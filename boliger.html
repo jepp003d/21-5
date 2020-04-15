@@ -9,7 +9,47 @@
 </head>
 
 <body>
-    <script src=""></script>
+    <!--    <h1>Boliger</h1>-->
+    <section id="liste"></section>
+
+
+
+    <h1 class="navn"></h1>
+    <p class="beskrivelse"></p>
+    <img src="" alt="" class="billede">
+
+
+    <script>
+        const listeElm = document.querySelector("#liste");
+        //        const skabelon = document.querySelector("template").content;
+        let alleTekster;
+        const url = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/tekst/101";
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentData();
+
+        }
+
+
+
+        async function hentData() {
+            console.log("hentData");
+            const response = await fetch(url);
+            alleTekster = await response.json();
+            console.log(alleTekster);
+            visPosts();
+        }
+
+        function visPosts() {
+            console.log("visPosts");
+            document.querySelector("h1").innerHTML = alleTekster.title.rendered;
+            document.querySelector("p").innerHTML = alleTekster.content.rendered;
+
+
+        }
+
+    </script>
 </body>
 
 </html>
