@@ -7,46 +7,82 @@
     <title>Boliger</title>
     <link rel="stylesheet" href="">
 </head>
+<style>
+    img {
+        width: 100%;
+    }
+
+    #sektion2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+</style>
 
 <body>
+
     <!--    <h1>Boliger</h1>-->
-    <section id="liste"></section>
+    <section id="sektion1"></section>
 
 
+    <section id="sektion2"></section>
+    <template>
+        <article>
 
-    <h1 class="navn"></h1>
-    <p class="beskrivelse"></p>
-    <img src="" alt="" class="billede">
+
+            <h1 class="overskrift"></h1>
+            <img src="" alt="" class="billede">
+        </article>
+
+    </template>
+
 
 
     <script>
-        const listeElm = document.querySelector("#liste");
-        //        const skabelon = document.querySelector("template").content;
-        let alleTekster;
-        const url = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/tekst/101";
+        let section1;
+        let section2 = [];
+        const listeElm = document.querySelector("#sektion2");
+        const endpoint1 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/292";
+        const endpoint2 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/boliger-grid";
+        let skabelon = document.querySelector("template");
+
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
             hentData();
-
         }
-
-
 
         async function hentData() {
-            console.log("hentData");
-            const response = await fetch(url);
-            alleTekster = await response.json();
-            console.log(alleTekster);
-            visPosts();
+            const response1 = await fetch(endpoint1);
+            const response2 = await fetch(endpoint2);
+            console.log(response1);
+            console.log(response2);
+
+            section1 = await response1.json();
+            section2 = await response2.json();
+            console.log(section1);
+            console.log(section2);
+
+            visSection1();
+            visSection2();
         }
 
-        function visPosts() {
-            console.log("visPosts");
-            document.querySelector("h1").innerHTML = alleTekster.title.rendered;
-            document.querySelector("p").innerHTML = alleTekster.content.rendered;
+        function visSection1() {
+
+            document.querySelector("#sektion1").innerHTML = section1.content.rendered;
+        }
+
+        function visSection2() {
+            console.log(section2);
+            section2.forEach(elm => {
+                const klon = skabelon.cloneNode(true).content;
+                klon.querySelector("h1").innerHTML = elm.overskrift;
+                klon.querySelector("img").src = elm.billede.guid;
+                listeElm.appendChild(klon);
 
 
+
+            })
         }
 
     </script>
