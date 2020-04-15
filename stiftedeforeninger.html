@@ -12,18 +12,18 @@
     <style></style>
 
 
-    <section class="forside_section_1"></section>
+    <section class="foreninger_sec1"></section>
 
 
 
-    <section class="forside_section_2"></section>
+    <section class="foreninger_sec2"></section>
 
     <template>
         <h2></h2>
         <img src="" alt="">
     </template>
 
-    <section class="forside_section_3"></section>
+
 
 
 
@@ -32,7 +32,7 @@
         let section1;
         let section2 = [];
 
-        const listeElm = document.querySelector(".forside_section_2");
+        const listeElm = document.querySelector(".foreninger_sec2");
         const endpoint1 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/314";
         const endpoint2 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/stiftet_forening";
 
@@ -63,7 +63,7 @@
 
         function visSection1() {
 
-            document.querySelector(".forside_section_1").innerHTML = section1.content.rendered;
+            document.querySelector(".foreninger_sec1").innerHTML = section1.content.rendered;
         }
 
         function visSection2() {
