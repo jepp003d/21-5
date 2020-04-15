@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <style></style>
+
+
+    <section class="forside_section_1"></section>
+
+
+
+    <section class="forside_section_2"></section>
+
+    <template>
+        <h2></h2>
+        <p></p>
+    </template>
+
+    <section class="forside_section_3"></section>
+
+
+
+
+    <script>
+        let section1;
+        let section2 = [];
+        let section3;
+        const listeElm = document.querySelector(".forside_section_2");
+        const endpoint1 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/235";
+        const endpoint2 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/forside-sektion_4";
+        const endpoint3 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/254";
+        let skabelon = document.querySelector("template");
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentData();
+        }
+
+        async function hentData() {
+            const response1 = await fetch(endpoint1);
+            const response2 = await fetch(endpoint2);
+            const response3 = await fetch(endpoint3);
+            console.log(response1);
+            console.log(response2);
+            console.log(response3);
+            section1 = await response1.json();
+            section2 = await response2.json();
+            section3 = await response3.json();
+            console.log(section1);
+            console.log(section2);
+            console.log(section3);
+            visSection1();
+            visSection2();
+            visSection3();
+        }
+
+        function visSection1() {
+
+            document.querySelector(".forside_section_1").innerHTML = section1.content.rendered;
+        }
+
+        function visSection2() {
+            console.log(section2);
+            section2.forEach(elm => {
+                const klon = skabelon.cloneNode(true).content;
+                klon.querySelector("h2").innerHTML = elm.overskrift;
+                klon.querySelector("p").innerHTML = elm.info;
+                listeElm.appendChild(klon);
+            })
+        }
+
+        function visSection3() {
+            document.querySelector(".forside_section_3").innerHTML = section3.content.rendered;
+        }
+    </script>
+</body></html>
