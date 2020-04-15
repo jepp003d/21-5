@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mallorca</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <style></style>
+
+    <h1>Mallorca</h1>
+
+    <section class="mallorca_section_1"></section>
+
+
+
+    <section class="mallorca_section_2"></section>
+
+    <template>
+        <h2></h2>
+        <img src="" alt="">
+    </template>
+
+
+    <script>
+        let section1;
+        const endpoint1 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/387";
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentData();
+        }
+
+        async function hentData() {
+            const response1 = await fetch(endpoint1);
+            console.log(response1);
+            section1 = await response1.json();
+            console.log(section1);
+            visSection1();
+        }
+
+        function visSection1() {
+
+            document.querySelector(".mallorca_section_1").innerHTML = section1.content.rendered;
+        }
+    </script>
+</body></html>
