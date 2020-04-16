@@ -5,12 +5,54 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mallorca</title>
-    <link rel="stylesheet" href="">
+    <style>
+        img {
+            width: 100%;
+        }
+
+
+        main {
+            50vw;
+        }
+
+        .carousel {
+            width: 70%;
+            height: 70%;
+        }
+
+        .container {
+            display: flex;
+            overflow: scroll;
+            scroll-snap-type: x mandatory;
+        }
+
+        .container section {
+            scroll-snap-align: start;
+            min-width: 100%;
+        }
+
+        .carousel-inner {
+            display: flex;
+
+        }
+
+        .backwd .fwd {
+            display: flex;
+            cursor: pointer;
+        }
+
+        .backwd .fwd p {
+            z-index: 10;
+            position: absolute;
+            margin: 10px;
+            align-items: center;
+
+        }
+
+    </style>
 </head>
 
 <body>
-
-    <style></style>
 
     <h1>Mallorca</h1>
 
@@ -18,17 +60,35 @@
 
 
 
-    <section class="mallorca_section_2"></section>
-
     <template>
-        <h2></h2>
-        <img src="" alt="">
+        <section>
+            <img class="caro_imgs" src="" alt="">
+        </section>
     </template>
+    <main>
+
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="backwd">
+                    <p>&lt;</p>
+                </div>
+                <div class="container"></div>
+                <div class="forwd">
+                    <p>&gt;</p>
+                </div>
+            </div>
+            <div class="legend-container"></div>
+        </div>
+    </main>
 
 
     <script>
         let section1;
+        let section2;
+        let numberOfPicsInCaro;
         const endpoint1 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/387";
+        const endpoint2 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/billedkarussel/375"
+
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
@@ -37,15 +97,38 @@
 
         async function hentData() {
             const response1 = await fetch(endpoint1);
+            const response2 = await fetch(endpoint2);
             console.log(response1);
+            console.log(response2);
             section1 = await response1.json();
+            section2 = await response2.json();
             console.log(section1);
+            console.log(section2);
             visSection1();
+            visSection2();
         }
 
         function visSection1() {
 
             document.querySelector(".mallorca_section_1").innerHTML = section1.content.rendered;
         }
+
+        function visSection2() {
+            numberOfPicsInCaro = section2.billeder.length;
+            section2.billeder.forEach((billeder, index) => {
+                const theClone = document.querySelector("template").cloneNode(true).content;
+                const secondClone = document.querySelector("template").cloneNode(true).content;
+                theClone.querySelector("img").src = billeder.guid;
+                secondClone.querySelector("img").src = billeder.guid;
+
+
+                document.querySelector(".container").appendChild(theClone);
+                document.querySelector(".legend-container").appendChild(theClone);
+            })
+
+        }
+
     </script>
-</body></html>
+</body>
+
+</html>
