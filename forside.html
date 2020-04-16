@@ -58,20 +58,86 @@
         h2 {
             text-align: center;
         }
+
+        nav {
+            background-color: #242A31;
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            grid-template-rows: 1fr;
+            font-family: aileron;
+            font-size: 1.1rem;
+            position: fixed;
+            width: 100%;
+        }
+
+        .list_wrapper {
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+            grid-row: 1;
+            grid-column: 1/3;
+            justify-content: center;
+            padding: 10px 10px 10px 0;
+        }
+
+
+
+        li {
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            color: white;
+        }
+
+        .dropdown_content {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            margin: 0;
+            border-radius: 10px;
+            color: white;
+            background-color: #242A31;
+        }
+
+        .dropdown_content_second {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            margin: 0;
+            border-radius: 10px;
+            color: white;
+            background-color: #242A31;
+        }
+
+        .overmenu {
+            padding: 20px;
+        }
+
+        .overmenu:hover .dropdown_content {
+            display: flex;
+            flex-direction: column;
+
+
+        }
+
     </style>
 
 
     <header>
         <nav>
-            <a href="index.html"> <img class="logo" src="img/Logo.svg"> </a>
+            <!--            <a href="index.html"> <img class="logo" src="img/Logo.svg"> </a>-->
 
             <ul class="list_wrapper">
 
-                <li>Forside</li>
-                <li>21-5 koncept
+                <li class="overmenu">Forside</li>
+                <li class="overmenu">21-5 koncept
                     <ul class="dropdown_content">
 
-                        <li>Booking af ferieboliger</li>
+                        <li>Booking af ferieboliger
+                            <a href="booking%20af%20ferieboliger.html">Booking af ferieboliger</a> </li>
                         <li>Sammensætning af familier</li>
                         <li>Byt</li>
                         <li>Fællesskab i foreningen</li>
@@ -88,7 +154,7 @@
                     </ul>
                 </li>
 
-                <li>Foreninger
+                <li class="overmenu">Foreninger
                     <ul class="dropdown_content">
 
                         <li>Hvordan kommer vi med</li>
@@ -106,7 +172,7 @@
                     </ul>
                 </li>
 
-                <li>Boliger
+                <li class="overmenu">Boliger
                     <ul class="dropdown_content">
 
                         <li>Fra skrot til slot</li>
@@ -116,12 +182,11 @@
                     </ul>
                 </li>
 
-                <li>Destinationer
+                <li class="overmenu">Destinationer
                     <ul class="dropdown_content">
 
                         <li>Mallorca</li>
                         <li>Marbella</li>
-                        <li></li>
                         <li>Toscana</li>
                         <li>Sydfrankrig</li>
                         <li>Chamonix</li>
@@ -133,32 +198,31 @@
                     </ul>
                 </li>
 
-                <li>BODY TEXTS
+                <li class="overmenu">Økonomi, jura og skat
                     <ul class="dropdown_content">
 
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>Skat</li>
+                        <li>Investering</li>
+                        <li>Finansiering</li>
+                        <li>Fællesudgifter</li>
+                        <li>Istandsættelse</li>
 
                     </ul>
                 </li>
 
-                <li>BODY TEXTS
-                    <ul class="dropdown_content">
+                <li class="overmenu">News
 
-                        <li></li>
-                        <li></li>
-                        <li></li>
-
-                    </ul>
                 </li>
 
-                <li>BODY TEXTS
+                <li class="overmenu">FAQ
+
+                </li>
+                <li class="overmenu">Kontakt
                     <ul class="dropdown_content">
 
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>Kaffemøder</li>
+                        <li>Orienteringmøder</li>
+                        <li>Job i 21-5</li>
 
                     </ul>
                 </li>
@@ -239,5 +303,8 @@
         function visSection3() {
             document.querySelector(".forside_section_3").innerHTML = section3.content.rendered;
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
