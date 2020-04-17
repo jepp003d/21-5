@@ -16,7 +16,6 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
-
 </style>
 
 <body>
@@ -27,7 +26,7 @@
 
     <section id="sektion2"></section>
     <template>
-        <article>
+        <article class="boliger_grid">
 
 
             <h1 class="overskrift"></h1>
@@ -78,6 +77,10 @@
                 const klon = skabelon.cloneNode(true).content;
                 klon.querySelector("h1").innerHTML = elm.overskrift;
                 klon.querySelector("img").src = elm.billede.guid;
+
+                klon.querySelector(".boliger_grid").addEventListener("click", () => {
+                    location.href = "fra_skrot_til_slot.html";
+                });
                 listeElm.appendChild(klon);
 
 
@@ -85,7 +88,13 @@
             })
         }
 
-    </script>
-</body>
 
-</html>
+        //        document.addEventListener("click", visFraSkrotTilSlot);
+        //
+        // function visFraSkrotTilSlot() {
+        // location.href = "fra_skrot_til_slot.html";
+        //
+        //
+        // }
+    </script>
+</body></html>
