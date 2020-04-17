@@ -33,19 +33,18 @@
 
     <script>
         let section1;
-        let section2;
-        let section3;
-        let section4;
-        let section5;
-        let section6;
-        let section7;
+        let section2[];
+        //        let section3;
+        //        let section4;
+        //        let section5;
+        //        let section6;
+        //        let section7;
 
         const listeElm = document.querySelector("#sektion2");
+        let id = urlParams.get("id");
         const endpoint1 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/333";
-        const endpoint2 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/billedkarussel/329";
+        const endpoint2 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/billedkarussel" + id;
         let skabelon = document.querySelector("template");
-
-
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
@@ -74,14 +73,23 @@
 
         function visSection2() {
             console.log(section2);
-            document.querySelector("#sektion2").innerHTML = section2.overskrift;
-            document.querySelector("#sektion2").innerHTML += "<br>" + section2.tekst;
+            section2.forEach(elm => {
+                const klon = skabelon.cloneNode(true).content;
+                klon.querySelector("h1").innerHTML = elm.overskrift;
+                klon.querySelector("p").innerHTML = elm.tekst;
+
+
+                klon.querySelector("img").src = elm.billede.guid;
+
+
+                listeElm.appendChild(klon);
+
+
+
+            })
 
 
 
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
