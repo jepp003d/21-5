@@ -36,17 +36,21 @@
 
         }
 
-        .backwd .fwd {
+        .bwd,
+        .fwd {
             display: flex;
             cursor: pointer;
+            align-items: center;
         }
 
-        .backwd .fwd p {
+        .bwd p,
+        .fwd p {
             z-index: 10;
             position: absolute;
-            margin: 10px;
-            align-items: center;
+        }
 
+        .fwd p {
+            margin-left: 10px;
         }
 
     </style>
@@ -70,11 +74,11 @@
 
         <div class="carousel">
             <div class="carousel-inner">
-                <div class="backwd">
+                <div class="bwd">
                     <p>&lt;</p>
                 </div>
                 <div class="container"></div>
-                <div class="forwd">
+                <div class="fwd">
                     <p>&gt;</p>
                 </div>
             </div>
