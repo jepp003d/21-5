@@ -31,30 +31,34 @@
             min-width: 100%;
         }
 
-        .carousel-inner {
+        .carousel_inner {
             display: flex;
 
         }
 
-        .backwd .fwd {
+        .bwd,
+        .fwd {
             display: flex;
             cursor: pointer;
-        }
-
-        .backwd .fwd p {
-            z-index: 10;
-            position: absolute;
-            margin: 10px;
             align-items: center;
 
         }
 
+        .bwd p,
+        .fwd p {
+            position: absolute;
+            z-index: 10;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .fwd p {
+            margin-left: -17px;
+        }
     </style>
 </head>
 
 <body>
-
-
     <h1>Toscana</h1>
 
     <section class="toscana_section_1"></section>
@@ -67,12 +71,15 @@
     <main>
 
         <div class="carousel">
-            <div class="carousel-inner">
-                <div class="backwd">
+            <div class="carousel_inner">
+
+                <div class="bwd">
                     <p>&lt;</p>
                 </div>
-                <div class="container"></div>
-                <div class="forwd">
+                <div class="container">
+
+                </div>
+                <div class="fwd">
                     <p>&gt;</p>
                 </div>
             </div>
@@ -82,15 +89,21 @@
 
     <script>
         let section1;
+
+        //------karrusel-----
         let section2;
         let numberOfPicsInCaro;
+        //------karrusel------
+
+        let caroCurrentNum = 0;
         const endpoint1 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/284";
         const endpoint2 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/billedkarussel/384"
-
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
             hentData();
+            document.querySelector(".fwd").addEventListener("click", fwd);
+            document.querySelector(".bwd").addEventListener("click", bwd);
         }
 
         async function hentData() {
@@ -107,7 +120,6 @@
         }
 
         function visSection1() {
-
             document.querySelector(".toscana_section_1").innerHTML = section1.content.rendered;
         }
 
@@ -118,15 +130,59 @@
                 const secondClone = document.querySelector("template").cloneNode(true).content;
                 theClone.querySelector("img").src = billeder.guid;
                 secondClone.querySelector("img").src = billeder.guid;
-
-
                 document.querySelector(".container").appendChild(theClone);
                 document.querySelector(".legend-container").appendChild(theClone);
             })
 
+            document.querySelector(".container").addEventListener("scroll", scrollFunction);
         }
 
-    </script>
-</body>
 
-</html>
+        function fwd() {
+            if (caroCurrentNum < numberOfPicsInCaro - 1) {
+                caroCurrentNum++;
+                navigate();
+            }
+        }
+
+        function bwd() {
+            if (caroCurrentNum > 0)
+                caroCurrentNum--;
+            navigate();
+        }
+
+        function navigate() {
+            document.querySelector(".container").scrollTo({
+                left: caroCurrentNum * document.querySelector(".caro_imgs").width,
+                behavior: "smooth"
+            })
+            setBtns();
+        }
+
+        function scrollFunction() {
+            //  console.log("scrollFunction");
+
+            caroCurrentNum = Math.round(document.querySelector(".container").scrollLeft / document.querySelector(".caro_imgs").width);
+            console.log(caroCurrentNum);
+            setBtns();
+
+        }
+
+        function setBtns() {
+            if (caroCurrentNum < numberOfPicsInCaro - 1) {
+                document.querySelector(".fwd").style.opacity = 1;
+                document.querySelector(".fwd").style.cursor = "pointer";
+            } else {
+                document.querySelector(".fwd").style.opacity = 0.2;
+                document.querySelector(".fwd").style.cursor = "default";
+            }
+            if (caroCurrentNum > 0) {
+                document.querySelector(".bwd").style.opacity = 1;
+                document.querySelector(".bwd").style.cursor = "pointer";
+            } else {
+                document.querySelector(".bwd").style.opacity = 0.2;
+                document.querySelector(".bwd").style.cursor = "default";
+            }
+        }
+    </script>
+</body></html>
