@@ -31,7 +31,7 @@
             min-width: 100%;
         }
 
-        .carousel-inner {
+        .carousel_inner {
             display: flex;
 
         }
@@ -41,29 +41,183 @@
             display: flex;
             cursor: pointer;
             align-items: center;
+
         }
 
         .bwd p,
         .fwd p {
-            z-index: 10;
             position: absolute;
+            z-index: 10;
+            color: white;
+            font-size: 2rem;
         }
 
         .fwd p {
-            margin-left: 10px;
+            margin-left: -17px;
         }
 
+        nav {
+            background-color: #242A31;
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            grid-template-rows: 1fr;
+            font-family: aileron;
+            font-size: 1.1rem;
+            position: fixed;
+            width: 100%;
+        }
+
+        .list_wrapper {
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+            grid-row: 1;
+            grid-column: 1/3;
+            justify-content: center;
+            padding: 10px 10px 10px 0;
+        }
+
+
+
+        li {
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            color: white;
+        }
+
+        .dropdown_content {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            margin: 0;
+            border-radius: 10px;
+            color: white;
+            background-color: #242A31;
+        }
+
+        .dropdown_content_second {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            margin: 0;
+            border-radius: 10px;
+            color: white;
+            background-color: #242A31;
+        }
+
+        .overmenu {
+            padding: 20px;
+        }
+
+        .overmenu:hover .dropdown_content {
+            display: flex;
+            flex-direction: column;
+        }
     </style>
 </head>
 
 <body>
+    <header>
+        <nav>
+            <!--            <a href="index.html"> <img class="logo" src="img/Logo.svg"> </a>-->
+
+            <ul class="list_wrapper">
+
+                <li class="overmenu">Forside</li>
+                <li class="overmenu"><a href="21-5%20koncept.html">21-5 koncept</a>
+                    <ul class="dropdown_content">
+
+                        <li>
+                            <a href="booking%20af%20ferieboliger.html">Booking af ferieboliger</a> </li>
+                        <li>Sammensætning af familier</li>
+                        <li>Byt</li>
+                        <li>Fællesskab i foreningen</li>
+                        <li>Om os
+                            <ul class="dropdown_content_second">
+                                <li>21-5 teamet</li>
+                                <li>21-5 familier</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="overmenu"><a href="foreninger.html">Foreninger</a>
+                    <ul class="dropdown_content">
+                        <li>Hvordan kommer vi med</li>
+                        <li>Til salg lige nu
+                            <ul class="dropdown_content_second">
+                                <li>Ejerforeningen 21-5 DK36 Grande</li>
+                                <li>Gensalg 21-5 DK15 Family</li>
+                                <li>Gensalg 21-5 DK21 Large</li>
+                            </ul>
+                        </li>
+                        <li><a href="stiftedeforeninger.html">Stiftede foreninger</a></li>
+                    </ul>
+                </li>
+
+                <li class="overmenu"><a href="boliger.html">Boliger</a>
+                    <ul class="dropdown_content">
+                        <li><a href="fra_skrot_til_slot.html">Fra skrot til slot</a></li>
+                        <li>Vi indretter</li>
+                        <li>Vi skaber hjem</li>
+                    </ul>
+                </li>
+
+                <li class="overmenu"><a href="destinationer.html">Destinationer</a>
+                    <ul class="dropdown_content">
+                        <li><a href="mallorca.html">Mallorca</a></li>
+                        <li><a href="sydspanien.html">Sydspanien</a></li>
+                        <li><a href="toscana.html">Toscana</a></li>
+                        <li><a href="sydfrankrig.html"> Sydfrankrig</a></li>
+                        <li><a href="chamonix.html">Chamonix</a></li>
+                        <li><a href="newyork.html">New York</a></li>
+                        <li><a href="barcelona.html">Barcelona</a></li>
+                        <li><a href="paris.html">Paris</a></li>
+                        <li><a href="rom.html">Rom</a></li>
+                    </ul>
+                </li>
+
+                <li class="overmenu">Økonomi, jura og skat
+                    <ul class="dropdown_content">
+
+                        <li>Skat</li>
+                        <li>Investering</li>
+                        <li>Finansiering</li>
+                        <li>Fællesudgifter</li>
+                        <li>Istandsættelse</li>
+
+                    </ul>
+                </li>
+
+                <li class="overmenu"><a href="news.html">News</a>
+
+                </li>
+
+                <li class="overmenu">FAQ
+
+                </li>
+                <li class="overmenu"><a href="kontakt.html">Kontakt</a>
+                    <ul class="dropdown_content">
+
+                        <li><a href="kaffemode.html">Kaffemøder</a></li>
+                        <li><a href="orienteringsmode.html">Orienteringmøder</a></li>
+                        <li><a href="job_i_21_5.html">Job i 21-5</a></li>
+
+                    </ul>
+                </li>
+            </ul>
 
 
+        </nav>
+
+    </header>
     <h1>Sydspanien</h1>
 
     <section class="spanien_section_1"></section>
-
-
 
     <template>
         <section>
@@ -73,63 +227,55 @@
     <main>
 
         <div class="carousel">
-            <div class="carousel-inner">
-
+            <div class="carousel_inner">
 
                 <div class="bwd">
                     <p>&lt;</p>
                 </div>
+                <div class="container">
 
-
-                <div class="container"></div>
-
-
+                </div>
                 <div class="fwd">
                     <p>&gt;</p>
                 </div>
             </div>
-
             <div class="legend-container"></div>
-
         </div>
     </main>
 
     <script>
-        "use strict"
-
         let section1;
+
+        //------karrusel-----
         let section2;
         let numberOfPicsInCaro;
+        //------karrusel------
 
+        let caroCurrentNum = 0;
         const endpoint1 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/385";
         const endpoint2 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/billedkarussel/383"
-
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
             hentData();
+            document.querySelector(".fwd").addEventListener("click", fwd);
+            document.querySelector(".bwd").addEventListener("click", bwd);
         }
 
         async function hentData() {
             const response1 = await fetch(endpoint1);
             const response2 = await fetch(endpoint2);
-
             console.log(response1);
             console.log(response2);
-
             section1 = await response1.json();
             section2 = await response2.json();
-
             console.log(section1);
             console.log(section2);
-
             visSection1();
             visSection2();
-
         }
 
         function visSection1() {
-
             document.querySelector(".spanien_section_1").innerHTML = section1.content.rendered;
         }
 
@@ -140,15 +286,59 @@
                 const secondClone = document.querySelector("template").cloneNode(true).content;
                 theClone.querySelector("img").src = billeder.guid;
                 secondClone.querySelector("img").src = billeder.guid;
-
-
                 document.querySelector(".container").appendChild(theClone);
                 document.querySelector(".legend-container").appendChild(theClone);
             })
 
+            document.querySelector(".container").addEventListener("scroll", scrollFunction);
         }
 
-    </script>
-</body>
 
-</html>
+        function fwd() {
+            if (caroCurrentNum < numberOfPicsInCaro - 1) {
+                caroCurrentNum++;
+                navigate();
+            }
+        }
+
+        function bwd() {
+            if (caroCurrentNum > 0)
+                caroCurrentNum--;
+            navigate();
+        }
+
+        function navigate() {
+            document.querySelector(".container").scrollTo({
+                left: caroCurrentNum * document.querySelector(".caro_imgs").width,
+                behavior: "smooth"
+            })
+            setBtns();
+        }
+
+        function scrollFunction() {
+            //  console.log("scrollFunction");
+
+            caroCurrentNum = Math.round(document.querySelector(".container").scrollLeft / document.querySelector(".caro_imgs").width);
+            console.log(caroCurrentNum);
+            setBtns();
+
+        }
+
+        function setBtns() {
+            if (caroCurrentNum < numberOfPicsInCaro - 1) {
+                document.querySelector(".fwd").style.opacity = 1;
+                document.querySelector(".fwd").style.cursor = "pointer";
+            } else {
+                document.querySelector(".fwd").style.opacity = 0.2;
+                document.querySelector(".fwd").style.cursor = "default";
+            }
+            if (caroCurrentNum > 0) {
+                document.querySelector(".bwd").style.opacity = 1;
+                document.querySelector(".bwd").style.cursor = "pointer";
+            } else {
+                document.querySelector(".bwd").style.opacity = 0.2;
+                document.querySelector(".bwd").style.cursor = "default";
+            }
+        }
+    </script>
+</body></html>
