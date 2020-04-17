@@ -5,10 +5,55 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="">
+    <style>
+        img {
+            width: 100%;
+        }
+
+
+        main {
+            50vw;
+        }
+
+        .carousel {
+            width: 70%;
+            height: 70%;
+        }
+
+        .container {
+            display: flex;
+            overflow: scroll;
+            scroll-snap-type: x mandatory;
+        }
+
+        .container section {
+            scroll-snap-align: start;
+            min-width: 100%;
+        }
+
+        .carousel-inner {
+            display: flex;
+
+        }
+
+        .backwd .fwd {
+            display: flex;
+            cursor: pointer;
+        }
+
+        .backwd .fwd p {
+            z-index: 10;
+            position: absolute;
+            margin: 10px;
+            align-items: center;
+
+        }
+
+    </style>
 </head>
 
 <body>
+
     <section id="detalje">
 
         <article id="forening">
@@ -16,19 +61,44 @@
             </button>
             <h2>Navn</h2>
             <p>beskrivelse</p>
-            <img src="" alt="">
 
+            <template>
+                <section>
+                    <img class="caro_imgs" src="" alt="">
+                </section>
+            </template>
+            <main>
 
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <div class="backwd">
+                            <p>&lt;</p>
+                        </div>
+                        <div class="container"></div>
+                        <div class="forwd">
+                            <p>&gt;</p>
+                        </div>
+                    </div>
+                    <div class="legend-container"></div>
+                </div>
+            </main>
 
         </article>
+
+
+
+
     </section>
     <script>
         const urlParams = new URLSearchParams(window.location.search)
         const id = urlParams.get("id");
-        console.log(id);
+        console.log("banan", id);
         const endpoint = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/stiftet_forening";
 
         let forening = [];
+        let section2;
+        let numberOfPicsInCaro;
+        const endpoint2 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/stiftet_forening/" + id;
 
         const detalje = document.querySelector("#detalje");
         document.addEventListener("DOMContentLoaded", start)
@@ -41,10 +111,20 @@
         //hentDYR
         async function loadData() {
             const response = await fetch(endpoint);
+            const response2 = await fetch(endpoint2);
             forening = await response.json();
+            section2 = await response2.json();
             console.log(forening);
+            console.log("hep", section2);
             visForening();
+            visSection2();
         }
+
+
+
+
+
+
 
         function visForening() {
 
@@ -55,11 +135,28 @@
             forening.forEach(elm => {
                 if (elm.id == id) {
                     detalje.querySelector("h2").innerHTML = elm.overskrift;
-                    detalje.querySelector("img").src = elm.imge.guid;
                     detalje.querySelector("p").innerHTML = elm.beskrivelse;
 
 
+
                 }
+
+            });
+        }
+
+        function visSection2() {
+            console.log("klaus", section2.billeder);
+            section2.billeder.forEach(elm => {
+
+                const theClone = document.querySelector("template").cloneNode(true).content;
+                const secondClone = document.querySelector("template").cloneNode(true).content;
+                theClone.querySelector("img").src = elm.guid;
+                secondClone.querySelector("img").src = elm.guid;
+
+
+                document.querySelector(".container").appendChild(theClone);
+                document.querySelector(".legend-container").appendChild(theClone);
+
 
             });
         }
