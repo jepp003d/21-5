@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <section id="detalje">
+
+        <article id="forening">
+            <button>⬅︎
+            </button>
+            <h2>Navn</h2>
+            <p>beskrivelse</p>
+            <img src="" alt="">
+
+
+
+        </article>
+    </section>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search)
+        const id = urlParams.get("id");
+        console.log(id);
+        const endpoint = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/stiftet_forening";
+
+        let forening = [];
+
+        const detalje = document.querySelector("#detalje");
+        document.addEventListener("DOMContentLoaded", start)
+
+        //start
+        function start() {
+            loadData();
+
+        }
+        //hentDYR
+        async function loadData() {
+            const response = await fetch(endpoint);
+            forening = await response.json();
+            console.log(forening);
+            visForening();
+        }
+
+        function visForening() {
+
+            detalje.querySelector("button").addEventListener("click", () => {
+                history.back();
+            });
+
+            forening.forEach(elm => {
+                if (elm.id == id) {
+                    detalje.querySelector("h2").innerHTML = elm.overskrift;
+                    detalje.querySelector("img").src = elm.imge.guid;
+                    detalje.querySelector("p").innerHTML = elm.beskrivelse;
+
+
+                }
+
+            });
+        }
+
+    </script>
+</body>
+
+</html>
