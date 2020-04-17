@@ -9,7 +9,229 @@
 </head>
 
 <body>
-    <style></style>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .forside_section_2 {
+
+            margin: 0 auto;
+            /*            padding: 40px 40px 0px 40px;*/
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /*            background-color: #f4f4f4;*/
+            grid-gap: 40px;
+            max-width: 1200px;
+            background-image: url(cheap-beach-family-destinations-1068x713.jpg);
+
+
+
+
+        }
+
+        .forside_section_2 img {
+            max-width: 1000px;
+
+        }
+
+        article {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+
+
+
+
+
+        }
+
+        article p {
+            text-align: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        nav {
+            background-color: #242A31;
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            grid-template-rows: 1fr;
+            font-family: aileron;
+            font-size: 1.1rem;
+            position: fixed;
+            width: 100%;
+        }
+
+        .list_wrapper {
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+            grid-row: 1;
+            grid-column: 1/3;
+            justify-content: center;
+            padding: 10px 10px 10px 0;
+        }
+
+
+
+        li {
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            color: white;
+        }
+
+        .dropdown_content {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            margin: 0;
+            border-radius: 10px;
+            color: white;
+            background-color: #242A31;
+        }
+
+        .dropdown_content_second {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            margin: 0;
+            border-radius: 10px;
+            color: white;
+            background-color: #242A31;
+        }
+
+        .overmenu {
+            padding: 20px;
+        }
+
+        .overmenu:hover .dropdown_content {
+            display: flex;
+            flex-direction: column;
+
+
+        }
+
+    </style>
+
+
+    <header>
+        <nav>
+            <!--            <a href="index.html"> <img class="logo" src="img/Logo.svg"> </a>-->
+
+            <ul class="list_wrapper">
+
+                <li class="overmenu">Forside</li>
+                <li class="overmenu">21-5 koncept
+                    <ul class="dropdown_content">
+
+                        <li>Booking af ferieboliger
+                            <a href="booking%20af%20ferieboliger.html">Booking af ferieboliger</a> </li>
+                        <li>Sammensætning af familier</li>
+                        <li>Byt</li>
+                        <li>Fællesskab i foreningen</li>
+                        <li>Om os
+                            <ul class="dropdown_content_second">
+
+                                <li>21-5 teamet</li>
+                                <li>21-5 familier</li>
+
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="overmenu">Foreninger
+                    <ul class="dropdown_content">
+
+                        <li>Hvordan kommer vi med</li>
+                        <li>Til salg lige nu
+                            <ul class="dropdown_content_second">
+
+                                <li>Ejerforeningen 21-5 DK36 Grande</li>
+                                <li>Gensalg 21-5 DK15 Family</li>
+                                <li>Gensalg 21-5 DK21 Large</li>
+
+                            </ul>
+                        </li>
+                        <li>Stiftede foreninger</li>
+
+                    </ul>
+                </li>
+
+                <li class="overmenu">Boliger
+                    <ul class="dropdown_content">
+
+                        <li>Fra skrot til slot</li>
+                        <li>Vi indretter</li>
+                        <li>Vi skaber hjem</li>
+
+                    </ul>
+                </li>
+
+                <li class="overmenu">Destinationer
+                    <ul class="dropdown_content">
+
+                        <li>Mallorca</li>
+                        <li>Marbella</li>
+                        <li>Toscana</li>
+                        <li>Sydfrankrig</li>
+                        <li>Chamonix</li>
+                        <li>New York</li>
+                        <li>Barcelona</li>
+                        <li>Paris</li>
+                        <li>Rom</li>
+
+                    </ul>
+                </li>
+
+                <li class="overmenu">Økonomi, jura og skat
+                    <ul class="dropdown_content">
+
+                        <li>Skat</li>
+                        <li>Investering</li>
+                        <li>Finansiering</li>
+                        <li>Fællesudgifter</li>
+                        <li>Istandsættelse</li>
+
+                    </ul>
+                </li>
+
+                <li class="overmenu">News
+
+                </li>
+
+                <li class="overmenu">FAQ
+
+                </li>
+                <li class="overmenu">Kontakt
+                    <ul class="dropdown_content">
+
+                        <li>Kaffemøder</li>
+                        <li>Orienteringmøder</li>
+                        <li>Job i 21-5</li>
+
+                    </ul>
+                </li>
+            </ul>
+
+
+        </nav>
+
+    </header>
 
 
     <section class="forside_section_1"></section>
@@ -19,8 +241,10 @@
     <section class="forside_section_2"></section>
 
     <template>
-        <h2></h2>
-        <p></p>
+        <article>
+            <h2></h2>
+            <p></p>
+        </article>
     </template>
 
     <section class="forside_section_3"></section>
@@ -79,5 +303,8 @@
         function visSection3() {
             document.querySelector(".forside_section_3").innerHTML = section3.content.rendered;
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
