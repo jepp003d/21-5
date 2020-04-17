@@ -12,11 +12,14 @@
     <style>
         body {
             margin: 0;
+
         }
 
         p {
             margin: 0;
         }
+
+        .forside_section_1 {}
 
         .forside_section_2 {
 
@@ -60,7 +63,8 @@
         }
 
         nav {
-            background-color: #242A31;
+            /*            background-color: #242A31;*/
+            background-color: white;
             display: grid;
             grid-template-columns: 100px 1fr;
             grid-template-rows: 1fr;
@@ -68,6 +72,7 @@
             font-size: 1.1rem;
             position: fixed;
             width: 100%;
+            top: 0;
         }
 
         .list_wrapper {
@@ -77,13 +82,16 @@
             grid-row: 1;
             grid-column: 1/3;
             justify-content: center;
-            padding: 10px 10px 10px 0;
+            /*            padding: 10px 10px 10px 0;*/
         }
 
 
+        li {}
 
-        li {
+        li a {
             cursor: pointer;
+            text-decoration: none;
+
         }
 
         ul {
@@ -91,6 +99,8 @@
             padding: 0;
             color: white;
         }
+
+
 
         .dropdown_content {
             display: none;
@@ -113,14 +123,18 @@
         }
 
         .overmenu {
-            padding: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
         }
 
         .overmenu:hover .dropdown_content {
             display: flex;
             flex-direction: column;
+        }
 
-
+        .dropdown_content:hover .dropdown_content_second {
+            display: flex;
+            flex-direction: column;
         }
 
     </style>
@@ -132,20 +146,19 @@
 
             <ul class="list_wrapper">
 
-                <li class="overmenu">Forside</li>
-                <li class="overmenu">21-5 koncept
+                <li class="overmenu"><a href="forside.html">Forside</a></li>
+                <li class="overmenu"><a href="21-5koncept.html">21-5 koncept</a>
                     <ul class="dropdown_content">
 
-                        <li>Booking af ferieboliger
-                            <a href="booking%20af%20ferieboliger.html">Booking af ferieboliger</a> </li>
-                        <li>Sammensætning af familier</li>
-                        <li>Byt</li>
-                        <li>Fællesskab i foreningen</li>
-                        <li>Om os
+                        <li><a href="booking.html">Booking af ferieboliger</a></li>
+                        <li><a href="sammensaetning.html">Sammensætning af familier</a></li>
+                        <li> <a href="byt.html">Byt</a></li>
+                        <li><a href="faellesskab.html">Fællesskab i foreningen</a></li>
+                        <li><a href="omos.html">Om os</a>
                             <ul class="dropdown_content_second">
 
-                                <li>21-5 teamet</li>
-                                <li>21-5 familier</li>
+                                <li><a href="21-5teamet">21-5 teamet</a></li>
+                                <li><a href="21-5familier">21-5 familier</a>21-5 familier</li>
 
 
                             </ul>
@@ -154,39 +167,39 @@
                     </ul>
                 </li>
 
-                <li class="overmenu">Foreninger
+                <li class="overmenu"><a href="foreninger.html">Foreninger</a>
                     <ul class="dropdown_content">
 
-                        <li>Hvordan kommer vi med</li>
-                        <li>Til salg lige nu
+                        <li><a href="hvordankommervimed.html">Hvordan kommer vi med</a></li>
+                        <li> <a href="tilsalgligenu.html">Til salg lige nu</a>
                             <ul class="dropdown_content_second">
 
-                                <li>Ejerforeningen 21-5 DK36 Grande</li>
-                                <li>Gensalg 21-5 DK15 Family</li>
-                                <li>Gensalg 21-5 DK21 Large</li>
+                                <li><a href="grande.html">DK36 Grande</a></li>
+                                <li><a href="family.html">DK15 Family</a></li>
+                                <li><a href="large.html">DK21 Large</a></li>
 
                             </ul>
                         </li>
-                        <li>Stiftede foreninger</li>
+                        <li><a href="stiftedeforeninger.html">Stiftede foreninger</a></li>
 
                     </ul>
                 </li>
 
-                <li class="overmenu">Boliger
+                <li class="overmenu"><a href="boliger.html">Boliger</a>
                     <ul class="dropdown_content">
 
-                        <li>Fra skrot til slot</li>
-                        <li>Vi indretter</li>
-                        <li>Vi skaber hjem</li>
+                        <li><a href="fraskrottilslot.html">Fra skrot til slot</a></li>
+                        <li><a href="viindretter.html">Vi indretter</a></li>
+                        <li><a href="viskaberhjem.html">Vi skaber hjem</a></li>
 
                     </ul>
                 </li>
 
-                <li class="overmenu">Destinationer
+                <li class="overmenu"><a href="">Destinationer</a>
                     <ul class="dropdown_content">
 
                         <li>Mallorca</li>
-                        <li>Marbella</li>
+                        <li>Sydspanien</li>
                         <li>Toscana</li>
                         <li>Sydfrankrig</li>
                         <li>Chamonix</li>
@@ -198,31 +211,31 @@
                     </ul>
                 </li>
 
-                <li class="overmenu">Økonomi, jura og skat
+                <li class="overmenu"><a href="">Økonomi, jura og skat</a>
                     <ul class="dropdown_content">
 
-                        <li>Skat</li>
-                        <li>Investering</li>
-                        <li>Finansiering</li>
-                        <li>Fællesudgifter</li>
-                        <li>Istandsættelse</li>
+                        <li><a href="">Skat</a></li>
+                        <li><a href="">Investering</a></li>
+                        <li><a href="">Finansiering</a></li>
+                        <li><a href="">Fællesudgifter</a></li>
+                        <li><a href="">Istandsættelse</a></li>
 
                     </ul>
                 </li>
 
-                <li class="overmenu">News
+                <li class="overmenu"><a href="">News</a>
 
                 </li>
 
-                <li class="overmenu">FAQ
+                <li class="overmenu"><a href="">FAQ</a>
 
                 </li>
-                <li class="overmenu">Kontakt
+                <li class="overmenu"><a href="">Kontakt</a>
                     <ul class="dropdown_content">
 
-                        <li>Kaffemøder</li>
-                        <li>Orienteringmøder</li>
-                        <li>Job i 21-5</li>
+                        <li><a href="">Kaffemøder</a></li>
+                        <li><a href="">Orienteringmøder</a></li>
+                        <li><a href="">Job i 21-5</a></li>
 
                     </ul>
                 </li>
@@ -233,6 +246,7 @@
 
     </header>
 
+    <section class="splash"></section>
 
     <section class="forside_section_1"></section>
 
