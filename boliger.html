@@ -17,9 +17,167 @@
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
 
+    nav {
+        background-color: #242A31;
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: 1fr;
+        font-family: aileron;
+        font-size: 1.1rem;
+        position: fixed;
+        width: 100%;
+    }
+
+    .list_wrapper {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0;
+        grid-row: 1;
+        grid-column: 1/3;
+        justify-content: center;
+        padding: 10px 10px 10px 0;
+    }
+
+
+
+    li {
+        cursor: pointer;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        color: white;
+    }
+
+    .dropdown_content {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        margin: 0;
+        border-radius: 10px;
+        color: white;
+        background-color: #242A31;
+    }
+
+    .dropdown_content_second {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        margin: 0;
+        border-radius: 10px;
+        color: white;
+        background-color: #242A31;
+    }
+
+    .overmenu {
+        padding: 20px;
+    }
+
+    .overmenu:hover .dropdown_content {
+        display: flex;
+        flex-direction: column;
+    }
 </style>
 
+
+
 <body>
+
+    <header>
+        <nav>
+            <!--            <a href="index.html"> <img class="logo" src="img/Logo.svg"> </a>-->
+
+            <ul class="list_wrapper">
+
+                <li class="overmenu">Forside</li>
+                <li class="overmenu"><a href="21-5%20koncept.html">21-5 koncept</a>
+                    <ul class="dropdown_content">
+
+                        <li>
+                            <a href="booking%20af%20ferieboliger.html">Booking af ferieboliger</a> </li>
+                        <li>Sammensætning af familier</li>
+                        <li>Byt</li>
+                        <li>Fællesskab i foreningen</li>
+                        <li>Om os
+                            <ul class="dropdown_content_second">
+                                <li>21-5 teamet</li>
+                                <li>21-5 familier</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="overmenu"><a href="foreninger.html">Foreninger</a>
+                    <ul class="dropdown_content">
+                        <li>Hvordan kommer vi med</li>
+                        <li>Til salg lige nu
+                            <ul class="dropdown_content_second">
+                                <li>Ejerforeningen 21-5 DK36 Grande</li>
+                                <li>Gensalg 21-5 DK15 Family</li>
+                                <li>Gensalg 21-5 DK21 Large</li>
+                            </ul>
+                        </li>
+                        <li><a href="stiftedeforeninger.html">Stiftede foreninger</a></li>
+                    </ul>
+                </li>
+
+                <li class="overmenu"><a href="boliger.html">Boliger</a>
+                    <ul class="dropdown_content">
+                        <li><a href="fra_skrot_til_slot.html">Fra skrot til slot</a></li>
+                        <li><a href="viindretter.html">Vi indretter</a></li>
+                        <li><a href="viskaberhjem.html">Vi skaber hjem</a></li>
+                    </ul>
+                </li>
+
+                <li class="overmenu"><a href="destinationer.html">Destinationer</a>
+                    <ul class="dropdown_content">
+                        <li><a href="mallorca.html">Mallorca</a></li>
+                        <li><a href="sydspanien.html">Sydspanien</a></li>
+                        <li><a href="toscana.html">Toscana</a></li>
+                        <li><a href="sydfrankrig.html"> Sydfrankrig</a></li>
+                        <li><a href="chamonix.html">Chamonix</a></li>
+                        <li><a href="newyork.html">New York</a></li>
+                        <li><a href="barcelona.html">Barcelona</a></li>
+                        <li><a href="paris.html">Paris</a></li>
+                        <li><a href="rom.html">Rom</a></li>
+                    </ul>
+                </li>
+
+                <li class="overmenu">Økonomi, jura og skat
+                    <ul class="dropdown_content">
+
+                        <li>Skat</li>
+                        <li>Investering</li>
+                        <li>Finansiering</li>
+                        <li>Fællesudgifter</li>
+                        <li>Istandsættelse</li>
+
+                    </ul>
+                </li>
+
+                <li class="overmenu"><a href="news.html">News</a>
+
+                </li>
+
+                <li class="overmenu">FAQ
+
+                </li>
+                <li class="overmenu"><a href="kontakt.html">Kontakt</a>
+                    <ul class="dropdown_content">
+
+                        <li><a href="kaffemode.html">Kaffemøder</a></li>
+                        <li><a href="orienteringsmode.html">Orienteringmøder</a></li>
+                        <li><a href="job_i_21_5.html">Job i 21-5</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+
+
+        </nav>
+
+    </header>
 
     <!--    <h1>Boliger</h1>-->
     <section id="sektion1"></section>
@@ -128,8 +286,5 @@
         //
         //
         // }
-
     </script>
-</body>
-
-</html>
+</body></html>
