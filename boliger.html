@@ -16,6 +16,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
+
 </style>
 
 <body>
@@ -40,12 +41,13 @@
     <script>
         let section1;
         let section2 = [];
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get("id");
         const listeElm = document.querySelector("#sektion2");
         const endpoint1 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/292";
         const endpoint2 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/boliger-grid";
         let skabelon = document.querySelector("template");
-        const urlParams = new URLSearchParams(window.location.search);
-        const id = urlParams.get("id");
+
 
         document.addEventListener("DOMContentLoaded", start);
 
@@ -79,7 +81,19 @@
                 const klon = skabelon.cloneNode(true).content;
                 klon.querySelector("h1").innerHTML = elm.overskrift;
                 klon.querySelector("img").src = elm.billede.guid;
-                klon.querySelector(".boliger_grid").addEventListener("click", visDetaljeView);
+                klon.querySelector(".boliger_grid").addEventListener("click", () => {
+
+                    if (elm.id == "369") {
+                        console.log(id);
+
+                        console.log("if sætning1");
+                        location.href = "fra_skrot_til_slot.html";
+
+
+
+                    }
+
+                });
 
                 listeElm.appendChild(klon);
 
@@ -89,11 +103,12 @@
 
         }
 
-        function visDetaljeView() {
+        function visDetaljeView(elm) {
             console.log("DetaljeView");
-            console.log(id);
-            endpoint2 = endpoint2 + id;
-            if (id == "369") {
+            console.log(elm.id);
+
+            if (elm.id == "369") {
+                console.log(id);
 
                 console.log("if sætning1");
                 location.href = "fra_skrot_til_slot.html";
@@ -101,6 +116,9 @@
 
 
             }
+
+
+
         }
 
         //        document.addEventListener("click", visFraSkrotTilSlot);
@@ -110,5 +128,8 @@
         //
         //
         // }
+
     </script>
-</body></html>
+</body>
+
+</html>
