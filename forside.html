@@ -6,55 +6,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://use.typekit.net/eib8sis.css">
+    <link rel="stylesheet" href="https://use.typekit.net/jbb7mxc.css">
 </head>
 
 <body>
     <style>
         body {
             margin: 0;
-            padding: 100px;
+
         }
 
         p {
-            margin: 0;
+
+            font-family: neue-haas-grotesk-text, sans-serif;
+            font-weight: 100;
+            font-style: normal;
+            font-size: 1.3rem;
+            letter-spacing: 1.2px;
+            color: #2a2a2a;
+
+        }
+
+        h2,
+        h3 {
+            color: #2a2a2a;
+            font-size: 3rem;
+            font-family: freight-neo-pro, sans-serif;
+            font-weight: 100;
+            font-style: normal;
+            text-align: center;
+            padding: 100px 0 25px 0;
         }
 
         .forside_section_2 {
-
             margin: 0 auto;
-            /*            padding: 40px 40px 0px 40px;*/
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            /*            background-color: #f4f4f4;*/
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
             grid-gap: 40px;
             max-width: 1200px;
-            background-image: url(cheap-beach-family-destinations-1068x713.jpg);
+        }
 
+        article {
+            position: relative;
+            text-align: center;
+            margin: 0 auto;
+        }
 
+        /*
+        article p {
 
+            position: absolute;
+            font-size: 1.5rem;
+            max-width: 350px;
+            z-index: 1;
+        }
+*/
+
+        .info {
+            padding: 10px;
+            position: absolute;
+            display: grid;
+            align-self: center;
+            justify-self: center;
+
+            max-width: 350px;
+            z-index: 1;
+            top: 4vw;
+        }
+
+        .info p {
+            text-align: center;
+        }
+
+        article h2 {
+            position: absolute;
+            top: 0;
+        }
+
+        article img {
+            position: relative;
+        }
+
+        .forside_section_1,
+        .forside_section_3 {
+
+            margin: 0 300px 0 300px;
+        }
+
+        .forside_section_1 p,
+        .forside_section_3 p {
+            columns: 400px 2;
+            column-gap: 75px;
+
+            margin: 0 auto;
 
         }
 
         .forside_section_2 img {
-            max-width: 1000px;
-
+            width: 100%;
         }
 
-        article {
-            background-color: rgba(0, 0, 0, 0.3);
-            padding: 20px;
 
-        }
 
-        article p {
-            text-align: center;
-            color: white;
-            font-size: 1.5rem;
-        }
 
-        h2 {
-            text-align: center;
-        }
+
+
+
+
 
         nav {
             background-color: #242A31;
@@ -116,6 +175,17 @@
         .overmenu:hover .dropdown_content {
             display: flex;
             flex-direction: column;
+        }
+
+        .splash {
+            background-size: 100%;
+            background-image: url(dk1_sydspanien75.jpg);
+            width: 100vw;
+            height: 50vw;
+            background-repeat: no-repeat;
+            margin-bottom: 175px;
+
+
         }
 
     </style>
@@ -217,20 +287,25 @@
     </header>
 
 
+    <section class="splash"></section>
+
     <section class="forside_section_1"></section>
 
-
+    <h2>Derfor købe en andel</h2>
 
     <section class="forside_section_2"></section>
 
     <template>
         <article>
+            <img>
             <h2></h2>
-            <p></p>
+            <div class="info"></div>
+
         </article>
     </template>
 
     <section class="forside_section_3"></section>
+    <section class="forside_section_4"></section>
 
 
 
@@ -278,7 +353,8 @@
             section2.forEach(elm => {
                 const klon = skabelon.cloneNode(true).content;
                 klon.querySelector("h2").innerHTML = elm.overskrift;
-                klon.querySelector("p").innerHTML = elm.info;
+                klon.querySelector(".info").innerHTML = elm.info;
+                klon.querySelector("img").src = elm.image.guid;
                 listeElm.appendChild(klon);
             })
         }
