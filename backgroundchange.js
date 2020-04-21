@@ -1,11 +1,12 @@
-var test = document.getElementById("test");
+var test = document.getElementById("splash");
+//var test2 = document.getElementById("forside_section_2");
 let curSection;
 let prevSection;
 
 document.onscroll = function () {
 
     scrollTop = document.documentElement.scrollTop;
-    test.innerHTML = scrollTop;
+    //    test.innerHTML = scrollTop;
 
     allSections = document.getElementsByTagName('section');
 
@@ -22,7 +23,7 @@ document.onscroll = function () {
         //  Ændrer baggrundsfarve når man skroller forbi 2/3 del af den forrige sektion
         heightBefore = 0;
         if (i > 0) {
-            heightBefore = allSections[i - 1].offsetHeight / 3;
+            heightBefore = allSections[i - 1].offsetHeight / 4;
         }
 
         if (scrollTop > curSection.offsetTop - heightBefore) {

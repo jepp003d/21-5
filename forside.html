@@ -17,6 +17,13 @@
 
         }
 
+        section {
+
+
+            transition: background 1.5s;
+
+        }
+
         p {
             font-family: neue-haas-grotesk-text, sans-serif;
             font-weight: 100;
@@ -278,6 +285,11 @@
             margin: 0 auto;
             text-align: center;
         }
+
+        .color2 {
+            background-color: #C95D43;
+        }
+
     </style>
 
 
@@ -377,16 +389,18 @@
     </header>
 
 
-    <section class="splash">
+    <section id="splash" class="splash">
         <h1 class="velkommen">TÆNK HVIS DU EJEDE <br> 5 FERIEBOLIGER I UDLANDET</h1>
     </section>
 
 
-    <section class="forside_section_1"></section>
+    <section class="forside_section_1 color2" data-color="white"></section>
+
 
     <h1>Derfor købe en andel</h1>
+    <section class="forside_section_2 color2" data-color="white">
 
-    <section class="forside_section_2"></section>
+    </section>
 
     <template>
         <article>
@@ -397,13 +411,8 @@
         </article>
     </template>
 
-    <section class="forside_section_3"></section>
-    <section class="forside_section_4">
-        <!--
-        <iframe src="https://player.vimeo.com/video/350945832?autoplay=1&loop=1" width="800" height="450" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-        <p><a href="https://vimeo.com/350945832">21-5 opfylder dr&oslash;mme og skaber livsgl&aelig;de</a> from <a href="https://vimeo.com/user29718321">21-5</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
--->
-    </section>
+    <section class="forside_section_3 color2" data-color="white"></section>
+
 
 
 
@@ -461,5 +470,9 @@
         function visSection3() {
             document.querySelector(".forside_section_3").innerHTML = section3.content.rendered;
         }
+
     </script>
-</body></html>
+    <script src="backgroundchange.js"></script>
+</body>
+
+</html>
