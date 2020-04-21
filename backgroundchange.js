@@ -1,4 +1,4 @@
-var test = document.getElementById("splash");
+var test = document.getElementById("forside_section_2");
 //var test2 = document.getElementById("forside_section_2");
 let curSection;
 let prevSection;
