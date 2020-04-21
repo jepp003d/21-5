@@ -27,15 +27,28 @@
             text-align: justify;
         }
 
-        h2 {
+        h1 {
             color: #2a2a2a;
             font-size: 5rem;
             font-family: freight-neo-pro, sans-serif;
             font-weight: 400;
             font-style: normal;
             text-align: center;
-            padding: 0px 0 75px 0;
+            padding: 75px 0 75px 0;
             margin: 0;
+        }
+
+        .velkommen {
+            color: white;
+            font-size: 5rem;
+            font-family: freight-neo-pro, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            text-align: center;
+            margin: 0;
+            position: absolute;
+            top: 5vw;
+
         }
 
         h3 {
@@ -47,21 +60,32 @@
             text-align: center;
             padding: 200px 0 75px 0;
             margin: 0;
+        }
 
+        h4 {
+            color: #2a2a2a;
+            font-size: 3rem;
+            font-family: freight-neo-pro, sans-serif;
+            font-weight: 100;
+            font-style: normal;
+            text-align: center;
+            padding: 200px 0 75px 0;
+            margin: 0;
         }
 
         .splash {
             background-size: 100%;
-            background-image: url(dk1_sydspanien75.jpg);
+            background-image: url(dk21_sydfrankrig55.jpg);
             width: 100vw;
             height: 50vw;
             background-repeat: no-repeat;
+
         }
 
         .forside_section_1,
         .forside_section_3,
         .forside_section_2 {
-            padding: 100px 300px 0 300px;
+            padding: 100px 300px 100px 300px;
         }
 
         .forside_section_1 img {
@@ -70,9 +94,10 @@
 
         .forside_section_1 p,
         .forside_section_3 p {
-            columns: 400px 2;
+            columns: 2;
             column-gap: 75px;
             margin: 0 auto;
+
         }
 
         .forside_section_2 {
@@ -115,7 +140,7 @@
             text-align: center;
         }
 
-        article h2 {
+        article h4 {
             position: absolute;
             top: 0;
         }
@@ -352,18 +377,21 @@
     </header>
 
 
-    <section class="splash"></section>
+    <section class="splash">
+        <h1 class="velkommen">TÆNK HVIS DU EJEDE <br> 5 FERIEBOLIGER I UDLANDET</h1>
+    </section>
+
 
     <section class="forside_section_1"></section>
 
-    <h2>Derfor købe en andel</h2>
+    <h1>Derfor købe en andel</h1>
 
     <section class="forside_section_2"></section>
 
     <template>
         <article>
             <img>
-            <h2></h2>
+            <h4></h4>
             <div class="info"></div>
 
         </article>
@@ -423,7 +451,7 @@
             console.log(section2);
             section2.forEach(elm => {
                 const klon = skabelon.cloneNode(true).content;
-                klon.querySelector("h2").innerHTML = elm.overskrift;
+                klon.querySelector("h4").innerHTML = elm.overskrift;
                 klon.querySelector(".info").innerHTML = elm.info;
                 klon.querySelector("img").src = elm.image.guid;
                 listeElm.appendChild(klon);
