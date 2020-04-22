@@ -58,10 +58,9 @@
         h2 {
             text-align: center;
         }
-
     </style>
     <header>
-<!--
+
         <nav>
             <a href="index.html"> <img class="logo" src="img/Logo.svg"> </a>
 
@@ -153,7 +152,7 @@
 
 
         </nav>
--->
+
 
     </header>
     <style></style>
@@ -166,9 +165,14 @@
 
     <template>
         <h2></h2>
-        <p></p>
-        <img class="grafik" alt="">
-        <img src="" alt="">
+        <div class="sectionwrapper">
+            <div class="col">
+                <p class="text"></p>
+            </div>
+            <div class="col">
+                <img class="grafik" src="" alt=""></div>
+        </div>
+        <img class="image" src="" alt="">
     </template>
 
 
@@ -214,13 +218,11 @@
                 const klon = skabelon.cloneNode(true).content;
                 klon.querySelector("h2").innerHTML = elm.overskrift;
                 klon.querySelector("p").innerHTML = elm.beskrivelse;
-                klon.querySelector("img").src = elm.image.guid;
-                klon.querySelector("img+img").src = elm.grafik.guid;
+                klon.querySelector(".grafik").src = elm.grafik.guid;
+                klon.querySelector(".image").src = elm.image.guid;
+
                 listeElm.appendChild(klon);
             })
         }
-
     </script>
-</body>
-
-</html>
+</body></html>

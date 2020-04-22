@@ -17,7 +17,7 @@
 
     #sektion2 {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
 
 
@@ -136,7 +136,7 @@
         <article class="boliger_grid">
 
 
-            <h1 class="overskrift"></h1>
+            <h2 class="overskrift"></h2>
             <img src="" alt="" class="billede">
         </article>
 
@@ -185,7 +185,7 @@
             console.log(section2);
             section2.forEach(elm => {
                 const klon = skabelon.cloneNode(true).content;
-                klon.querySelector("h1").innerHTML = elm.overskrift;
+                klon.querySelector("h2").innerHTML = elm.overskrift;
                 klon.querySelector("img").src = elm.billede.guid;
                 //                klon.querySelector(".boliger_grid").addEventListener("click", () => {
                 //
