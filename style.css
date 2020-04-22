@@ -6,6 +6,9 @@ img {
 
 }
 
+body {
+    margin: 0;
+}
 
 
 p {
@@ -49,11 +52,14 @@ h4 {
 
 .splash {
     margin-top: 32vw;
-    background-size: 100%;
+    background-size: cover;
     background-image: url(img/splash_forside1.jpg);
-    width: 100vw;
-    height: 50vw;
-    background-repeat: no-repeat;
+    background-position: 50% 40%;
+    height: 50vh;
+
+
+
+
 }
 
 .velkommen {
@@ -64,7 +70,7 @@ h4 {
 
 
     text-align: center;
-    padding-top: 15vw;
+    padding-top: 5vw;
 
 
 
@@ -82,7 +88,8 @@ iframe {
 /**** GENERALT SLUT ****/
 
 
-/***** FORSIDE START *****/
+
+/***** MOBIL FORSIDE START *****/
 
 .forside_section_1 h1:nth-child(1),
 .section_1 h1:nth-child(1),
@@ -132,12 +139,43 @@ article p {
 
 }
 
-/***** FORSIDE SLUT *****/
+/***** MOBIL FORSIDE SLUT *****/
+
+/***** MOBIL 21-5 FORENINGER START *****/
+
+.sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+
+.col {
+    flex-grow: 1;
+    flex-basis: 250px;
+    padding: 0 4vw 0 0;
+
+
+
+
+}
+
+
+
+
+
+
+
+/***** MOBIL 21-5 FORENINGER SLUT *****/
+
 
 
 /***** WEB START *****/
+
+
 @media only screen and (min-width : 1224px) {
 
+    /***** WEB GENERELT START *****/
     .forside_section_1 h1:nth-child(1),
     .section_1 h1:nth-child(1),
     .foreninger h2,
@@ -166,6 +204,10 @@ article p {
 
         padding: 75px 0 75px 0;
         margin: 0;
+    }
+
+    h2 {
+        padding: 5vw 10vw 3vw 10vw;
     }
 
 
@@ -204,10 +246,17 @@ article p {
 
 
 
+
+    /*
+
     .forside_section_1,
     .forside_section_3,
     .forside_section_2 {
         padding: 100px 300px 100px 300px;
+    }
+*/
+    section {
+        padding: 8vw 20vw 8vw 20vw;
     }
 
     .forside_section_1 img {
@@ -215,12 +264,16 @@ article p {
     }
 
     .forside_section_1 p,
-    .forside_section_3 p {
+    .forside_section_3 p,
+    .destinationer_section_1 p,
+    .section_1 p {
         columns: 2;
         column-gap: 75px;
         margin: 0 auto;
 
     }
+
+
 
 
 
@@ -264,20 +317,6 @@ article p {
     article img {
         position: relative;
     }
-
-
-
-    .forside_section_2 img {
-        width: 100%;
-    }
-
-
-
-
-
-
-
-
 
 
 
@@ -341,5 +380,23 @@ article p {
 
 
 }
+
+/***** WEB GENERELT SLUT *****/
+
+/***** WEB FORSIDE START *****/
+.forside_section_2 h4 {
+    font-size: 2rem;
+    padding: 5vw 2vw 0 2vw;
+    color: white;
+    text-shadow: 2px 2px 8px #000000;
+
+}
+
+.forside_section_2 img {
+    filter: blur(1px);
+}
+
+/***** WEB FORSIDE SLUT *****/
+
 
 /***** WEB SLUT *****/
