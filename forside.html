@@ -24,7 +24,6 @@
             transition: background 1s;
 
         }
-
     </style>
 
 
@@ -146,6 +145,7 @@
     </template>
 
     <section class="forside_section_3 color2" data-color="white"></section>
+    <section class="forside_section_4 color2" data-color="white"></section>
 
 
 
@@ -156,11 +156,13 @@
         let section1;
         let section2 = [];
         let section3;
+        let section4;
         const listeElm = document.querySelector(".forside_section_2");
 
         const endpoint1 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/235";
         const endpoint2 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/forside-sektion_4";
         const endpoint3 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/254";
+        const endpoint4 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/693";
         let skabelon = document.querySelector("template");
         document.addEventListener("DOMContentLoaded", start);
 
@@ -173,20 +175,25 @@
             const response1 = await fetch(endpoint1);
             const response2 = await fetch(endpoint2);
             const response3 = await fetch(endpoint3);
+            const response4 = await fetch(endpoint4);
             console.log(response1);
             console.log(response2);
             console.log(response3);
+            console.log(response4);
 
             section1 = await response1.json();
             section2 = await response2.json();
             section3 = await response3.json();
+            section4 = await response4.json();
             console.log(section1);
             console.log(section2);
             console.log(section3);
+            console.log(section4);
 
             visSection1();
             visSection2();
             visSection3();
+            visSection4();
         }
 
 
@@ -212,8 +219,9 @@
             document.querySelector(".forside_section_3").innerHTML = section3.content.rendered;
         }
 
+        function visSection4() {
+            document.querySelector(".forside_section_4").innerHTML = section4.content.rendered;
+        }
     </script>
     <script src="backgroundchange.js"></script>
-</body>
-
-</html>
+</body></html>
