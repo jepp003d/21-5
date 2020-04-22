@@ -54,12 +54,19 @@ h4 {
     margin-top: 32vw;
     background-size: cover;
     background-image: url(img/splash_forside1.jpg);
+<<<<<<< HEAD
+    width: 100vw;
+    height: 50vw;
+    background-repeat: no-repeat;
+    z-index: 2;
+=======
     background-position: 50% 40%;
     height: 50vh;
 
 
 
 
+>>>>>>> origin/master
 }
 
 .velkommen {
@@ -377,12 +384,14 @@ article p {
         text-align: center;
     }
 
+    /*
     .color2 {
         background-color: #C95D43;
 
 
 
     }
+*/
 
 
 }
