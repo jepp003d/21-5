@@ -54,6 +54,7 @@ h4 {
     width: 100vw;
     height: 50vw;
     background-repeat: no-repeat;
+    z-index: 2;
 }
 
 .velkommen {
@@ -335,9 +336,11 @@ article p {
         text-align: center;
     }
 
+    /*
     .color2 {
         background-color: #C95D43;
     }
+*/
 
 
 }

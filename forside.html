@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="menubar.css">
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/eib8sis.css">
     <link rel="stylesheet" href="https://use.typekit.net/jbb7mxc.css">
@@ -24,99 +24,246 @@
             transition: background 1s;
 
         }
+
+        .header .menu {
+            background-color: white;
+            max-height: 0;
+            transition: max-height .2s ease-out;
+            margin-top: 50px;
+
+        }
+
+        .header .menu-icon {
+            padding: 5px;
+            margin-top: 20px;
+            position: relative;
+            float: right;
+            cursor: pointer;
+            top: 0vw;
+            right: 4vw;
+        }
+
+        .header .menu-icon .nav-icon {
+            background: #333;
+            display: block;
+            height: 8px;
+            width: 50px;
+            position: relative;
+            transition: background .2s ease-out;
+        }
+
+        .header .menu-icon .nav-icon:before {
+            background: #333;
+            content: "";
+            display: block;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            top: 15px;
+            transition: all .2s ease-out;
+        }
+
+        .header .menu-icon .nav-icon:after {
+            background: #333;
+            content: "";
+            display: block;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            top: -15px;
+            transition: all .2s ease-out;
+        }
+
+        .header .menu-btn {
+            display: none;
+
+        }
+
+        .header .menu-btn:checked~.menu {
+            max-height: 200vw;
+        }
+
+
+        .header .menu-btn:checked~.menu-icon .nav-icon {
+            background: transparent;
+        }
+
+        .header .menu-btn:checked~.menu-icon .nav-icon:before {
+            transform: rotate(-45deg);
+            top: 0;
+        }
+
+        .header .menu-btn:checked~.menu-icon .nav-icon:after {
+            transform: rotate(45deg);
+            top: 0;
+        }
+
+        /*------BURGERMENU------*/
+
+        /*----------MENUSTYLING---------*/
+
+        body {
+            margin: 0;
+        }
+
+        .menu ul {
+            padding: 0;
+        }
+
+        a {
+            visibility: visible;
+            text-decoration: none;
+            padding: 15px;
+
+
+
+        }
+
+        header {
+            color: white;
+            font-family: freight-neo-pro, sans-serif;
+            font-size: 1.5rem;
+            position: fixed;
+            right: 0;
+            font-weight: 400;
+            font-size: 0.8rem;
+
+        }
+
+        header nav {
+            z-index: 10;
+
+            height: 100vw;
+        }
+
+
+        header nav a {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            color: black;
+            border-bottom: 1px solid black;
+
+        }
+
+        .header nav a:hover {
+            color: #A25F67;
+        }
+
+        .header ul {
+            margin: 0;
+            list-style: none;
+            overflow: scroll;
+
+            right: 0;
+        }
+
+        li {}
+
+        .header ul a {
+            display: block;
+        }
+
+        .header ul a:hover {}
+
+        .overmenu {}
+
+
+        .undermenu {
+            transition: all 1s;
+            opacity: 0;
+            display: none;
+        }
+
+        .menu li:hover>ul {
+            opacity: 1;
+            display: block;
+        }
+
+        /*-------------------JAVASCRIPTCLICK-------------------*/
+
+
+        /*-------------------JAVASCRIPTCLICK-------------------*/
+
+        .undermenu .under-undermenu {
+            display: none;
+        }
+
+
+
+        .menu li:hover>.undermenu>.under-undermenu {
+            display: block;
+        }
     </style>
 
 
-    <header>
+    <header class="header">
+
         <nav>
-            <!--            <a href="index.html"> <img class="logo" src="img/Logo.svg"> </a>-->
 
-            <ul class="list_wrapper">
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
 
-                <li class="overmenu"><a href="forside.html">Forside</a></li>
-                <li class="overmenu"><a href="21-5%20koncept.html">21-5 koncept</a>
-                    <ul class="dropdown_content">
+            <ul class="menu">
+
+                <li><a class="overmenu" href="forside.html">Forside</a></li>
+                <li><a class="overmenu" href="21-5%20koncept.html">21-5 koncept</a>
+                    <ul class="undermenu">
 
                         <li>
                             <a href="booking%20af%20ferieboliger.html">Booking af ferieboliger</a> </li>
-                        <li>Sammensætning af familier</li>
-                        <li>Byt</li>
-                        <li>Fællesskab i foreningen</li>
-                        <li>Om os
-                            <ul class="dropdown_content_second">
-                                <li>21-5 teamet</li>
-                                <li>21-5 familier</li>
+                        <li><a href="">Sammensætning af familier</a></li>
+                        <li><a href="">Byt</a></li>
+                        <li><a href="">Fællesskab i foreningen</a></li>
+
+
+                        <li><a href="">Om os</a>
+                            <ul class="under-undermenu">
+                                <li><a href="">21-5 teamet</a></li>
+                                <li><a href="">21-5 familier</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
+                <li><a class="overmenu" href="foreninger.html">Foreninger</a>
+                    <ul class="undermenu">
+                        <li><a href="">Hvordan kommer vi med</a></li>
+                        <li><a href="">Til salg lige nu</a>
+                            <ul class="under-undermenu">
+                                <li><a href="">Ejerforeningen 21-5 DK36 Grande</a></li>
+                                <li><a href="">Gensalg 21-5 DK15 Family</a></li>
+                                <li><a href="">Gensalg 21-5 DK21 Large</a></li>
 
-                <li class="overmenu"><a href="foreninger.html">Foreninger</a>
-                    <ul class="dropdown_content">
-                        <li>Hvordan kommer vi med</li>
-                        <li>Til salg lige nu
-                            <ul class="dropdown_content_second">
-                                <li>Ejerforeningen 21-5 DK36 Grande</li>
-                                <li>Gensalg 21-5 DK15 Family</li>
-                                <li>Gensalg 21-5 DK21 Large</li>
                             </ul>
                         </li>
                         <li><a href="stiftedeforeninger.html">Stiftede foreninger</a></li>
                     </ul>
                 </li>
 
-                <li class="overmenu"><a href="boliger.html">Boliger</a>
-                    <ul class="dropdown_content">
+                <li><a class="overmenu" href="boliger.html">Boliger</a>
+                    <ul class="undermenu">
                         <li><a href="fra_skrot_til_slot.html">Fra skrot til slot</a></li>
                         <li><a href="viindretter.html">Vi indretter</a></li>
                         <li><a href="viskaberhjem.html">Vi skaber hjem</a></li>
                     </ul>
                 </li>
+                <li><a class="overmenu" href="destinationer.html">Destinationer</a>
 
-                <li class="overmenu"><a href="destinationer.html">Destinationer</a>
-                    <ul class="dropdown_content">
-                        <li><a href="mallorca.html">Mallorca</a></li>
-                        <li><a href="sydspanien.html">Sydspanien</a></li>
-                        <li><a href="toscana.html">Toscana</a></li>
-                        <li><a href="sydfrankrig.html"> Sydfrankrig</a></li>
-                        <li><a href="chamonix.html">Chamonix</a></li>
-                        <li><a href="newyork.html">New York</a></li>
-                        <li><a href="barcelona.html">Barcelona</a></li>
-                        <li><a href="paris.html">Paris</a></li>
-                        <li><a href="rom.html">Rom</a></li>
-                    </ul>
                 </li>
 
-                <li class="overmenu">Økonomi, jura og skat
-                    <ul class="dropdown_content">
+                <li><a class="overmenu" href="">Formalier</a>
+                    <ul class="undermenu">
 
-                        <li>Skat</li>
-                        <li>Investering</li>
-                        <li>Finansiering</li>
-                        <li>Fællesudgifter</li>
-                        <li>Istandsættelse</li>
+                        <li><a href="">Skat</a></li>
+                        <li><a href="">Investering</a></li>
+                        <li><a href="">Finansiering</a></li>
+                        <li><a href="">Istandsættelse</a></li>
+                        <li><a href="">Fællesudgifter</a></li>
 
                     </ul>
                 </li>
 
-                <li class="overmenu"><a href="news.html">News</a>
 
-                </li>
-
-                <li class="overmenu"><a href="">FAQ</a>
-
-                </li>
-                <li class="overmenu"><a href="kontakt.html">Kontakt</a>
-                    <ul class="dropdown_content">
-
-                        <li><a href="kaffemode.html">Kaffemøder</a></li>
-                        <li><a href="orienteringsmode.html">Orienteringmøder</a></li>
-                        <li><a href="job_i_21_5.html">Job i 21-5</a></li>
-
-                    </ul>
-                </li>
             </ul>
-
 
         </nav>
 
@@ -223,5 +370,5 @@
             document.querySelector(".forside_section_4").innerHTML = section4.content.rendered;
         }
     </script>
-    <script src="backgroundchange.js"></script>
+    <!--    <script src="backgroundchange.js"></script>-->
 </body></html>
