@@ -25,215 +25,6 @@
 
         }
 
-/*
-        p {
-        font-family: neue-haas-grotesk-text, sans-serif;
-        font-weight: 100;
-        font-style: normal;
-        font-size: 1rem;
-        letter-spacing: 1.2px;
-        color: #2a2a2a;
-        text-align: justify;
-        }
-
-        h1 {
-        color: #2a2a2a;
-        font-size: 5rem;
-        font-family: freight-neo-pro, sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        text-align: center;
-        padding: 75px 0 75px 0;
-        margin: 0;
-        }
-*/
-
-        /*
-        .velkommen {
-            color: white;
-            font-size: 5rem;
-            font-family: freight-neo-pro, sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            text-align: center;
-            margin: 0;
-            position: absolute;
-            top: 5vw;
-
-        }
-
-        h3 {
-            color: #2a2a2a;
-            font-size: 3rem;
-            font-family: freight-neo-pro, sans-serif;
-            font-weight: 100;
-            font-style: normal;
-            text-align: center;
-            padding: 200px 0 75px 0;
-            margin: 0;
-        }
-
-        h4 {
-            color: #2a2a2a;
-            font-size: 3rem;
-            font-family: freight-neo-pro, sans-serif;
-            font-weight: 100;
-            font-style: normal;
-            text-align: center;
-            padding: 200px 0 75px 0;
-            margin: 0;
-        }
-
-        .splash {
-            background-size: 100%;
-            background-image: url(dk21_sydfrankrig55.jpg);
-            width: 100vw;
-            height: 50vw;
-            background-repeat: no-repeat;
-
-        }
-
-        .forside_section_1,
-        .forside_section_3,
-        .forside_section_2 {
-            padding: 100px 300px 100px 300px;
-        }
-
-        .forside_section_1 img {
-            padding: 0px 0 75px 0;
-        }
-
-        .forside_section_1 p,
-        .forside_section_3 p {
-            columns: 2;
-            column-gap: 75px;
-            margin: 0 auto;
-
-        }
-
-        .forside_section_2 {
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            grid-gap: 40px;
-            max-width: 1200px;
-        }
-
-        article {
-            position: relative;
-            text-align: center;
-            margin: 0 auto;
-        }
-
-
-        article p {
-
-            position: absolute;
-            font-size: 1.5rem;
-            max-width: 350px;
-            z-index: 1;
-        }
-
-
-        .info {
-            padding: 10px;
-            position: absolute;
-            display: grid;
-            align-self: center;
-            justify-self: center;
-
-            max-width: 350px;
-            z-index: 1;
-            top: 4vw;
-        }
-
-        .info p {
-            text-align: center;
-        }
-
-        article h4 {
-            position: absolute;
-            top: 0;
-        }
-
-        article img {
-            position: relative;
-        }
-
-
-
-        .forside_section_2 img {
-            width: 100%;
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-        .wpforms-field-label {
-            display: none;
-        }
-
-        #wpforms-582-field-hp {
-            display: none;
-        }
-
-        div.wpforms-container-full .wpforms-form input[type=date],
-        div.wpforms-container-full .wpforms-form input[type=datetime],
-        div.wpforms-container-full .wpforms-form input[type=datetime-local],
-        div.wpforms-container-full .wpforms-form input[type=email],
-        div.wpforms-container-full .wpforms-form input[type=month],
-        div.wpforms-container-full .wpforms-form input[type=number],
-        div.wpforms-container-full .wpforms-form input[type=password],
-        div.wpforms-container-full .wpforms-form input[type=tel],
-        div.wpforms-container-full .wpforms-form input[type=text],
-        div.wpforms-container-full .wpforms-form input[type=time],
-        div.wpforms-container-full .wpforms-form input[type=url],
-        div.wpforms-container-full .wpforms-form input[type=week],
-        div.wpforms-container-full .wpforms-form select,
-        div.wpforms-container-full .wpforms-form textarea {
-            background-color: #fff;
-            box-sizing: border-box;
-            border-radius: 2px;
-            color: #333;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            display: block;
-            float: none;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            padding: 6px 10px;
-            height: 38px;
-            width: 50%;
-            line-height: 1.3;
-        }
-
-        figure {}
-
-        iframe {
-            height: 50vw;
-            width: 60vw;
-            position: absolute;
-            left: 20vw;
-        }
-
-        .wp-block-embed__wrapper {
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .color2 {
-            background-color: #C95D43;
-        }
-*/
     </style>
 
 
@@ -366,6 +157,7 @@
         let section2 = [];
         let section3;
         const listeElm = document.querySelector(".forside_section_2");
+
         const endpoint1 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/235";
         const endpoint2 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/forside-sektion_4";
         const endpoint3 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/254";
@@ -377,22 +169,28 @@
         }
 
         async function hentData() {
+
             const response1 = await fetch(endpoint1);
             const response2 = await fetch(endpoint2);
             const response3 = await fetch(endpoint3);
             console.log(response1);
             console.log(response2);
             console.log(response3);
+
             section1 = await response1.json();
             section2 = await response2.json();
             section3 = await response3.json();
             console.log(section1);
             console.log(section2);
             console.log(section3);
+
             visSection1();
             visSection2();
             visSection3();
         }
+
+
+
 
         function visSection1() {
 
@@ -413,6 +211,9 @@
         function visSection3() {
             document.querySelector(".forside_section_3").innerHTML = section3.content.rendered;
         }
+
     </script>
     <script src="backgroundchange.js"></script>
-</body></html>
+</body>
+
+</html>
