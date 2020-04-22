@@ -58,6 +58,7 @@
         h2 {
             text-align: center;
         }
+
     </style>
     <header>
 
@@ -160,19 +161,20 @@
         <h1 class="velkommen">FORENINGER</h1>
     </section>
 
-    <h1>Foreninger</h1>
+
     <section class="foreninger"></section>
 
     <template>
         <h2></h2>
         <div class="sectionwrapper">
+            <img class="image" src="" alt="">
             <div class="col">
                 <p class="text"></p>
             </div>
             <div class="col">
                 <img class="grafik" src="" alt=""></div>
         </div>
-        <img class="image" src="" alt="">
+
     </template>
 
 
@@ -217,12 +219,16 @@
             section1.forEach(elm => {
                 const klon = skabelon.cloneNode(true).content;
                 klon.querySelector("h2").innerHTML = elm.overskrift;
+                klon.querySelector(".image").src = elm.image.guid;
                 klon.querySelector("p").innerHTML = elm.beskrivelse;
                 klon.querySelector(".grafik").src = elm.grafik.guid;
-                klon.querySelector(".image").src = elm.image.guid;
+
 
                 listeElm.appendChild(klon);
             })
         }
+
     </script>
-</body></html>
+</body>
+
+</html>

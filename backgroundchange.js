@@ -14,9 +14,7 @@ document.onscroll = function () {
         prevSection = curSection;
         curSection = allSections[i];
 
-        console.log("prev", prevSection);
 
-        console.log("curSection", curSection);
 
 
 
@@ -29,6 +27,7 @@ document.onscroll = function () {
         if (scrollTop > curSection.offsetTop - heightBefore) {
             curColor = curSection.getAttribute("data-color");
             prevColor = "#C95D43";
+
             curSection.style.background = curColor;
             prevSection.style.background = prevColor;
 
