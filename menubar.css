@@ -8,6 +8,12 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
+
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
 }
 
 .list_wrapper {
@@ -30,6 +36,7 @@ ul {
     list-style-type: none;
     padding: 0;
     color: white;
+    text-decoration: none;
 }
 
 .dropdown_content {
@@ -54,9 +61,11 @@ ul {
 
 .overmenu {
     padding: 20px;
+
 }
 
 .overmenu:hover .dropdown_content {
     display: flex;
     flex-direction: column;
+
 }

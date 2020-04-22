@@ -10,61 +10,65 @@
     <link rel="stylesheet" href="https://use.typekit.net/jbb7mxc.css">
     <title>Destinationer</title>
     <style>
+        /*
         * {
-            margin: 0;
-            box-sizing: border-box;
+        margin: 0;
+        box-sizing: border-box;
         }
 
         img {
-            width: 100%;
-            height: 230px;
-            border-top: solid black 1px;
-            border-bottom: solid black 1px
+        width: 100%;
+        height: 230px;
+        border-top: solid black 1px;
+        border-bottom: solid black 1px
         }
 
         h1 {
-            text-align: center;
-            font-size: 3em;
-            margin: 10px;
-            padding-top: 30px;
+        text-align: center;
+        font-size: 3em;
+        margin: 10px;
+        padding-top: 30px;
         }
 
         .destinationer_section_1 p {
-            margin: 0 auto;
-            max-width: 600px;
-            margin-bottom: 100px;
-            padding: 20px;
+        margin: 0 auto;
+        max-width: 600px;
+        margin-bottom: 100px;
+        padding: 20px;
 
         }
 
         .container_splash {
-            z-index: 10;
-            position: absolute;
-            top: 355px;
-            left: 0;
-            width: 50%;
-            height: 80%;
-            background-color: white;
-            border-top: solid black 1px;
-            border-right: solid black 1px;
-        }
-
-        .splash {
-            background-image: url(destinationer-splash.jpg);
-            min-height: 700px;
-            background-size: cover;
-        }
+        z-index: 10;
+        position: absolute;
+        top: 355px;
+        left: 0;
+        width: 50%;
+        height: 80%;
+        background-color: white;
+        border-top: solid black 1px;
+        border-right: solid black 1px;
+        }*/
+        /*
+.splash {
+background-image: url(destinationer-splash.jpg);
+min-height: 700px;
+background-size: cover;
+}
+*/
 
         .destinationer_section_2 {
             margin: 0 auto;
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             grid-gap: 40px;
             max-width: 1200px;
-            padding-top: 149px;
+
 
         }
 
+        /*
         .forside_section_2 img {
             max-width: 1000px;
             border: solid black 1px;
@@ -91,6 +95,7 @@
         footer {
             height: 50px;
         }
+*/
     </style>
 </head>
 
@@ -191,11 +196,12 @@
 
 
 
-    <section class="splash"></section>
-    <div class="container_splash">
-        <h1>Destinationer</h1>
-        <section class="destinationer_section_1"></section>
-    </div>
+    <section id="splash" class="splash">
+        <h1 class="velkommen">DESTINATIONER</h1>
+    </section>
+
+
+    <section class="destinationer_section_1"></section>
 
 
 
