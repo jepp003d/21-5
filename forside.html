@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/eib8sis.css">
     <link rel="stylesheet" href="https://use.typekit.net/jbb7mxc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -25,78 +26,7 @@
 
         }
 
-        .header .menu {
-            background-color: white;
-            max-height: 0;
-            transition: max-height .2s ease-out;
-            margin-top: 50px;
 
-        }
-
-        .header .menu-icon {
-            padding: 5px;
-            margin-top: 20px;
-            position: relative;
-            float: right;
-            cursor: pointer;
-            top: 0vw;
-            right: 4vw;
-        }
-
-        .header .menu-icon .nav-icon {
-            background: #333;
-            display: block;
-            height: 8px;
-            width: 50px;
-            position: relative;
-            transition: background .2s ease-out;
-        }
-
-        .header .menu-icon .nav-icon:before {
-            background: #333;
-            content: "";
-            display: block;
-            height: 100%;
-            position: absolute;
-            width: 100%;
-            top: 15px;
-            transition: all .2s ease-out;
-        }
-
-        .header .menu-icon .nav-icon:after {
-            background: #333;
-            content: "";
-            display: block;
-            height: 100%;
-            position: absolute;
-            width: 100%;
-            top: -15px;
-            transition: all .2s ease-out;
-        }
-
-        .header .menu-btn {
-            display: none;
-
-        }
-
-        .header .menu-btn:checked~.menu {
-            max-height: 200vw;
-        }
-
-
-        .header .menu-btn:checked~.menu-icon .nav-icon {
-            background: transparent;
-        }
-
-        .header .menu-btn:checked~.menu-icon .nav-icon:before {
-            transform: rotate(-45deg);
-            top: 0;
-        }
-
-        .header .menu-btn:checked~.menu-icon .nav-icon:after {
-            transform: rotate(45deg);
-            top: 0;
-        }
 
         /*------BURGERMENU------*/
 
@@ -106,67 +36,65 @@
             margin: 0;
         }
 
-        .menu ul {
-            padding: 0;
-        }
+        /* Style the navigation menu */
+        .topnav {
+            overflow: hidden;
 
-        a {
-            visibility: visible;
-            text-decoration: none;
-            padding: 15px;
-
-
+            position: fixed;
+            width: 100%;
 
         }
 
-        header {
+        /* Hide the links inside the navigation menu (except for logo/home) */
+        .topnav #myLinks {
+            display: none;
+
+        }
+
+        /* Style navigation menu links */
+        .topnav a {
             color: white;
+            padding: 14px 16px;
+            display: block;
+            text-decoration: none;
+
+        }
+
+        /* Style the hamburger menu */
+        .topnav a.icon {
+
+            color: black;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+
+        }
+
+        /* Add a grey background color on mouse-over */
+
+
+        /* Style the active link (or home/logo) */
+        .active {
+            /*            background-color: white;*/
+            color: white;
+            position: relative;
+
+        }
+
+        ul {
+            list-style: none;
+            text-decoration: none;
+            float: right;
+        }
+
+        .menu a {
+            color: black;
             font-family: freight-neo-pro, sans-serif;
             font-size: 1.5rem;
-            position: fixed;
-            right: 0;
             font-weight: 400;
-            font-size: 0.8rem;
-
-        }
-
-        header nav {
-            z-index: 10;
-
-            height: 100vw;
-        }
-
-
-        header nav a {
             font-size: 1.5rem;
-            text-transform: uppercase;
-            color: black;
-            border-bottom: 1px solid black;
-
         }
-
-        .header nav a:hover {
-            color: #A25F67;
-        }
-
-        .header ul {
-            margin: 0;
-            list-style: none;
-            overflow: scroll;
-
-            right: 0;
-        }
-
-        li {}
-
-        .header ul a {
-            display: block;
-        }
-
-        .header ul a:hover {}
-
-        .overmenu {}
-
 
         .undermenu {
             transition: all 1s;
@@ -178,30 +106,12 @@
             opacity: 1;
             display: block;
         }
-
-        /*-------------------JAVASCRIPTCLICK-------------------*/
-
-
-        /*-------------------JAVASCRIPTCLICK-------------------*/
-
-        .undermenu .under-undermenu {
-            display: none;
-        }
-
-
-
-        .menu li:hover>.undermenu>.under-undermenu {
-            display: block;
-        }
     </style>
 
-
-    <header class="header">
-
-        <nav>
-
-            <input class="menu-btn" type="checkbox" id="menu-btn" />
-            <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+    <div class="topnav">
+        <a href="#home" class="active">Logo</a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
 
             <ul class="menu">
 
@@ -265,9 +175,12 @@
 
             </ul>
 
-        </nav>
-
-    </header>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
 
 
     <section id="splash" class="splash">
@@ -341,6 +254,7 @@
             visSection2();
             visSection3();
             visSection4();
+
         }
 
 
@@ -368,6 +282,21 @@
 
         function visSection4() {
             document.querySelector(".forside_section_4").innerHTML = section4.content.rendered;
+        }
+
+        /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            var y = document.querySelector(".topnav");
+
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+                x.style.height = "50vw";
+                x.style.backgroundColor = "white";
+
+            }
         }
     </script>
     <!--    <script src="backgroundchange.js"></script>-->
