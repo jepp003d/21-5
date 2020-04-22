@@ -5,8 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boliger</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="menubar.css">
+    <link rel="stylesheet" href="https://use.typekit.net/eib8sis.css">
+    <link rel="stylesheet" href="https://use.typekit.net/jbb7mxc.css">
 </head>
 <style>
     img {
@@ -122,6 +124,9 @@
     </header>
 
     <!--    <h1>Boliger</h1>-->
+    <section id="splash" class="splash">
+        <h1> BOLIGER </h1>
+    </section>
     <section id="sektion1"></section>
 
 
@@ -181,25 +186,25 @@
                 const klon = skabelon.cloneNode(true).content;
                 klon.querySelector("h1").innerHTML = elm.overskrift;
                 klon.querySelector("img").src = elm.billede.guid;
-                klon.querySelector(".boliger_grid").addEventListener("click", () => {
-
-                    if (elm.id == "369") {
-                        console.log(id);
-
-                        console.log("if sætning1");
-                        location.href = "fra_skrot_til_slot.html";
-
-
-
-                    }
-
-                });
+                //                klon.querySelector(".boliger_grid").addEventListener("click", () => {
+                //
+                //                    if (elm.id == "369") {
+                //                        console.log(id);
+                //
+                //                        console.log("if sætning1");
+                //                        location.href = "fra_skrot_til_slot.html";
+                //
+                //
+                //
+                //                    }
+                //
+                //                });
 
                 listeElm.appendChild(klon);
 
 
 
-            })
+            });
 
         }
 
