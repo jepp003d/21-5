@@ -28,161 +28,99 @@
 
 
 
-        /*------BURGERMENU------*/
-
-        /*----------MENUSTYLING---------*/
-
-        body {
-            margin: 0;
-        }
-
-        /* Style the navigation menu */
-        .topnav {
-            overflow: hidden;
-
-            position: fixed;
-            width: 100%;
-
-        }
-
-        /* Hide the links inside the navigation menu (except for logo/home) */
-        .topnav #myLinks {
-            display: none;
-
-        }
-
-        /* Style navigation menu links */
-        .topnav a {
-            color: white;
-            padding: 14px 16px;
-            display: block;
-            text-decoration: none;
-
-        }
-
-        /* Style the hamburger menu */
-        .topnav a.icon {
-
-            color: black;
-            display: block;
-            position: absolute;
-            right: 0;
-            top: 0;
-
-        }
-
-        /* Add a grey background color on mouse-over */
-
-
-        /* Style the active link (or home/logo) */
-        .active {
-            /*            background-color: white;*/
-            color: white;
-            position: relative;
-
-        }
-
-        ul {
-            list-style: none;
-            text-decoration: none;
-            float: right;
-        }
-
-        .menu a {
-            color: black;
-            font-family: freight-neo-pro, sans-serif;
-            font-size: 1.5rem;
-            font-weight: 400;
-            font-size: 1.5rem;
-        }
-
-        .undermenu {
-            transition: all 1s;
-            opacity: 0;
-            display: none;
-        }
-
-        .menu li:hover>ul {
-            opacity: 1;
-            display: block;
-        }
-
+        /*------BURGERMENU-WEB------*/
     </style>
 
-    <div class="topnav">
-        <a href="#home" class="active">Logo</a>
-        <!-- Navigation links (hidden by default) -->
-        <div id="myLinks">
-
-            <ul class="menu">
-
-                <li><a class="overmenu" href="forside.html">Forside</a></li>
-                <li><a class="overmenu" href="21-5%20koncept.html">21-5 koncept</a>
-                    <ul class="undermenu">
-
-                        <li>
-                            <a href="booking%20af%20ferieboliger.html">Booking af ferieboliger</a> </li>
-                        <li><a href="">Sammensætning af familier</a></li>
-                        <li><a href="">Byt</a></li>
-                        <li><a href="">Fællesskab i foreningen</a></li>
+    <header>
+        <nav role="navigation">
+            <div id="menuToggle">
+                <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+                <div class="logo"> <img src="img/21_5_logo.svg" alt="21-5 logo"></div>
+                <input type="checkbox" />
 
 
-                        <li><a href="">Om os</a>
-                            <ul class="under-undermenu">
-                                <li><a href="">21-5 teamet</a></li>
-                                <li><a href="">21-5 familier</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a class="overmenu" href="foreninger.html">Foreninger</a>
-                    <ul class="undermenu">
-                        <li><a href="">Hvordan kommer vi med</a></li>
-                        <li><a href="">Til salg lige nu</a>
-                            <ul class="under-undermenu">
-                                <li><a href="">Ejerforeningen 21-5 DK36 Grande</a></li>
-                                <li><a href="">Gensalg 21-5 DK15 Family</a></li>
-                                <li><a href="">Gensalg 21-5 DK21 Large</a></li>
+                <!--
+    Some spans to act as a hamburger.
 
-                            </ul>
-                        </li>
-                        <li><a href="stiftedeforeninger.html">Stiftede foreninger</a></li>
-                    </ul>
-                </li>
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+                <span class="burger"></span>
+                <span class="burger"></span>
+                <span class="burger"></span>
 
-                <li><a class="overmenu" href="boliger.html">Boliger</a>
-                    <ul class="undermenu">
-                        <li><a href="fra_skrot_til_slot.html">Fra skrot til slot</a></li>
-                        <li><a href="viindretter.html">Vi indretter</a></li>
-                        <li><a href="viskaberhjem.html">Vi skaber hjem</a></li>
-                    </ul>
-                </li>
-                <li><a class="overmenu" href="destinationer.html">Destinationer</a>
+                <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+                <ul class="menu">
 
-                </li>
+                    <li><a class="overmenu" href="forside.html">Forside</a></li>
+                    <li><a class="overmenu" href="21-5%20koncept.html">21-5 koncept<span class="arrow"></span></a>
+                        <ul class="undermenu">
 
-                <li><a class="overmenu" href="">Formalier</a>
-                    <ul class="undermenu">
-
-                        <li><a href="">Skat</a></li>
-                        <li><a href="">Investering</a></li>
-                        <li><a href="">Finansiering</a></li>
-                        <li><a href="">Istandsættelse</a></li>
-                        <li><a href="">Fællesudgifter</a></li>
-
-                    </ul>
-                </li>
+                            <li>
+                                <a href="booking%20af%20ferieboliger.html">Booking af ferieboliger</a> </li>
+                            <li><a href="">Sammensætning af familier</a></li>
+                            <li><a href="">Byt</a></li>
+                            <li><a href="">Fællesskab i foreningen</a></li>
 
 
-            </ul>
+                            <li><a href="">Om os<span class="arrow"></span></a>
+                                <ul class="under-undermenu">
+                                    <li><a class="21_5_teamet" href="">21-5 teamet</a></li>
+                                    <li><a href="">21-5 familier</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a class="overmenu" href="foreninger.html">Foreninger<span class="arrow"></span></a>
+                        <ul class="undermenu">
+                            <li><a href="">Hvordan kommer vi med</a></li>
+                            <li><a href="">Til salg lige nu<span class="arrow"></span></a>
+                                <ul class="under-undermenu">
+                                    <li><a href="">Ejerforeningen 21-5 DK36 Grande</a></li>
+                                    <li><a href="">Gensalg 21-5 DK15 Family</a></li>
+                                    <li><a href="">Gensalg 21-5 DK21 Large</a></li>
 
-        </div>
-        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
+                                </ul>
+                            </li>
+                            <li><a href="stiftedeforeninger.html">Stiftede foreninger</a></li>
+                        </ul>
+                    </li>
 
+                    <li><a class="overmenu" href="boliger.html">Boliger<span class="arrow"></span></a>
+                        <ul class="undermenu">
+                            <li><a href="fra_skrot_til_slot.html">Fra skrot til slot</a></li>
+                            <li><a href="viindretter.html">Vi indretter</a></li>
+                            <li><a href="viskaberhjem.html">Vi skaber hjem</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="overmenu" href="destinationer.html">Destinationer</a>
+
+                    </li>
+
+                    <li><a class="overmenu" href="">Formalier<span class="arrow"></span></a>
+                        <ul class="undermenu">
+
+                            <li><a href="">Skat</a></li>
+                            <li><a href="">Investering</a></li>
+                            <li><a href="">Finansiering</a></li>
+                            <li><a href="">Istandsættelse</a></li>
+                            <li><a href="">Fællesudgifter</a></li>
+
+                        </ul>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </nav>
+    </header>
 
     <section id="splash" class="splash">
         <h1 class="velkommen">TÆNK HVIS DU EJEDE <br> 5 FERIEBOLIGER I UDLANDET</h1>
@@ -299,9 +237,6 @@
 
             }
         }
-
     </script>
     <!--    <script src="backgroundchange.js"></script>-->
-</body>
-
-</html>
+</body></html>
