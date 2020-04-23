@@ -49,24 +49,92 @@ h4 {
     margin: 0;
 }
 
+/*--------------SPLASHBILLEDER---------------*/
 
 .splash {
     margin-top: 32vw;
     background-size: cover;
     background-image: url(img/splash_forside1.jpg);
-<<<<<<< HEAD
-    width: 100vw;
-    height: 50vw;
+
+
     background-repeat: no-repeat;
     z-index: 2;
-=======
     background-position: 50% 40%;
+    height: 80vh;
+
+}
+
+.splash_koncept {
+    background-size: cover;
+    background-image: url(img/splash_forside3.jpg);
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-position: 10% 30%;
     height: 50vh;
+    margin-bottom: 100px;
+}
 
+.splash_foreninger {
+    background-size: cover;
+    background-image: url(img/splash_foreninger.jpg);
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-position: 10% 45%;
+    height: 50vh;
+}
 
+.splash_stiftedeforeninger {
+    background-size: cover;
+    background-image: url(img/splash_stiftedeforeninger.jpg);
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-position: 10% 45%;
+    height: 50vh;
+    margin-bottom: 100px;
+}
 
+.splash_boliger {
+    background-size: cover;
+    background-image: url(img/splash_boliger.jpg);
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-position: 10% 29%;
+    height: 50vh;
+}
 
->>>>>>> origin/master
+.splash_fraskrottilslot {
+    background-size: cover;
+    background-image: url(img/splash_skrottilslot.jpg);
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-position: 10% 80%;
+    height: 50vh;
+}
+
+.splash_destinationer {
+    background-size: cover;
+    background-image: url(img/splash_destinationer.jpg);
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-position: 10% 40%;
+    height: 50vh;
+    margin-bottom: 100px;
+}
+
+.splash_mallorca {
+    background-size: cover;
+    background-image: url(img/splash_mallorca.jpg);
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-position: 10% 78%;
+    height: 50vh;
 }
 
 .velkommen {
@@ -83,6 +151,9 @@ h4 {
 
 }
 
+.forside_section_4 h1 {
+    padding-bottom: 0;
+}
 
 
 iframe {
@@ -122,7 +193,8 @@ iframe {
 }
 
 .forside_section_2,
-.destinationer_section_2 {
+.destinationer_section_2,
+.foreninger_sec2 {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -157,14 +229,18 @@ article p {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    align-items: center;
 
 }
 
-.col {
+.col1 {
+    flex-grow: 3;
+    flex-basis: 250px;
+}
+
+.col2 {
     flex-grow: 1;
     flex-basis: 250px;
-
-
 }
 
 
@@ -207,10 +283,15 @@ article p {
 
     h1 {
 
-        font-size: 5rem;
+        font-size: 3rem;
 
         padding: 75px 0 75px 0;
         margin: 0;
+    }
+
+    #splash h1 {
+        font-size: 5rem;
+        padding-top: 200px;
     }
 
     h2 {
@@ -238,10 +319,10 @@ article p {
     h2,
     h3 {
 
-        font-size: 3rem;
+        font-size: 2rem;
 
 
-        padding: 200px 0 75px 0;
+        padding: 75px 0 75px 0;
         margin: 0;
     }
 
@@ -265,7 +346,7 @@ article p {
     }
 */
     section {
-        padding: 8vw 20vw 8vw 20vw;
+        padding: 0 20vw 0 20vw;
         transition: background 1s;
     }
 
@@ -276,7 +357,9 @@ article p {
     .forside_section_1 p,
     .forside_section_3 p,
     .destinationer_section_1 p,
-    .section_1 p {
+    .section_1 p,
+    .section_1 p,
+    .foreninger p {
         columns: 2;
         column-gap: 75px;
         margin: 0 auto;
@@ -384,12 +467,14 @@ article p {
         text-align: center;
     }
 
+    /*
     .color2 {
         background-color: #C95D43;
 
 
 
     }
+*/
 
 
 }
@@ -409,9 +494,11 @@ article p {
     filter: blur(1px);
 }
 
+/*
 h2 {
     padding: 10vw 0 5vw 0;
 }
+*/
 
 
 
@@ -427,15 +514,26 @@ h2 {
 
 .foreninger .text {
     padding-top: 6vw;
-    padding-right: 4vw;
+    padding-right: 0;
 }
 
 .foreninger .grafik {
-    padding-top: 4vw;
-    padding-left: 7vw;
-    width: 80%;
+
+    width: 66%;
 }
 
+
+
+.foreninger_sec2 article {
+    background-color: #c63f3f;
+    color: #D0AD87;
+    border: 5px solid #ffe9b7;
+    cursor: pointer;
+}
+
+.foreninger_sec2 article h2 {
+    padding: 0;
+}
 
 /****** WEB FORENINGER SLUT *****/
 /***** WEB DESTINATIONER START ****/
