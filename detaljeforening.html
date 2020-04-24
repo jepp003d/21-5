@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 
 <head>
     <meta charset="utf-8">
@@ -8,50 +8,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/eib8sis.css">
     <link rel="stylesheet" href="https://use.typekit.net/jbb7mxc.css">
-    <title></title>
+    <title>Stiftede foreninger</title>
     <style>
-        img {
-            width: 100%;
-        }
 
 
-        main {
-            50vw;
-        }
-
-        .carousel {
-            width: 70%;
-            height: 70%;
-        }
-
-        .container {
-            display: flex;
-            overflow: scroll;
-            scroll-snap-type: x mandatory;
-        }
-
-        .container section {
-            scroll-snap-align: start;
-            min-width: 100%;
-        }
-
-        .carousel-inner {
-            display: flex;
-
-        }
-
-        .backwd .fwd {
-            display: flex;
-            cursor: pointer;
-        }
-
-        .backwd .fwd p {
-            z-index: 10;
-            position: absolute;
-            margin: 10px;
-            align-items: center;
-
-        }
     </style>
 </head>
 
@@ -146,6 +106,9 @@
             </div>
         </nav>
     </header>
+    <section id="splash" class="splash_stiftedeforeninger">
+        <h1 class="velkommen">Stiftede foreninger</h1>
+    </section>
 
     <section id="detalje">
 
@@ -160,27 +123,28 @@
                     <img class="caro_imgs" src="" alt="">
                 </section>
             </template>
-            <main>
-
-                <div class="carousel">
-                    <div class="carousel-inner">
-                        <div class="backwd">
-                            <p>&lt;</p>
-                        </div>
-                        <div class="container"></div>
-                        <div class="forwd">
-                            <p>&gt;</p>
-                        </div>
-                    </div>
-                    <div class="legend-container"></div>
-                </div>
-            </main>
 
         </article>
+    </section>
+    <section>
+        <main>
 
+            <div class="carousel">
+                <div class="carousel_inner">
 
+                    <div class="bwd">
+                        <p>&lt;</p>
+                    </div>
+                    <div class="container">
 
-
+                    </div>
+                    <div class="fwd">
+                        <p>&gt;</p>
+                    </div>
+                </div>
+                <div class="legend-container"></div>
+            </div>
+        </main>
     </section>
     <script>
         const urlParams = new URLSearchParams(window.location.search)
@@ -253,5 +217,8 @@
 
             });
         }
+
     </script>
-</body></html>
+</body>
+
+</html>

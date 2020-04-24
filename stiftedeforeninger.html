@@ -118,10 +118,17 @@
 
     <template>
         <article>
+
             <h2></h2>
-            <img src="" alt="">
+            <div class="sectionwrapper">
+                <div class="">
+                    <p></p>
+                </div>
+                <div class=""><img src="" alt=""></div>
+            </div>
         </article>
     </template>
+
 
 
 
@@ -171,13 +178,18 @@
             section2.forEach(elm => {
                 const klon = skabelon.cloneNode(true).content;
                 klon.querySelector("h2").innerHTML = elm.overskrift;
+                klon.querySelector("p").innerHTML = elm.beskrivelse;
                 klon.querySelector("img").src = elm.imge.guid;
-                klon.querySelector("article").addEventListener("click", () => {
-                    location.href = "detaljeforening.html?id=" + elm.id;
 
-                });
+                //                klon.querySelector("article").addEventListener("click", () => {
+                // location.href = "detaljeforening.html?id=" + elm.id;
+                //
+                // });
                 listeElm.appendChild(klon);
             })
         }
+
     </script>
-</body></html>
+</body>
+
+</html>

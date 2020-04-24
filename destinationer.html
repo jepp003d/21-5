@@ -169,7 +169,59 @@
                 klon.querySelector("img").src = elm.billede.guid;
                 listeElm.appendChild(klon);
             })
+
+            document.querySelector("article:nth-child(1)").addEventListener("click", visToscana)
+            document.querySelector("article:nth-child(2)").addEventListener("click", visSydfrankrig)
+            document.querySelector("article:nth-child(3)").addEventListener("click", visNewYork)
+            document.querySelector("article:nth-child(4)").addEventListener("click", visBarcelona)
+            document.querySelector("article:nth-child(5)").addEventListener("click", visRom)
+            document.querySelector("article:nth-child(6)").addEventListener("click", visParis)
+            document.querySelector("article:nth-child(7)").addEventListener("click", visSydspanien)
+            document.querySelector("article:nth-child(8)").addEventListener("click", visChamonix)
+            document.querySelector("article:nth-child(9)").addEventListener("click", visMallorca)
+
+
+            function visToscana() {
+                location.href = "toscana.html";
+            }
+
+            function visSydfrankrig() {
+                location.href = "sydfrankrig.html";
+            }
+
+            function visNewYork() {
+                location.href = "newyork.html";
+            }
+
+            function visBarcelona() {
+                location.href = "barcelona.html";
+            }
+
+            function visRom() {
+                location.href = "rom.html";
+            }
+
+            function visParis() {
+                location.href = "paris.html";
+            }
+
+            function visSydspanien() {
+                location.href = "sydspanien.html";
+            }
+
+            function visChamonix() {
+                location.href = "chamonix.html";
+            }
+
+            function visMallorca() {
+                location.href = "mallorca.html";
+            }
+
+
         }
+
     </script>
     <script src="backgroundchange.js"></script>
-</body></html>
+</body>
+
+</html>

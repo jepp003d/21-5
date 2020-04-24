@@ -108,20 +108,42 @@
 
 
     <section id="splash" class="splash_fraskrottilslot">
-        <h1 class="velkommen">BOLIGER</h1>
+        <h1 class="velkommen">FRA SKROT TIL SLOT</h1>
     </section>
 
     <section id="sektion1"></section>
 
 
-    <section id="sektion2"></section>
+    <section id="sektion2">
+        <h2 class="overskrift"></h2>
+        <p class="tekst"></p>
+    </section>
 
+    <template>
+        <section>
+            <img class="caro_imgs" src="" alt="">
+        </section>
+    </template>
+    <section>
+        <main>
 
+            <div class="carousel">
+                <div class="carousel_inner">
 
+                    <div class="bwd">
+                        <p>&lt;</p>
+                    </div>
+                    <div class="container">
 
-    <h1 class="overskrift"></h1>
-    <p class="tekst"></p>
-    <img src="" alt="" class="billede">
+                    </div>
+                    <div class="fwd">
+                        <p>&gt;</p>
+                    </div>
+                </div>
+                <div class="legend-container"></div>
+            </div>
+        </main>
+    </section>
 
 
 
@@ -130,17 +152,21 @@
 
     <script>
         let section1;
-        let section2[];
-        //        let section3;
-        //        let section4;
-        //        let section5;
-        //        let section6;
-        //        let section7;
+        let section2; //Toscana overskrift + tekst
+        let toscanaKarrussel; //Toscana karrussel
+        let section3;
+        let section4;
+        let section5;
+        let section6;
+        let section7;
+        let numberOfPicsInCaro;
+        let caroCurrentNum = 0;
 
-        const listeElm = document.querySelector("#sektion2");
-        let id = urlParams.get("id");
+
         const endpoint1 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/333";
-        const endpoint2 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/billedkarussel" + id;
+        const endpoint2 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/billedkarussel/330";
+        const endpoint3 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/billedkarussel/330";
+
         let skabelon = document.querySelector("template");
         document.addEventListener("DOMContentLoaded", start);
 
@@ -151,16 +177,22 @@
         async function hentData() {
             const response1 = await fetch(endpoint1);
             const response2 = await fetch(endpoint2);
+            const response3 = await fetch(endpoint3);
             console.log(response1);
             console.log(response2);
+            console.log(response3);
 
             section1 = await response1.json();
             section2 = await response2.json();
+            toscanaKarrussel = await response3.json();
             console.log(section1);
             console.log(section2);
+            console.log("ANANAS",
+                toscanaKarrussel);
 
             visSection1();
             visSection2();
+            visToscanaKarrussel();
         }
 
         function visSection1() {
@@ -169,23 +201,77 @@
         }
 
         function visSection2() {
-            console.log(section2);
-            section2.forEach(elm => {
-                const klon = skabelon.cloneNode(true).content;
-                klon.querySelector("h1").innerHTML = elm.overskrift;
-                klon.querySelector("p").innerHTML = elm.tekst;
 
-
-                klon.querySelector("img").src = elm.billede.guid;
-
-
-                listeElm.appendChild(klon);
+            document.querySelector(".overskrift").innerHTML = section2.overskrift;
+            document.querySelector(".tekst").innerHTML = section2.tekst;
 
 
 
+
+
+
+        }
+
+        function visToscanaKarrussel() {
+            numberOfPicsInCaro = toscanaKarrussel.billeder.length;
+            toscanaKarrussel.billeder.forEach((billeder, index) => {
+                const theClone = document.querySelector("template").cloneNode(true).content;
+                const secondClone = document.querySelector("template").cloneNode(true).content;
+                theClone.querySelector("img").src = billeder.guid;
+                secondClone.querySelector("img").src = billeder.guid;
+                document.querySelector(".container").appendChild(theClone);
+                document.querySelector(".legend-container").appendChild(theClone);
             })
 
+            document.querySelector(".container").addEventListener("scroll", scrollFunction);
+        }
 
+
+        function fwd() {
+            if (caroCurrentNum < numberOfPicsInCaro - 1) {
+                caroCurrentNum++;
+                navigate();
+            }
+        }
+
+        function bwd() {
+            if (caroCurrentNum > 0)
+                caroCurrentNum--;
+            navigate();
+        }
+
+        function navigate() {
+            document.querySelector(".container").scrollTo({
+                left: caroCurrentNum * document.querySelector(".caro_imgs").width,
+                behavior: "smooth"
+            })
+            setBtns();
+        }
+
+        function scrollFunction() {
+            //  console.log("scrollFunction");
+
+            caroCurrentNum = Math.round(document.querySelector(".container").scrollLeft / document.querySelector(".caro_imgs").width);
+            console.log(caroCurrentNum);
+            setBtns();
+
+        }
+
+        function setBtns() {
+            if (caroCurrentNum < numberOfPicsInCaro - 1) {
+                document.querySelector(".fwd").style.opacity = 1;
+                document.querySelector(".fwd").style.cursor = "pointer";
+            } else {
+                document.querySelector(".fwd").style.opacity = 0.2;
+                document.querySelector(".fwd").style.cursor = "default";
+            }
+            if (caroCurrentNum > 0) {
+                document.querySelector(".bwd").style.opacity = 1;
+                document.querySelector(".bwd").style.cursor = "pointer";
+            } else {
+                document.querySelector(".bwd").style.opacity = 0.2;
+                document.querySelector(".bwd").style.cursor = "default";
+            }
 
         }
     </script>

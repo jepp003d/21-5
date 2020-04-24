@@ -49,6 +49,63 @@ h4 {
     margin: 0;
 }
 
+
+/********* KARUSSELLER START ************/
+
+
+.carousel {
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+
+
+}
+
+.container {
+    display: flex;
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.container section {
+    scroll-snap-align: start;
+    min-width: 100%;
+    padding: 0;
+}
+
+.carousel_inner {
+
+    display: flex;
+
+
+}
+
+
+
+.bwd,
+.fwd {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+
+}
+
+.bwd p,
+.fwd p {
+    position: absolute;
+    z-index: 10;
+    color: white;
+    font-size: 2rem;
+
+}
+
+.fwd p {
+    margin-left: -17px;
+}
+
+/********* KARUSSELLER SLUT ***************/
+
 /*--------------SPLASHBILLEDER---------------*/
 
 .splash {
@@ -193,11 +250,10 @@ iframe {
 }
 
 .forside_section_2,
-.destinationer_section_2,
-.foreninger_sec2 {
+.destinationer_section_2 {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 40px;
 
 }
@@ -213,6 +269,7 @@ article {
 */
 
 
+/*
 article p {
 
     position: absolute;
@@ -220,6 +277,7 @@ article p {
     max-width: 350px;
 
 }
+*/
 
 /***** MOBIL FORSIDE SLUT *****/
 
@@ -250,6 +308,24 @@ article p {
 
 
 /***** MOBIL 21-5 FORENINGER SLUT *****/
+/***** MOBIL STIFTEDE FORENINGER START ****/
+.foreninger_sec2 .sectionwrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-flow: dense;
+    /*    grid-gap: 40px;*/
+}
+
+
+
+.foreninger_sec2 p {
+    text-align: start;
+    max-width: 350px;
+
+}
+
+
+/***** MOBIL STIFTEDE FORENINGER SLUT ****/
 
 
 
@@ -379,9 +455,11 @@ article p {
 
     article p {
 
+        /*
         position: absolute;
         font-size: 1.5rem;
         max-width: 350px;
+*/
 
     }
 
@@ -525,10 +603,12 @@ h2 {
 
 
 .foreninger_sec2 article {
+    /*
     background-color: #c63f3f;
     color: #D0AD87;
     border: 5px solid #ffe9b7;
     cursor: pointer;
+*/
 }
 
 .foreninger_sec2 article h2 {
@@ -833,5 +913,17 @@ under-undermenu a {}
 }
 
 /*WEB-NAVIGATION SLUT*/
+/***** WEB STIFTEDE FORENINGER START *****/
+
+
+
+.foreninger_sec2 h2 {
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+}
+
+
+/***** WEB STIFTEDE FORENINGER SLUT *****/
+
 
 /***** WEB SLUT *****/

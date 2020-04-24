@@ -22,6 +22,7 @@
 
 
     }
+
 </style>
 
 
@@ -182,52 +183,30 @@
                 const klon = skabelon.cloneNode(true).content;
                 klon.querySelector("h2").innerHTML = elm.overskrift;
                 klon.querySelector("img").src = elm.billede.guid;
-                //                klon.querySelector(".boliger_grid").addEventListener("click", () => {
-                //
-                //                    if (elm.id == "369") {
-                //                        console.log(id);
-                //
-                //                        console.log("if sætning1");
-                //                        location.href = "fra_skrot_til_slot.html";
-                //
-                //
-                //
-                //                    }
-                //
-                //                });
-
                 listeElm.appendChild(klon);
-
-
-
             });
 
-        }
+            //Tilføjer eventlisteners
+            document.querySelector("article:nth-child(1)").addEventListener("click", visFraSkrotTilSlot)
+            document.querySelector("article:nth-child(2)").addEventListener("click", visViIndretter)
+            document.querySelector("article:nth-child(3)").addEventListener("click", visViSkaberHjem)
 
-        function visDetaljeView(elm) {
-            console.log("DetaljeView");
-            console.log(elm.id);
-
-            if (elm.id == "369") {
-                console.log(id);
-
-                console.log("if sætning1");
+            function visFraSkrotTilSlot() {
                 location.href = "fra_skrot_til_slot.html";
+            }
 
+            function visViIndretter() {
+                location.href = "viindretter.html";
+            }
 
-
+            function visViSkaberHjem() {
+                location.href = "viSkaberHjem.html";
             }
 
 
-
         }
 
-        //        document.addEventListener("click", visFraSkrotTilSlot);
-        //
-        // function visFraSkrotTilSlot() {
-        // location.href = "fra_skrot_til_slot.html";
-        //
-        //
-        // }
     </script>
-</body></html>
+</body>
+
+</html>

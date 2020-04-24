@@ -10,55 +10,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/jbb7mxc.css">
     <title>Mallorca</title>
     <style>
-        img {
-            width: 100%;
-        }
 
-
-        main {
-            50vw;
-        }
-
-        .carousel {
-            width: 70%;
-            height: 70%;
-        }
-
-        .container {
-            display: flex;
-            overflow: scroll;
-            scroll-snap-type: x mandatory;
-        }
-
-        .container section {
-            scroll-snap-align: start;
-            min-width: 100%;
-        }
-
-        .carousel_inner {
-            display: flex;
-
-        }
-
-        .bwd,
-        .fwd {
-            display: flex;
-            cursor: pointer;
-            align-items: center;
-
-        }
-
-        .bwd p,
-        .fwd p {
-            position: absolute;
-            z-index: 10;
-            color: white;
-            font-size: 2rem;
-        }
-
-        .fwd p {
-            margin-left: -17px;
-        }
     </style>
 </head>
 
@@ -164,25 +116,26 @@
             <img class="caro_imgs" src="" alt="">
         </section>
     </template>
-    <main>
+    <section>
+        <main>
 
-        <div class="carousel">
-            <div class="carousel_inner">
+            <div class="carousel">
+                <div class="carousel_inner">
 
-                <div class="bwd">
-                    <p>&lt;</p>
-                </div>
-                <div class="container">
+                    <div class="bwd">
+                        <p>&lt;</p>
+                    </div>
+                    <div class="container">
 
+                    </div>
+                    <div class="fwd">
+                        <p>&gt;</p>
+                    </div>
                 </div>
-                <div class="fwd">
-                    <p>&gt;</p>
-                </div>
+                <div class="legend-container"></div>
             </div>
-            <div class="legend-container"></div>
-        </div>
-    </main>
-
+        </main>
+    </section>
     <script>
         let section1;
 
