@@ -637,11 +637,11 @@ h2 {
     text-decoration: none;
     color: white;
     transition: color 0.3s ease;
+    font-size: 1.5rem;
+    font-family: neue-haas-grotesk-text, sans-serif;
 }
 
-#menuToggle .undermenu a {
-    /*        color: #222222;*/
-}
+#menuToggle .undermenu a {}
 
 #menuToggle .undermenu .under-undermenu a {
     /*        color: #eaeaea;*/
@@ -649,27 +649,47 @@ h2 {
 
 #menuToggle a:hover {
     color: black;
-
 }
 
+#menuToggle .koncept:hover,
+#menuToggle .om_os:hover,
+#menuToggle .foreninger:hover,
+#menuToggle .boliger:hover,
+#menuToggle .formalier:hover,
+#menuToggle .til_salg:hover {
+    cursor: default;
+    color: #535353;
+}
 
 #menuToggle input {
     display: block;
     width: 40px;
     height: 32px;
     position: absolute;
-    /*        top: -7px;*/
-    /*           left: -5px;*/
-
     cursor: pointer;
-
     opacity: 0;
     /* hide this */
     z-index: 2;
     /* and place it over the hamburger */
-
     -webkit-touch-callout: none;
 }
+
+.koncept,
+.om_os,
+.foreninger,
+.boliger,
+.formalier,
+.til_salg {
+    cursor: default;
+}
+
+
+
+#koncept a:hover {
+    color: aqua;
+}
+
+
 
 /*
  * Just a quick hamburger
@@ -734,17 +754,6 @@ h2 {
 
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
-
-.menu a {
-    font-size: 1.5rem;
-    font-family: neue-haas-grotesk-text, sans-serif;
-
-}
-
-
-
-
-
 
 .undermenu {
     transition: all 0.5s;
