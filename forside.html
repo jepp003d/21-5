@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styling.css">
     <link rel="stylesheet" href="https://use.typekit.net/jbb7mxc.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
 
 
 </head>
@@ -33,9 +33,11 @@
 
     .splash-section1 blockquote,
     .splash-section2 blockquote {
-        font-size: 80px;
+        font-size: 50px;
         padding-top: 70px;
         text-align: center;
+        font-family: freight-neo-pro, sans-serif;
+
     }
 
     .splash-section2 {
@@ -72,6 +74,11 @@
         padding-top: 100px;
         background: #000000;
     }
+
+    article {
+        transition: background 1.4s;
+    }
+
 </style>
 
 <body>
@@ -95,11 +102,32 @@
 
 
     <div>
-        <section class="forside_sections color2" data-color="white">
+        <section class="forside_sections" data-color="">
+        </section>
+        <section class=footer_section>
+            <article>
+                <div class="logo"><img src="img/21_5_logo.svg" alt="logo"></div>
+                <div class="sectionwrapper">
+                    <div class="col_news">
+                        <h2>NEWS</h2>
+                        <p>Hold dig opdateret på 21-5's nyheder</p>
+                    </div>
+                    <div class="col_kontakt">
+                        <h2>KONTAKT</h2>
+                        <p>Kontakt os eller book kaffemøde</p>
+                    </div>
+                    <div class="col_faq">
+
+                        <h2>FAQ</h2>
+                        <p>Se de ofte stillede spørgsmål</p>
+                    </div>
+                </div>
+            </article>
         </section>
     </div>
-    <template>
-        <article>
+    <template class="sections_template">
+
+        <article class="test color2" data-color="white">
 
             <div class="col">
                 <h2 class="overskrift1"></h2>
@@ -113,12 +141,42 @@
             </div>
 
         </article>
+
     </template>
 
+    <footer>
+        <div class="sectionwrapper">
+            <div class="col">
+                <p><b>21-5 A/S</b><br>
+                    Rungstedvej 41<br>
+                    2970 Hørsholm</p>
+
+            </div>
+            <div class="col">
+                <div class="col_1">
+                    <div class="col_2">
+                        <img src="img/facebook.svg" alt="facebooklogo">
+                    </div>
+                    <div class="col_2">
+                        <img src="img/instagram.svg" alt="instagramlogo">
+                    </div>
+                </div>
+                <p>70 26 11 55 <br>
+                    info@21-5.dk</p>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2542/in-view.min.js"></script>
+    <script src="backgroundchange.js"></script>
     <script>
         let forsideSections = [];
         const endpoint = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/forside";
-        let skabelon = document.querySelector("template");
+        let skabelon = document.querySelector(".sections_template");
         const listeElm = document.querySelector(".forside_sections");
         document.addEventListener("DOMContentLoaded", start);
 
@@ -131,6 +189,7 @@
             console.log(response);
             forsideSections = await response.json();
             visSections();
+
 
         }
 
@@ -153,5 +212,24 @@
                 console.log();
             });
         });
+
+        document.querySelector(".col_news").addEventListener("click", visNews)
+        document.querySelector(".col_kontakt").addEventListener("click", visKontakt)
+        document.querySelector(".col_faq").addEventListener("click", visFAQ)
+
+        function visNews() {
+            location.href = "news.html";
+        }
+
+        function visKontakt() {
+            location.href = "kontakt.html";
+        }
+
+        function visFAQ() {
+            location.href = "faq.html"
+        }
+
     </script>
-</body></html>
+</body>
+
+</html>

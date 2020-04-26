@@ -10,6 +10,53 @@
     <link rel="stylesheet" href="https://use.typekit.net/eib8sis.css">
     <link rel="stylesheet" href="https://use.typekit.net/jbb7mxc.css">
 </head>
+<style>
+    main {
+        50vw;
+    }
+
+    .carousel {
+        width: 100%;
+        padding: 0;
+    }
+
+    .container {
+        display: flex;
+        overflow: scroll;
+        scroll-snap-type: x mandatory;
+    }
+
+    .container section {
+        scroll-snap-align: start;
+        min-width: 100%;
+    }
+
+    .carousel_inner {
+        display: flex;
+
+    }
+
+    .bwd,
+    .fwd {
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+
+    }
+
+    .bwd p,
+    .fwd p {
+        position: absolute;
+        z-index: 10;
+        color: white;
+        font-size: 2rem;
+    }
+
+    .fwd p {
+        margin-left: -17px;
+    }
+
+</style>
 
 <body>
 
@@ -36,9 +83,9 @@
                 </div>
             </div>
             <template>
-                <section>
-                    <img class="caro_imgs" src="" alt="">
-                </section>
+
+                <img class="caro_imgs" src="" alt="">
+
             </template>
 
         </article>
@@ -177,5 +224,8 @@
                 document.querySelector(".bwd").style.cursor = "default";
             }
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
