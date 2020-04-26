@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stiftede Foreninger</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styling.css">
     <link rel="stylesheet" href="https://use.typekit.net/eib8sis.css">
     <link rel="stylesheet" href="https://use.typekit.net/jbb7mxc.css">
 </head>
@@ -16,31 +16,38 @@
 
     </style>
 
+    <!--
     <header>
         <nav role="navigation">
             <div id="menuToggle">
-                <!--
+-->
+    <!--
     A fake / hidden checkbox is used as click reciever,
     so you can use the :checked selector on it.
     -->
+    <!--
                 <div class="logo"> <img src="img/21_5_logo.svg" alt="21-5 logo"></div>
                 <input type="checkbox" />
+-->
 
 
-                <!--
+    <!--
     Some spans to act as a hamburger.
 
     They are acting like a real hamburger,
     not that McDonalds stuff.
     -->
+    <!--
                 <span class="burger"></span>
                 <span class="burger"></span>
                 <span class="burger"></span>
+-->
 
-                <!--
+    <!--
     Too bad the menu has to be inside of the button
     but hey, it's pure CSS magic.
     -->
+    <!--
                 <ul class="menu">
 
                     <li><a class="overmenu" href="forside.html">Forside</a></li>
@@ -106,26 +113,21 @@
             </div>
         </nav>
     </header>
+-->
     <section id="splash" class="splash_stiftedeforeninger">
         <h1 class="velkommen">Stiftede foreninger</h1>
     </section>
 
-    <section class="foreninger_sec1"></section>
-
-
-
-    <section class="foreninger_sec2"></section>
+    <section class="stiftede_foreninger_sections"></section>
 
     <template>
         <article>
 
             <h2></h2>
-            <div class="sectionwrapper">
-                <div class="">
-                    <p></p>
-                </div>
-                <div class=""><img src="" alt=""></div>
-            </div>
+
+            <img src="" alt="">
+            <p></p>
+
         </article>
     </template>
 
@@ -136,13 +138,11 @@
 
 
     <script>
-        let section1;
-        let section2 = [];
+        let stiftedeForeningerSections = [];
 
-        const listeElm = document.querySelector(".foreninger_sec2");
-        const endpoint1 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/314";
-        const endpoint2 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/stiftet_forening";
+        const listeElm = document.querySelector(".stiftede_foreninger_sections");
 
+        const endpoint = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/stiftet_forening";
         let skabelon = document.querySelector("template");
         document.addEventListener("DOMContentLoaded", start);
 
@@ -151,31 +151,20 @@
         }
 
         async function hentData() {
-            const response1 = await fetch(endpoint1);
-            const response2 = await fetch(endpoint2);
+            const response = await fetch(endpoint);
 
-            console.log(response1);
-            console.log(response2);
-
-            section1 = await response1.json();
-            section2 = await response2.json();
-
-            console.log(section1);
-            console.log(section2);
-
-            visSection1();
-            visSection2();
+            console.log(response);
+            stiftedeForeningerSections = await response.json();
+            console.log(stiftedeForeningerSections);
+            visSections();
 
         }
 
-        function visSection1() {
 
-            document.querySelector(".foreninger_sec1").innerHTML = section1.content.rendered;
-        }
 
-        function visSection2() {
-            console.log(section2);
-            section2.forEach(elm => {
+        function visSections() {
+            console.log(stiftedeForeningerSections);
+            stiftedeForeningerSections.forEach(elm => {
                 const klon = skabelon.cloneNode(true).content;
                 klon.querySelector("h2").innerHTML = elm.overskrift;
                 klon.querySelector("p").innerHTML = elm.beskrivelse;
@@ -188,8 +177,5 @@
                 listeElm.appendChild(klon);
             })
         }
-
     </script>
-</body>
-
-</html>
+</body></html>

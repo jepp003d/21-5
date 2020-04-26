@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styling.css">
     <link rel="stylesheet" href="https://use.typekit.net/eib8sis.css">
     <link rel="stylesheet" href="https://use.typekit.net/jbb7mxc.css">
     <title>Foreninger</title>
@@ -14,42 +14,42 @@
 
 <body>
     <style>
-        body {
-            margin: 0;
-        }
-
-        p {
-            margin: 0;
-        }
 
     </style>
 
 
-    <header>
+    <!--    <header>-->
+    <!--
         <nav role="navigation">
             <div id="menuToggle">
-                <!--
+-->
+    <!--
     A fake / hidden checkbox is used as click reciever,
     so you can use the :checked selector on it.
     -->
+    <!--
                 <div class="logo"> <img src="img/21_5_logo.svg" alt="21-5 logo"></div>
                 <input type="checkbox" />
+-->
 
 
-                <!--
+    <!--
     Some spans to act as a hamburger.
 
     They are acting like a real hamburger,
     not that McDonalds stuff.
     -->
+    <!--
                 <span class="burger"></span>
                 <span class="burger"></span>
                 <span class="burger"></span>
+-->
 
-                <!--
+    <!--
     Too bad the menu has to be inside of the button
     but hey, it's pure CSS magic.
     -->
+    <!--
                 <ul class="menu">
 
                     <li><a class="overmenu" href="forside.html">Forside</a></li>
@@ -115,50 +115,37 @@
             </div>
         </nav>
     </header>
-    <style></style>
+-->
     <section id="splash" class="splash_foreninger">
         <h1 class="velkommen">FORENINGER</h1>
     </section>
 
 
-    <section class="foreninger"></section>
+    <section class="foreninger_sections"></section>
 
     <template>
-        <h2></h2>
-        <div class="sectionwrapper">
-            <div class="col2">
-                <img class="grafik" src="" alt=""></div>
-            <div class="col1"><img class="image" src="" alt=""></div>
-        </div>
-        <p class="text"></p>
-    </template>
-
-    <!--
-    <template>
-        <h2></h2>
-        <div class="sectionwrapper">
-            <img class="image" src="" alt="">
-            <div class="col">
-                <p class="text"></p>
+        <article>
+            <h2></h2>
+            <p class="text"></p>
+            <div class="grid">
+                <div class="col">
+                    <img class="grafik" src="" alt="">
+                </div>
+                <div class="col">
+                    <img class="image" src="" alt="">
+                </div>
             </div>
-            <div class="col">
-                <img class="grafik" src="" alt=""></div>
-        </div>
+        </article>
 
     </template>
--->
-
-
-
-
 
 
     <script>
-        let section1 = [];
+        let foreningerSections = [];
 
-        const listeElm = document.querySelector(".foreninger");
+        const listeElm = document.querySelector(".foreninger_sections");
 
-        const endpoint1 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/foreninger-type";
+        const endpoint = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/forening";
 
         let skabelon = document.querySelector("template");
         document.addEventListener("DOMContentLoaded", start);
@@ -169,37 +156,34 @@
 
         async function hentData() {
 
-            const response1 = await fetch(endpoint1);
+            const response = await fetch(endpoint);
 
 
-            console.log(response1);
+            console.log(response);
 
 
-            section1 = await response1.json();
+            foreningerSections = await response.json();
 
 
-            console.log(section1);
+            console.log(foreningerSections);
 
-            visSection1();
+            visSections();
 
         }
 
 
-        function visSection1() {
-            console.log(section1);
-            section1.forEach(elm => {
+        function visSections() {
+            console.log(foreningerSections);
+            foreningerSections.forEach(elm => {
                 const klon = skabelon.cloneNode(true).content;
                 klon.querySelector("h2").innerHTML = elm.overskrift;
+                klon.querySelector("p").innerHTML = elm.tekst;
                 klon.querySelector(".image").src = elm.image.guid;
-                klon.querySelector("p").innerHTML = elm.beskrivelse;
-                klon.querySelector(".grafik").src = elm.grafik.guid;
 
+                klon.querySelector(".grafik").src = elm.grafikbillede.guid;
 
                 listeElm.appendChild(klon);
             })
         }
-
     </script>
-</body>
-
-</html>
+</body></html>

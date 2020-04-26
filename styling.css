@@ -1,0 +1,331 @@
+/****** MOBIL START ******/
+/******* MOBIL GENERALT START *****/
+img {
+    width: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+section {
+    padding: 0 10vw 0 10vw;
+}
+
+
+
+
+p {
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .8rem;
+    letter-spacing: 1.2px;
+    color: #2a2a2a;
+    line-height: 1.5;
+
+}
+
+h1 {
+    color: #2a2a2a;
+    font-size: 2rem;
+    font-family: freight-neo-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin: 0;
+}
+
+
+h2,
+h3,
+h4 {
+    color: #2a2a2a;
+    font-size: 1.8rem;
+    font-family: freight-neo-pro, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    text-align: center;
+    margin: 0;
+}
+
+.velkommen {
+
+    color: white;
+    text-align: center;
+
+
+
+
+}
+
+
+
+/******* MOBIL GENERALT SLUT *****/
+
+
+
+/******* MOBIL FORSIDE START ******/
+
+
+
+.forside_sections article:nth-child(3) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 5vw;
+
+
+}
+
+
+
+.forside_sections h1,
+.forside_sections h2,
+.koncept_sections h2,
+.destinationer_sections h2,
+#destinationer_detaljeview h2 {
+    margin-top: 10vw;
+}
+
+.forside_sections p,
+.forside_sections img,
+.koncept_sections p,
+.koncept_sections img,
+.destinationer_sections p,
+.destinationer_sections img,
+#destinationer_detaljeview p,
+#destinationer_detaljeview img {
+    margin-top: 5vw;
+
+}
+
+
+.forside_sections article:nth-child(1) .col:nth-child(2) h2,
+.forside_sections article:nth-child(2) .col:nth-child(2) h2,
+.forside_sections article:nth-child(4) .text1,
+.forside_sections article:nth-child(4) .overskrift2,
+.forside_sections article:nth-child(4) .text2,
+.forside_sections article:nth-child(3) img {
+    display: none;
+}
+
+
+
+
+
+/******* MOBIL FORSIDE SLUT *****/
+/****** MOBIL KONCEPT START *****/
+
+.splash_koncept {
+    background-size: cover;
+    background-image: url(img/splash_forside3.jpg);
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-position: 10% 30%;
+    height: 50vh;
+    margin-bottom: 100px;
+}
+
+.koncept_sections article:nth-child(1) .overskrift2,
+.koncept_sections article:nth-child(1) .text2 {
+    display: none;
+}
+
+.koncept_sections article:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 5vw;
+
+
+}
+
+.koncept_sections article:nth-child(2) img {
+    grid-column: 1 / -1;
+}
+
+
+
+
+
+
+
+
+
+
+
+/****** MOBIL KONCEPT SLUT ******/
+/***** MOBIL DESTINATIONER START ****/
+.splash_destinationer {
+    background-size: cover;
+    background-image: url(img/splash_destinationer.jpg);
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-position: 10% 40%;
+    height: 50vh;
+    margin-bottom: 100px;
+}
+
+.destinationer_sections article:nth-child(2) .tekst1,
+.destinationer_sections article:nth-child(3) .tekst1,
+.destinationer_sections article:nth-child(4) .tekst1,
+.destinationer_sections article:nth-child(5) .tekst1,
+.destinationer_sections article:nth-child(6) .tekst1,
+.destinationer_sections article:nth-child(7) .tekst1,
+.destinationer_sections article:nth-child(8) .tekst1,
+.destinationer_sections article:nth-child(9) .tekst1,
+.destinationer_sections article:nth-child(10) .tekst1 {
+    display: none;
+}
+
+
+.destinationer_sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1vw;
+
+
+}
+
+.destinationer_sections article:nth-child(1) {
+    grid-column: 1 / -1;
+}
+
+/***** MOBIL DESTINATIONER SLUT *****/
+/***** MOBIL DESTINATIONER DETALJEVIEW START ****/
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 1vw;
+
+
+}
+
+
+
+
+/***** MOBIL DESTINATIONER DETALJEVIEW SLUT *****/
+
+/***** MOBIL FORENINGER START *****/
+.splash_foreninger {
+    background-size: cover;
+    background-image: url(img/splash_foreninger.jpg);
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-position: 10% 45%;
+    height: 50vh;
+}
+
+
+
+/***** MOBIL FORENINGER SLUT *****/
+/***** MOBIL STIFTEDE FORENINGER START ****/
+.splash_stiftedeforeninger {
+
+    background-size: cover;
+    background-image: url(img/splash_stiftedeforeninger.jpg);
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-position: 10% 45%;
+    height: 50vh;
+    margin-bottom: 100px;
+}
+
+
+.stiftede_foreninger_sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1vw;
+
+
+}
+
+.stiftede_foreninger_sections article:nth-child(1) {
+    grid-column: 1 / -1;
+}
+
+/***** MOBIL STIFTEDE FORENINGER SLUT ****/
+/****** MOBIL SLUT ******/
+
+/***** WEB START *******/
+@media only screen and (min-width : 1224px) {
+    /***** WEB GENERALT START ****/
+
+    section {
+        padding: 0vw 15vw 0 15vw;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .koncept_sections article:nth-child(1) p,
+    .destinationer_sections article:nth-child(1) p,
+    #destinationer_detaljeview .tekst1,
+    .foreninger_sections p {
+        columns: 2;
+
+    }
+
+
+
+
+
+
+    /***** WEB GENERALT SLUT ****/
+    /***** WEB FORSIDE START *****/
+
+    /* Splash start */
+    .splash h1 {
+        font-size: 4rem;
+        padding-top: 8vw;
+    }
+
+    /*Splash slut */
+
+    .forside_sections article:nth-child(1) p,
+    .forside_sections article:nth-child(2) p {
+        columns: 2;
+
+    }
+
+    .forside_sections img {
+        margin-top: 3vw;
+    }
+
+    .forside_sections {
+        margin-top: 20vw;
+    }
+
+
+    /***** WEB FORSIDE SLUT ****/
+
+    /***** WEB KONCEPT START ****/
+
+
+
+    /***** WEB KONCEPT SLUT *****/
+    /***** WEB DESTINATIONER START *****/
+
+
+    /***** WEB DESTINATIONER SLUT *****/
+
+    /***** WEB DESTINATIONER DETALJEVIEW START ****/
+
+
+
+    /***** WEB DESTINATIONER DETALJEVIEW SLUT ****/
+
+    /***** WEB FORENINGER START ****/
+
+    #
+    /***** WEB FORENINGER START ****/
+
+
+    /***** WEB SLUT *****/
+
+}

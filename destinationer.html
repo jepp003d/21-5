@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styling.css">
     <link rel="stylesheet" href="https://use.typekit.net/eib8sis.css">
     <link rel="stylesheet" href="https://use.typekit.net/jbb7mxc.css">
     <title>Destinationer</title>
@@ -13,31 +13,38 @@
 </head>
 
 <body>
+    <!--
     <header>
         <nav role="navigation">
             <div id="menuToggle">
-                <!--
+-->
+    <!--
     A fake / hidden checkbox is used as click reciever,
     so you can use the :checked selector on it.
     -->
+    <!--
                 <div class="logo"> <img src="img/21_5_logo.svg" alt="21-5 logo"></div>
                 <input type="checkbox" />
+-->
 
 
-                <!--
+    <!--
     Some spans to act as a hamburger.
 
     They are acting like a real hamburger,
     not that McDonalds stuff.
     -->
+    <!--
                 <span class="burger"></span>
                 <span class="burger"></span>
                 <span class="burger"></span>
+-->
 
-                <!--
+    <!--
     Too bad the menu has to be inside of the button
     but hey, it's pure CSS magic.
     -->
+    <!--
                 <ul class="menu">
 
                     <li><a class="overmenu" href="forside.html">Forside</a></li>
@@ -102,7 +109,8 @@
 
             </div>
         </nav>
-    </header>
+-->
+    <!--    </header>-->
 
 
 
@@ -111,31 +119,23 @@
     </section>
 
 
-    <section class="destinationer_section_1 color2" data-color="white"></section>
-
-
-
-    <section class="destinationer_section_2 color2" data-color="white"></section>
+    <section class="destinationer_sections color2" data-color="white"></section>
 
     <template>
-        <article class="destantioner-grid">
+        <article class="detalje">
             <h2></h2>
+            <p class="tekst1"></p>
             <img src="" alt="">
         </article>
     </template>
 
-    <footer>
-        <section class="footer">
-
-        </section>
-    </footer>
 
     <script>
-        let section1;
-        let section2 = [];
-        const listeElm = document.querySelector(".destinationer_section_2");
-        const endpoint1 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/255";
-        const endpoint2 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/destination-grid";
+        let destinationerSections = [];
+
+        const endpoint = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/enkelte_destinatione";
+
+        const listeElm = document.querySelector(".destinationer_sections");
         let skabelon = document.querySelector("template");
         document.addEventListener("DOMContentLoaded", start);
 
@@ -144,84 +144,32 @@
         }
 
         async function hentData() {
-            const response1 = await fetch(endpoint1);
-            const response2 = await fetch(endpoint2);
-            console.log(response1);
-            console.log(response2);
-            section1 = await response1.json();
-            section2 = await response2.json();
-            console.log(section1);
-            console.log(section2);
-            visSection1();
-            visSection2();
+            const response = await fetch(endpoint);
+            console.log(response);
+            destinationerSections = await response.json();
+            console.log(destinationerSections);
+
+            visSections();
         }
 
-        function visSection1() {
 
-            document.querySelector(".destinationer_section_1").innerHTML = section1.content.rendered;
-        }
-
-        function visSection2() {
-            console.log(section2);
-            section2.forEach(elm => {
+        function visSections() {
+            console.log(destinationerSections);
+            destinationerSections.forEach(elm => {
                 const klon = skabelon.cloneNode(true).content;
-                klon.querySelector("h2").innerHTML = elm.titel;
-                klon.querySelector("img").src = elm.billede.guid;
+                klon.querySelector("h2").innerHTML = elm.overskrift;
+                klon.querySelector("p").innerHTML = elm.tekst1;
+                klon.querySelector("img").src = elm.image.guid;
+                klon.querySelector(".detalje").addEventListener("click", () => {
+
+                    location.href = "destinationerDetaljeview.html?id=" + elm.id;
+                });
                 listeElm.appendChild(klon);
             })
 
-            document.querySelector("article:nth-child(1)").addEventListener("click", visToscana)
-            document.querySelector("article:nth-child(2)").addEventListener("click", visSydfrankrig)
-            document.querySelector("article:nth-child(3)").addEventListener("click", visNewYork)
-            document.querySelector("article:nth-child(4)").addEventListener("click", visBarcelona)
-            document.querySelector("article:nth-child(5)").addEventListener("click", visRom)
-            document.querySelector("article:nth-child(6)").addEventListener("click", visParis)
-            document.querySelector("article:nth-child(7)").addEventListener("click", visSydspanien)
-            document.querySelector("article:nth-child(8)").addEventListener("click", visChamonix)
-            document.querySelector("article:nth-child(9)").addEventListener("click", visMallorca)
-
-
-            function visToscana() {
-                location.href = "toscana.html";
-            }
-
-            function visSydfrankrig() {
-                location.href = "sydfrankrig.html";
-            }
-
-            function visNewYork() {
-                location.href = "newyork.html";
-            }
-
-            function visBarcelona() {
-                location.href = "barcelona.html";
-            }
-
-            function visRom() {
-                location.href = "rom.html";
-            }
-
-            function visParis() {
-                location.href = "paris.html";
-            }
-
-            function visSydspanien() {
-                location.href = "sydspanien.html";
-            }
-
-            function visChamonix() {
-                location.href = "chamonix.html";
-            }
-
-            function visMallorca() {
-                location.href = "mallorca.html";
-            }
 
 
         }
-
     </script>
-    <script src="backgroundchange.js"></script>
-</body>
-
-</html>
+    <!--    <script src="backgroundchange.js"></script>-->
+</body></html>
