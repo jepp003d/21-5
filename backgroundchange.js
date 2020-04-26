@@ -1,4 +1,4 @@
-var test = document.querySelector(".forside_sections");
+var test = document.querySelector(".test");
 //var test2 = document.getElementById("forside_section_2");
 let curSection;
 let prevSection;

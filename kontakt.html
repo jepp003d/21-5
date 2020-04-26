@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt os</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styling.css">
     <link rel="stylesheet" href="menubar.css">
     <link rel="stylesheet" href="https://use.typekit.net/eib8sis.css">
     <link rel="stylesheet" href="https://use.typekit.net/jbb7mxc.css">
@@ -22,127 +22,55 @@
 </style>
 
 <body>
-    <header>
-        <nav>
-            <!--            <a href="index.html"> <img class="logo" src="img/Logo.svg"> </a>-->
 
-            <ul class="list_wrapper">
-
-                <li class="overmenu"><a href="forside.html">Forside</a></li>
-                <li class="overmenu"><a href="21-5%20koncept.html">21-5 koncept</a>
-                    <ul class="dropdown_content">
-
-                        <li>
-                            <a href="booking%20af%20ferieboliger.html">Booking af ferieboliger</a> </li>
-                        <li>Sammensætning af familier</li>
-                        <li>Byt</li>
-                        <li>Fællesskab i foreningen</li>
-                        <li>Om os
-                            <ul class="dropdown_content_second">
-                                <li>21-5 teamet</li>
-                                <li>21-5 familier</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="overmenu"><a href="foreninger.html">Foreninger</a>
-                    <ul class="dropdown_content">
-                        <li>Hvordan kommer vi med</li>
-                        <li>Til salg lige nu
-                            <ul class="dropdown_content_second">
-                                <li>Ejerforeningen 21-5 DK36 Grande</li>
-                                <li>Gensalg 21-5 DK15 Family</li>
-                                <li>Gensalg 21-5 DK21 Large</li>
-                            </ul>
-                        </li>
-                        <li><a href="stiftedeforeninger.html">Stiftede foreninger</a></li>
-                    </ul>
-                </li>
-
-                <li class="overmenu"><a href="boliger.html">Boliger</a>
-                    <ul class="dropdown_content">
-                        <li><a href="fra_skrot_til_slot.html">Fra skrot til slot</a></li>
-                        <li><a href="viindretter.html">Vi indretter</a></li>
-                        <li><a href="viskaberhjem.html">Vi skaber hjem</a></li>
-                    </ul>
-                </li>
-
-                <li class="overmenu"><a href="destinationer.html">Destinationer</a>
-                    <ul class="dropdown_content">
-                        <li><a href="mallorca.html">Mallorca</a></li>
-                        <li><a href="sydspanien.html">Sydspanien</a></li>
-                        <li><a href="toscana.html">Toscana</a></li>
-                        <li><a href="sydfrankrig.html"> Sydfrankrig</a></li>
-                        <li><a href="chamonix.html">Chamonix</a></li>
-                        <li><a href="newyork.html">New York</a></li>
-                        <li><a href="barcelona.html">Barcelona</a></li>
-                        <li><a href="paris.html">Paris</a></li>
-                        <li><a href="rom.html">Rom</a></li>
-                    </ul>
-                </li>
-
-                <li class="overmenu">Økonomi, jura og skat
-                    <ul class="dropdown_content">
-
-                        <li>Skat</li>
-                        <li>Investering</li>
-                        <li>Finansiering</li>
-                        <li>Fællesudgifter</li>
-                        <li>Istandsættelse</li>
-
-                    </ul>
-                </li>
-
-                <li class="overmenu"><a href="news.html">News</a>
-
-                </li>
-
-                <li class="overmenu"><a href="">FAQ</a>
-
-                </li>
-                <li class="overmenu"><a href="kontakt.html">Kontakt</a>
-                    <ul class="dropdown_content">
-
-                        <li><a href="kaffemode.html">Kaffemøder</a></li>
-                        <li><a href="orienteringsmode.html">Orienteringmøder</a></li>
-                        <li><a href="job_i_21_5.html">Job i 21-5</a></li>
-
-                    </ul>
-                </li>
-            </ul>
-
-
-        </nav>
-    </header>
 
 
     <section id="splash" class="splash">
         <h1 class="velkommen">KONTAKT OS</h1>
     </section>
-    <section id="sektion1"></section>
+    <section id="kontakt_section">
+        <div class="col">
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="col">
+            <img src="" alt="">
+        </div>
+    </section>
+
+    <footer>
+        <div class="sectionwrapper">
+            <div class="col">
+                <p><b>21-5 A/S</b><br>
+                    Rungstedvej 41<br>
+                    2970 Hørsholm</p>
+
+            </div>
+            <div class="col">
+                <div class="col_1">
+                    <div class="col_2">
+                        <img src="img/facebook.svg" alt="facebooklogo">
+                    </div>
+                    <div class="col_2">
+                        <img src="img/instagram.svg" alt="instagramlogo">
+                    </div>
+                </div>
+                <p>70 26 11 55 <br>
+                    info@21-5.dk</p>
+
+            </div>
 
 
-    <section id="sektion2"></section>
-    <template>
-        <article>
+        </div>
 
-
-            <h1 class="overskrift"></h1>
-            <img src="" alt="" class="billede">
-        </article>
-
-    </template>
+    </footer>
 
 
 
     <script>
-        let section1;
-        let section2 = [];
-        const listeElm = document.querySelector("#sektion2");
-        const endpoint1 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/408";
-        const endpoint2 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/kontakt-grid";
-        let skabelon = document.querySelector("template");
+        let kontaktSection;
+        const endpoint1 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/kontaktside/929";
+
 
         document.addEventListener("DOMContentLoaded", start);
 
@@ -152,35 +80,24 @@
 
         async function hentData() {
             const response1 = await fetch(endpoint1);
-            const response2 = await fetch(endpoint2);
+
             console.log(response1);
-            console.log(response2);
 
-            section1 = await response1.json();
-            section2 = await response2.json();
-            console.log(section1);
-            console.log(section2);
 
-            visSection1();
-            visSection2();
+            kontaktSection = await response1.json();
+
+
+
+
+            visSection();
+
         }
 
-        function visSection1() {
+        function visSection() {
 
-            document.querySelector("#sektion1").innerHTML = section1.content.rendered;
-        }
-
-        function visSection2() {
-            console.log(section2);
-            section2.forEach(elm => {
-                const klon = skabelon.cloneNode(true).content;
-                klon.querySelector("h1").innerHTML = elm.overskrift;
-                klon.querySelector("img").src = elm.billede.guid;
-                listeElm.appendChild(klon);
-
-
-
-            })
+            document.querySelector("h2").innerHTML = kontaktSection.overskrift;
+            document.querySelector("p").innerHTML = kontaktSection.tekst;
+            document.querySelector("img").src = kontaktSection.image.guid;
         }
     </script>
 </body></html>
