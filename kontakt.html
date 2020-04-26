@@ -11,14 +11,8 @@
     <link rel="stylesheet" href="https://use.typekit.net/jbb7mxc.css">
 </head>
 <style>
-    img {
-        width: 100%;
-    }
 
-    #sektion2 {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    }
+
 </style>
 
 <body>
@@ -28,14 +22,19 @@
     <section id="splash" class="splash">
         <h1 class="velkommen">KONTAKT OS</h1>
     </section>
-    <section id="kontakt_section">
-        <div class="col">
-            <h2></h2>
-            <p></p>
-        </div>
-        <div class="col">
-            <img src="" alt="">
-        </div>
+    <section id="kontakt_sections">
+        <template>
+
+            <div class="col">
+                <h2></h2>
+                <p></p>
+            </div>
+            <div class="col">
+                <img src="" alt="">
+            </div>
+
+
+        </template>
     </section>
 
     <footer>
@@ -68,8 +67,10 @@
 
 
     <script>
-        let kontaktSection;
-        const endpoint1 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/kontaktside/929";
+        let kontaktSections = [];
+        const endpoint1 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/kontaktside";
+        let skabelon = document.querySelector("template");
+        const listeElm = document.querySelector("#kontakt_sections");
 
 
         document.addEventListener("DOMContentLoaded", start);
@@ -84,20 +85,27 @@
             console.log(response1);
 
 
-            kontaktSection = await response1.json();
+            kontaktSections = await response1.json();
 
 
 
 
-            visSection();
+            visSections();
 
         }
 
-        function visSection() {
+        function visSections() {
 
-            document.querySelector("h2").innerHTML = kontaktSection.overskrift;
-            document.querySelector("p").innerHTML = kontaktSection.tekst;
-            document.querySelector("img").src = kontaktSection.image.guid;
+
+            kontaktSections.forEach(elm => {
+                const klon = skabelon.cloneNode(true).content;
+                klon.querySelector("h2").innerHTML = elm.overskrift;
+                klon.querySelector("p").innerHTML = elm.tekst;
+
+                klon.querySelector("img").src = elm.image.guid;
+
+                listeElm.appendChild(klon);
+            })
         }
     </script>
 </body></html>

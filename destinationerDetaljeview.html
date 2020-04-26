@@ -111,6 +111,53 @@
             </div>
         </main>
     </section>
+    <section class=footer_section>
+
+        <article>
+            <div class="logo"><img src="img/21_5_logo.svg" alt="logo"></div>
+            <div class="sectionwrapper">
+                <div class="col_news">
+                    <h2>NEWS</h2>
+                    <p>Hold dig opdateret på 21-5's nyheder</p>
+                </div>
+                <div class="col_kontakt">
+                    <h2>KONTAKT</h2>
+                    <p>Kontakt os eller book kaffemøde</p>
+                </div>
+                <div class="col_faq">
+
+                    <h2>FAQ</h2>
+                    <p>Se de ofte stillede spørgsmål</p>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <div class="sectionwrapper">
+            <div class="col">
+                <p><b>21-5 A/S</b><br>
+                    Rungstedvej 41<br>
+                    2970 Hørsholm</p>
+
+            </div>
+            <div class="col">
+                <div class="col_1">
+                    <div class="col_2">
+                        <img src="img/facebook.svg" alt="facebooklogo">
+                    </div>
+                    <div class="col_2">
+                        <img src="img/instagram.svg" alt="instagramlogo">
+                    </div>
+                </div>
+                <p>70 26 11 55 <br>
+                    info@21-5.dk</p>
+
+            </div>
+
+
+        </div>
+
+    </footer>
 
 
     <script>
@@ -223,6 +270,21 @@
                 document.querySelector(".bwd").style.opacity = 0.2;
                 document.querySelector(".bwd").style.cursor = "default";
             }
+        }
+        document.querySelector(".col_news").addEventListener("click", visNews)
+        document.querySelector(".col_kontakt").addEventListener("click", visKontakt)
+        document.querySelector(".col_faq").addEventListener("click", visFAQ)
+
+        function visNews() {
+            location.href = "news.html";
+        }
+
+        function visKontakt() {
+            location.href = "kontakt.html";
+        }
+
+        function visFAQ() {
+            location.href = "faq.html"
         }
 
     </script>

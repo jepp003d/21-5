@@ -2,10 +2,13 @@
 /******* GENERALT START *****/
 img {
     width: 100%;
+
 }
 
 body {
     margin: 0;
+    /*    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);*/
+    background-color: white;
 }
 
 section {
@@ -18,11 +21,15 @@ section {
 }
 */
 
-.forside_sections article:nth-child(1) {
-    background-color: white;
+.col_news,
+.col_kontakt,
+.col_faq {
+    cursor: pointer;
 }
 
-.forside_sections {}
+
+
+
 
 
 
@@ -66,6 +73,8 @@ h4 {
 
     color: white;
     text-align: center;
+    padding-top: 10vw;
+    font-size: 4rem;
 
 
     /***** FOOTER START *****/
@@ -126,9 +135,11 @@ footer p {
 .forside_sections h1,
 .forside_sections h2,
 .koncept_sections h2,
-.destinationer_sections h2,
-#destinationer_detaljeview h2 {
+#destinationer_detaljeview h2,
+#boliger_sections h2,
+.foreninger_sections h2 {
     margin-top: 10vw;
+    margin-bottom: 3vw;
 }
 
 .forside_sections p,
@@ -136,11 +147,27 @@ footer p {
 .koncept_sections p,
 .koncept_sections img,
 .destinationer_sections p,
-.destinationer_sections img,
 #destinationer_detaljeview p,
-#destinationer_detaljeview img {
+#destinationer_detaljeview img,
+#boliger_sections p,
+#boliger_sections img,
+.foreninger_sections p,
+.foreninger_sections img {
     margin-top: 5vw;
 
+}
+
+.destinationer_sections img {
+    margin-top: .5vw;
+}
+
+.destinationer_sections h2 {
+    margin-top: 5vw;
+    margin-bottom: 1vw;
+}
+
+.destinationer_sections article:nth-child(1) h2 {
+    margin-top: 15vw;
 }
 
 
@@ -203,6 +230,20 @@ footer p {
     height: 50vh;
 }
 
+#boliger_sections article:nth-child(2) .image1 {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#boliger_sections a {
+    text-decoration: none;
+    color: #C95D43;
+    font-weight: 500;
+}
+
 /***** MOBIL BOLIGER SLUT ****/
 
 /***** MOBIL DESTINATIONER START ****/
@@ -214,7 +255,7 @@ footer p {
     z-index: 2;
     background-position: 10% 40%;
     height: 50vh;
-    margin-bottom: 100px;
+
 }
 
 .destinationer_sections article:nth-child(2) .tekst1,
@@ -243,6 +284,8 @@ footer p {
 }
 
 /***** MOBIL DESTINATIONER SLUT *****/
+
+
 /***** MOBIL DESTINATIONER DETALJEVIEW START ****/
 
 .grid {
@@ -253,6 +296,13 @@ footer p {
 
 }
 
+#destinationer_detaljeview .container {
+    margin-top: 2vw;
+}
+
+#destinationer_detaljeview .tekst2 {
+    margin-bottom: 5vw;
+}
 
 
 
@@ -267,6 +317,14 @@ footer p {
     z-index: 2;
     background-position: 10% 45%;
     height: 50vh;
+}
+
+.foreninger_sections article:nth-child(1) img {
+    display: none;
+}
+
+.foreninger_sections .grafik {
+    width: 55%;
 }
 
 
@@ -289,8 +347,8 @@ footer p {
 
 .stiftede_foreninger_sections {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 1vw;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 2vw;
 
 
 }
@@ -300,6 +358,8 @@ footer p {
 }
 
 /***** MOBIL STIFTEDE FORENINGER SLUT ****/
+
+
 /**** MOBIL NEWS/KONTAKT/FAQ SEKTION START ****/
 
 
@@ -342,12 +402,24 @@ footer p {
 /**** MOBIL NEWS/KONTAKT/FAQ SEKTION START ****/
 
 /***** MOBIL KONTAKT START ****/
-#kontakt_section {
+#kontakt_sections {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    grid-gap: 1vw;
+    grid-gap: 10vw;
 
 }
+
+#kontakt_sections .col:nth-child(2) {
+    grid-column: 1/-1;
+}
+
+#kontakt_sections .col:nth-child(3) {
+    display: none;
+}
+
+
+
+
 
 
 

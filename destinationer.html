@@ -217,6 +217,24 @@
 
 
         }
+        document.querySelector(".col_news").addEventListener("click", visNews)
+        document.querySelector(".col_kontakt").addEventListener("click", visKontakt)
+        document.querySelector(".col_faq").addEventListener("click", visFAQ)
+
+        function visNews() {
+            location.href = "news.html";
+        }
+
+        function visKontakt() {
+            location.href = "kontakt.html";
+        }
+
+        function visFAQ() {
+            location.href = "faq.html"
+        }
+
     </script>
     <!--    <script src="backgroundchange.js"></script>-->
-</body></html>
+</body>
+
+</html>

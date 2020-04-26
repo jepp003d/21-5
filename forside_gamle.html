@@ -1,28 +1,36 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
     <link rel="stylesheet" href="style.css">
-
-
     <link rel="stylesheet" href="https://use.typekit.net/eib8sis.css">
     <link rel="stylesheet" href="https://use.typekit.net/jbb7mxc.css">
-    <title>Book kaffemøde!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<style>
-    img {
-        width: 100%;
-    }
-
-    #sektion2 {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    }
-</style>
 
 <body>
+    <style>
+        body {
+            margin: 0;
+
+        }
+
+        section {
+
+
+            transition: background 1s;
+
+        }
+
+
+
+        /*------BURGERMENU-WEB------*/
+    </style>
+
     <header>
         <nav role="navigation">
             <div id="menuToggle">
@@ -114,43 +122,47 @@
         </nav>
     </header>
 
-
-    <section id="sektion1"></section>
-    <footer>
-        <div class="sectionwrapper">
-            <div class="col">
-                <p><b>21-5 A/S</b><br>
-                    Rungstedvej 41<br>
-                    2970 Hørsholm</p>
-
-            </div>
-            <div class="col">
-                <div class="col_1">
-                    <div class="col_2">
-                        <img src="img/facebook.svg" alt="facebooklogo">
-                    </div>
-                    <div class="col_2">
-                        <img src="img/instagram.svg" alt="instagramlogo">
-                    </div>
-                </div>
-                <p>70 26 11 55 <br>
-                    info@21-5.dk</p>
-
-            </div>
+    <section id="splash" class="splash">
+        <h1 class="velkommen">TÆNK HVIS DU EJEDE <br> 5 FERIEBOLIGER I UDLANDET</h1>
+    </section>
 
 
-        </div>
+    <section class="forside_section_1 color2" data-color="white"></section>
 
-    </footer>
+
+    <h1>Derfor købe en andel</h1>
+    <section class="forside_section_2 color2" data-color="white">
+
+    </section>
+
+    <template>
+        <article>
+            <img>
+            <h4></h4>
+            <div class="info"></div>
+        </article>
+    </template>
+
+    <section class="forside_section_3 color2" data-color="white"></section>
+    <section class="forside_section_4 color2" data-color="white"></section>
+
+
+
+
 
 
     <script>
         let section1;
+        let section2 = [];
+        let section3;
+        let section4;
+        const listeElm = document.querySelector(".forside_section_2");
 
-
-        const endpoint1 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/420";
-
-
+        const endpoint1 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/235";
+        const endpoint2 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/forside-sektion_4";
+        const endpoint3 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/254";
+        const endpoint4 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/693";
+        let skabelon = document.querySelector("template");
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
@@ -158,17 +170,73 @@
         }
 
         async function hentData() {
+
             const response1 = await fetch(endpoint1);
+            const response2 = await fetch(endpoint2);
+            const response3 = await fetch(endpoint3);
+            const response4 = await fetch(endpoint4);
             console.log(response1);
+            console.log(response2);
+            console.log(response3);
+            console.log(response4);
+
             section1 = await response1.json();
+            section2 = await response2.json();
+            section3 = await response3.json();
+            section4 = await response4.json();
             console.log(section1);
+            console.log(section2);
+            console.log(section3);
+            console.log(section4);
+
             visSection1();
+            visSection2();
+            visSection3();
+            visSection4();
 
         }
+
+
+
 
         function visSection1() {
 
-            document.querySelector("#sektion1").innerHTML = section1.content.rendered;
+            document.querySelector(".forside_section_1").innerHTML = section1.content.rendered;
+        }
+
+        function visSection2() {
+            console.log(section2);
+            section2.forEach(elm => {
+                const klon = skabelon.cloneNode(true).content;
+                klon.querySelector("h4").innerHTML = elm.overskrift;
+                klon.querySelector(".info").innerHTML = elm.info;
+                klon.querySelector("img").src = elm.image.guid;
+                listeElm.appendChild(klon);
+            })
+        }
+
+        function visSection3() {
+            document.querySelector(".forside_section_3").innerHTML = section3.content.rendered;
+        }
+
+        function visSection4() {
+            document.querySelector(".forside_section_4").innerHTML = section4.content.rendered;
+        }
+
+        /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            var y = document.querySelector(".topnav");
+
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+                x.style.height = "50vw";
+                x.style.backgroundColor = "white";
+
+            }
         }
     </script>
+    <!--    <script src="backgroundchange.js"></script>-->
 </body></html>
