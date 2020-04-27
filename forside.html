@@ -1,36 +1,86 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.typekit.net/eib8sis.css">
+    <title>Forside</title>
+    <link rel="stylesheet" href="styling.css">
     <link rel="stylesheet" href="https://use.typekit.net/jbb7mxc.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
 </head>
+<style>
+    {
+        height: 100%;
+    }
+
+    body,
+    html,
+    .site-body,
+    section {
+        height: 100%;
+    }
+
+    .splash-section1,
+    .splash-section2 {
+        padding: 20px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .splash-section1 blockquote,
+    .splash-section2 blockquote {
+        font-size: 50px;
+        padding-top: 70px;
+        text-align: center;
+        font-family: freight-neo-pro, sans-serif;
+
+    }
+
+    .splash-section2 {
+        height: 15vw;
+    }
+
+
+    .site-body #splash-section1 {
+        background: url(img/splash_forside1.jpg) no-repeat fixed;
+        background-position: center center;
+
+        color: white;
+    }
+
+    .page-wrapper .site-body #section1 .section-text1 {
+        position: fixed;
+        width: 300px;
+        margin: 0 auto;
+
+        padding-top: 100px;
+        background: #000000;
+    }
+
+    .site-body #section2 {
+        background-color: white;
+        background-position: center center;
+        z-index: 3000;
+    }
+
+    .page-wrapper .site-body #section2 .section-text2 {
+
+        width: 300px;
+        margin: 0 auto;
+        padding-top: 100px;
+        background: #000000;
+    }
+
+    article {
+        transition: background 1.4s;
+    }
+</style>
 
 <body>
-    <style>
-        body {
-            margin: 0;
-
-        }
-
-        section {
-
-
-            transition: background 1s;
-
-        }
-
-
-
-        /*------BURGERMENU-WEB------*/
-    </style>
-
     <header>
         <nav role="navigation">
             <div id="menuToggle">
@@ -42,8 +92,12 @@
                 <input type="checkbox" />
 
 
+
+
                 <!--
     Some spans to act as a hamburger.
+
+
 
     They are acting like a real hamburger,
     not that McDonalds stuff.
@@ -52,11 +106,15 @@
                 <span class="burger"></span>
                 <span class="burger"></span>
 
+
+
                 <!--
     Too bad the menu has to be inside of the button
     but hey, it's pure CSS magic.
     -->
                 <ul class="menu">
+
+
 
                     <li><a class="overmenu" href="forside.html">Forside</a></li>
                     <li><a class="overmenu koncept">Koncept<span class="arrow"></span></a>
@@ -68,6 +126,11 @@
                             <li><a href="">Fællesskab i foreningen</a></li>
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/master
                             <li><a>Om os<span class="arrow"></span></a>
                                 <ul class="under-undermenu">
                                     <li><a class="21_5_teamet" href="">21-5 teamet</a></li>
@@ -86,21 +149,41 @@
                                     <li><a href="">Gensalg 21-5 DK15 Family</a></li>
                                     <li><a href="">Gensalg 21-5 DK21 Large</a></li>
 
+
+
                                 </ul>
                             </li>
                             <li><a href="stiftedeforeninger.html">Stiftede foreninger</a></li>
                         </ul>
                     </li>
 
+<<<<<<< HEAD
                     <li><a class="overmenu" href="boliger.html">Boliger</a>
 
+=======
+
+
+                    <li><a class="overmenu" href="boliger.html">Boliger</a>
+
+
+
+>>>>>>> origin/master
                     </li>
                     <li><a class="overmenu" href="destinationer.html">Destinationer</a>
 
+
+
                     </li>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/master
                     <li><a class="overmenu formalier">Formalier<span class="arrow"></span></a>
                         <ul class="undermenu">
+
+
 
                             <li><a href="">Skat</a></li>
                             <li><a href="">Investering</a></li>
@@ -108,58 +191,124 @@
                             <li><a href="">Istandsættelse</a></li>
                             <li><a href="">Fællesudgifter</a></li>
 
+
+
                         </ul>
                     </li>
                     <li><a class="overmenu" href="kontakt.html">Kontakt</a>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/master
 
 
                 </ul>
+
+
 
             </div>
         </nav>
     </header>
 
-    <section id="splash" class="splash">
-        <h1 class="velkommen">TÆNK HVIS DU EJEDE <br> 5 FERIEBOLIGER I UDLANDET</h1>
-    </section>
 
 
-    <section class="forside_section_1 color2" data-color="white"></section>
+    <div class="site-body">
+        <section id="splash-section1" class="splash-section1">
+            <blockquote class="section-text1">
+                TÆNK AT EJE <br> 5 FERIEBOLIGER I UDLANDET
+
+            </blockquote>
+        </section>
+        <section id="splash-section2" class="splash-section2">
+            <blockquote class="section-text2">
+                TÆNK AT EJE <br> 5 FERIEBOLIGER I UDLANDET
+            </blockquote>
+
+        </section>
+
+    </div>
 
 
-    <h1>Derfor købe en andel</h1>
-    <section class="forside_section_2 color2" data-color="white">
 
-    </section>
+    <div>
+        <section class="forside_sections" data-color="">
+        </section>
+        <section class=footer_section>
 
-    <template>
-        <article>
-            <img>
-            <h4></h4>
-            <div class="info"></div>
+            <article>
+                <div class="logo_footer"><img src="img/21_5_logo.svg" alt="logo"></div>
+                <div class="sectionwrapper">
+                    <div class="col_news">
+                        <h2>NEWS</h2>
+                        <p>Hold dig opdateret på 21-5's nyheder</p>
+                    </div>
+                    <div class="col_kontakt">
+                        <h2>KONTAKT</h2>
+                        <p>Kontakt os eller book kaffemøde</p>
+                    </div>
+                    <div class="col_faq">
+
+                        <h2>FAQ</h2>
+                        <p>Se de ofte stillede spørgsmål</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+    <template class="sections_template">
+
+        <article class="test color2">
+
+            <div class="col">
+                <h2 class="overskrift1"></h2>
+                <p class="text1"></p>
+            </div>
+            <div class="col">
+                <h2 class="overskrift2"></h2>
+                <img src="" alt="">
+                <p class="text2"></p>
+
+            </div>
+
         </article>
+
     </template>
 
-    <section class="forside_section_3 color2" data-color="white"></section>
-    <section class="forside_section_4 color2" data-color="white"></section>
+    <footer>
+        <div class="sectionwrapper">
+            <div class="col">
+                <p><b>21-5 A/S</b><br>
+                    Rungstedvej 41<br>
+                    2970 Hørsholm</p>
+
+            </div>
+            <div class="col">
+                <div class="col_1">
+                    <div class="col_2">
+                        <img src="img/facebook.svg" alt="facebooklogo">
+                    </div>
+                    <div class="col_2">
+                        <img src="img/instagram.svg" alt="instagramlogo">
+                    </div>
+                </div>
+                <p>70 26 11 55 <br>
+                    info@21-5.dk</p>
+
+            </div>
 
 
+        </div>
 
-
-
-
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2542/in-view.min.js"></script>
+    <!--    <script src="backgroundchange.js"></script>-->
     <script>
-        let section1;
-        let section2 = [];
-        let section3;
-        let section4;
-        const listeElm = document.querySelector(".forside_section_2");
-
-        const endpoint1 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/235";
-        const endpoint2 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/forside-sektion_4";
-        const endpoint3 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/254";
-        const endpoint4 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/pages/693";
-        let skabelon = document.querySelector("template");
+        let forsideSections = [];
+        const endpoint = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/forside";
+        let skabelon = document.querySelector(".sections_template");
+        const listeElm = document.querySelector(".forside_sections");
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
@@ -167,73 +316,50 @@
         }
 
         async function hentData() {
+            const response = await fetch(endpoint);
+            console.log(response);
+            forsideSections = await response.json();
+            visSections();
 
-            const response1 = await fetch(endpoint1);
-            const response2 = await fetch(endpoint2);
-            const response3 = await fetch(endpoint3);
-            const response4 = await fetch(endpoint4);
-            console.log(response1);
-            console.log(response2);
-            console.log(response3);
-            console.log(response4);
-
-            section1 = await response1.json();
-            section2 = await response2.json();
-            section3 = await response3.json();
-            section4 = await response4.json();
-            console.log(section1);
-            console.log(section2);
-            console.log(section3);
-            console.log(section4);
-
-            visSection1();
-            visSection2();
-            visSection3();
-            visSection4();
 
         }
 
-
-
-
-        function visSection1() {
-
-            document.querySelector(".forside_section_1").innerHTML = section1.content.rendered;
-        }
-
-        function visSection2() {
-            console.log(section2);
-            section2.forEach(elm => {
+        function visSections() {
+            console.log(forsideSections);
+            forsideSections.forEach(elm => {
                 const klon = skabelon.cloneNode(true).content;
-                klon.querySelector("h4").innerHTML = elm.overskrift;
-                klon.querySelector(".info").innerHTML = elm.info;
+                klon.querySelector(".overskrift1").innerHTML = elm.overskrift1;
+                klon.querySelector(".text1").innerHTML = elm.tekst1;
+                klon.querySelector(".overskrift2").innerHTML = elm.overskrift2;
                 klon.querySelector("img").src = elm.image.guid;
+                klon.querySelector(".text2").innerHTML = elm.tekst2;
                 listeElm.appendChild(klon);
             })
         }
 
-        function visSection3() {
-            document.querySelector(".forside_section_3").innerHTML = section3.content.rendered;
+        $(window).scroll(function() {
+            $("section blockquote").each(function() {
+                $(this).css('margin-top', $(window).scrollTop() - $(this).parent().position().top);
+                console.log();
+            });
+        });
+
+
+
+        document.querySelector(".col_news").addEventListener("click", visNews)
+        document.querySelector(".col_kontakt").addEventListener("click", visKontakt)
+        document.querySelector(".col_faq").addEventListener("click", visFAQ)
+
+        function visNews() {
+            location.href = "news.html";
         }
 
-        function visSection4() {
-            document.querySelector(".forside_section_4").innerHTML = section4.content.rendered;
+        function visKontakt() {
+            location.href = "kontakt.html";
         }
 
-        /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-        function myFunction() {
-            var x = document.getElementById("myLinks");
-            var y = document.querySelector(".topnav");
-
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
-                x.style.height = "50vw";
-                x.style.backgroundColor = "white";
-
-            }
+        function visFAQ() {
+            location.href = "faq.html"
         }
     </script>
-    <!--    <script src="backgroundchange.js"></script>-->
 </body></html>

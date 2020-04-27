@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinationer</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="https://use.typekit.net/eib8sis.css">
+    <link rel="stylesheet" href="https://use.typekit.net/jbb7mxc.css">
+</head>
+<style>
+    main {
+        50vw;
+    }
+
+    .carousel {
+        width: 100%;
+        padding: 0;
+    }
+
+    .container {
+        display: flex;
+        overflow: scroll;
+        scroll-snap-type: x mandatory;
+    }
+
+    .container section {
+        scroll-snap-align: start;
+        min-width: 100%;
+    }
+
+    .carousel_inner {
+        display: flex;
+
+    }
+
+    .bwd,
+    .fwd {
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+
+    }
+
+    .bwd p,
+    .fwd p {
+        position: absolute;
+        z-index: 10;
+        color: white;
+        font-size: 2rem;
+    }
+
+    .fwd p {
+        margin-left: -17px;
+    }
+
+</style>
+
+<body>
+
+    <section id="splash" class="">
+        <h1 class="velkommen">DESTINATIONER</h1>
+    </section>
+
+    <section id="destinationer_detaljeview">
+
+        <article id="destination">
+            <button>⬅︎
+            </button>
+            <h2></h2>
+            <p class="tekst1"></p>
+            <img class="image" src="" alt="">
+            <div class="grid">
+                <div class="col">
+                    <h2 class="overskrift2"></h2>
+                    <p class="tekst2"></p>
+                </div>
+                <div class="col">
+                    <h2 class="overskrift3"></h2>
+                    <p class="tekst3"></p>
+                </div>
+            </div>
+            <template>
+
+                <img class="caro_imgs" src="" alt="">
+
+            </template>
+
+        </article>
+    </section>
+
+    <section>
+        <main>
+
+            <div class="carousel">
+                <div class="carousel_inner">
+
+                    <div class="bwd">
+                        <p>&lt;</p>
+                    </div>
+                    <div class="container">
+
+                    </div>
+                    <div class="fwd">
+                        <p>&gt;</p>
+                    </div>
+                </div>
+                <div class="legend-container"></div>
+            </div>
+        </main>
+    </section>
+    <section class=footer_section>
+
+        <article>
+            <div class="logo"><img src="img/21_5_logo.svg" alt="logo"></div>
+            <div class="sectionwrapper">
+                <div class="col_news">
+                    <h2>NEWS</h2>
+                    <p>Hold dig opdateret på 21-5's nyheder</p>
+                </div>
+                <div class="col_kontakt">
+                    <h2>KONTAKT</h2>
+                    <p>Kontakt os eller book kaffemøde</p>
+                </div>
+                <div class="col_faq">
+
+                    <h2>FAQ</h2>
+                    <p>Se de ofte stillede spørgsmål</p>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <div class="sectionwrapper">
+            <div class="col">
+                <p><b>21-5 A/S</b><br>
+                    Rungstedvej 41<br>
+                    2970 Hørsholm</p>
+
+            </div>
+            <div class="col">
+                <div class="col_1">
+                    <div class="col_2">
+                        <img src="img/facebook.svg" alt="facebooklogo">
+                    </div>
+                    <div class="col_2">
+                        <img src="img/instagram.svg" alt="instagramlogo">
+                    </div>
+                </div>
+                <p>70 26 11 55 <br>
+                    info@21-5.dk</p>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search)
+        const id = urlParams.get("id");
+        console.log("banan", id);
+        const endpoint = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/enkelte_destinatione";
+        const detalje = document.querySelector("#destinationer_detaljeview");
+        document.addEventListener("DOMContentLoaded", start);
+        let destination = [];
+        let karrusel;
+        let numberOfPicsInCaro;
+        let caroCurrentNum = 0;
+
+        const endpoint2 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/enkelte_destinatione/" + id;
+
+        function start() {
+            hentData();
+            document.querySelector(".fwd").addEventListener("click", fwd);
+            document.querySelector(".bwd").addEventListener("click", bwd);
+        }
+
+        async function hentData() {
+            const response = await fetch(endpoint);
+            const response2 = await fetch(endpoint2);
+            destination = await response.json();
+            karrusel = await response2.json();
+            visDestination();
+            visBilledkarrusel();
+
+        }
+
+        function visDestination() {
+            detalje.querySelector("button").addEventListener("click", () => {
+                history.back();
+            });
+
+            destination.forEach(elm => {
+                if (elm.id == id) {
+                    detalje.querySelector("h2").innerHTML = elm.overskrift;
+                    detalje.querySelector(".tekst1").innerHTML = elm.tekst1;
+                    detalje.querySelector(".image").src = elm.image.guid;
+                    detalje.querySelector(".overskrift2").innerHTML = elm.overskrift2;
+                    detalje.querySelector(".tekst2").innerHTML = elm.tekst2;
+                    detalje.querySelector(".overskrift3").innerHTML = elm.overskrift3;
+                    detalje.querySelector(".tekst3").innerHTML = elm.tekst3;
+
+                }
+
+            });
+        }
+
+        function visBilledkarrusel() {
+            numberOfPicsInCaro = karrusel.billedekarussel.length;
+            console.log("billedkarussel", karrusel.billedekarussel);
+            karrusel.billedekarussel.forEach((billedekarussel, index) => {
+                const theClone = document.querySelector("template").cloneNode(true).content;
+                const secondClone = document.querySelector("template").cloneNode(true).content;
+                theClone.querySelector(".caro_imgs").src = billedekarussel.guid;
+                secondClone.querySelector(".caro_imgs").src = billedekarussel.guid;
+                document.querySelector(".container").appendChild(theClone);
+                document.querySelector(".legend-container").appendChild(theClone);
+            })
+
+            document.querySelector(".container").addEventListener("scroll", scrollFunction);
+        }
+
+        function fwd() {
+            if (caroCurrentNum < numberOfPicsInCaro - 1) {
+                caroCurrentNum++;
+                navigate();
+            }
+        }
+
+        function bwd() {
+            if (caroCurrentNum > 0)
+                caroCurrentNum--;
+            navigate();
+        }
+
+        function navigate() {
+            document.querySelector(".container").scrollTo({
+                left: caroCurrentNum * document.querySelector(".caro_imgs").width,
+                behavior: "smooth"
+            })
+            setBtns();
+        }
+
+        function scrollFunction() {
+            //  console.log("scrollFunction");
+
+            caroCurrentNum = Math.round(document.querySelector(".container").scrollLeft / document.querySelector(".caro_imgs").width);
+            console.log(caroCurrentNum);
+            setBtns();
+
+        }
+
+        function setBtns() {
+            if (caroCurrentNum < numberOfPicsInCaro - 1) {
+                document.querySelector(".fwd").style.opacity = 1;
+                document.querySelector(".fwd").style.cursor = "pointer";
+            } else {
+                document.querySelector(".fwd").style.opacity = 0.2;
+                document.querySelector(".fwd").style.cursor = "default";
+            }
+            if (caroCurrentNum > 0) {
+                document.querySelector(".bwd").style.opacity = 1;
+                document.querySelector(".bwd").style.cursor = "pointer";
+            } else {
+                document.querySelector(".bwd").style.opacity = 0.2;
+                document.querySelector(".bwd").style.cursor = "default";
+            }
+        }
+        document.querySelector(".col_news").addEventListener("click", visNews)
+        document.querySelector(".col_kontakt").addEventListener("click", visKontakt)
+        document.querySelector(".col_faq").addEventListener("click", visFAQ)
+
+        function visNews() {
+            location.href = "news.html";
+        }
+
+        function visKontakt() {
+            location.href = "kontakt.html";
+        }
+
+        function visFAQ() {
+            location.href = "faq.html"
+        }
+
+    </script>
+</body>
+
+</html>

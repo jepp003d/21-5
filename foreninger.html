@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styling.css">
     <link rel="stylesheet" href="https://use.typekit.net/eib8sis.css">
     <link rel="stylesheet" href="https://use.typekit.net/jbb7mxc.css">
     <title>Foreninger</title>
@@ -14,17 +14,8 @@
 
 <body>
     <style>
-        body {
-            margin: 0;
-        }
-
-        p {
-            margin: 0;
-        }
 
     </style>
-
-
     <header>
         <nav role="navigation">
             <div id="menuToggle">
@@ -36,8 +27,12 @@
                 <input type="checkbox" />
 
 
+
+
                 <!--
     Some spans to act as a hamburger.
+
+
 
     They are acting like a real hamburger,
     not that McDonalds stuff.
@@ -46,11 +41,15 @@
                 <span class="burger"></span>
                 <span class="burger"></span>
 
+
+
                 <!--
     Too bad the menu has to be inside of the button
     but hey, it's pure CSS magic.
     -->
                 <ul class="menu">
+
+
 
                     <li><a class="overmenu" href="forside.html">Forside</a></li>
                     <li><a class="overmenu koncept">Koncept<span class="arrow"></span></a>
@@ -62,6 +61,11 @@
                             <li><a href="">Fællesskab i foreningen</a></li>
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/master
                             <li><a>Om os<span class="arrow"></span></a>
                                 <ul class="under-undermenu">
                                     <li><a class="21_5_teamet" href="">21-5 teamet</a></li>
@@ -80,21 +84,41 @@
                                     <li><a href="">Gensalg 21-5 DK15 Family</a></li>
                                     <li><a href="">Gensalg 21-5 DK21 Large</a></li>
 
+
+
                                 </ul>
                             </li>
                             <li><a href="stiftedeforeninger.html">Stiftede foreninger</a></li>
                         </ul>
                     </li>
 
+<<<<<<< HEAD
                     <li><a class="overmenu" href="boliger.html">Boliger</a>
 
+=======
+
+
+                    <li><a class="overmenu" href="boliger.html">Boliger</a>
+
+
+
+>>>>>>> origin/master
                     </li>
                     <li><a class="overmenu" href="destinationer.html">Destinationer</a>
 
+
+
                     </li>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/master
                     <li><a class="overmenu formalier">Formalier<span class="arrow"></span></a>
                         <ul class="undermenu">
+
+
 
                             <li><a href="">Skat</a></li>
                             <li><a href="">Investering</a></li>
@@ -102,61 +126,107 @@
                             <li><a href="">Istandsættelse</a></li>
                             <li><a href="">Fællesudgifter</a></li>
 
+
+
                         </ul>
                     </li>
                     <li><a class="overmenu" href="kontakt.html">Kontakt</a>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/master
 
 
                 </ul>
+
+
 
             </div>
         </nav>
     </header>
 
+<<<<<<< HEAD
     <style></style>
+=======
+>>>>>>> origin/master
     <section id="splash" class="splash_foreninger">
         <h1 class="velkommen">FORENINGER</h1>
     </section>
 
 
-    <section class="foreninger"></section>
+    <section class="foreninger_sections"></section>
+    <section class=footer_section>
+
+        <article>
+            <div class="logo"><img src="img/21_5_logo.svg" alt="logo"></div>
+            <div class="sectionwrapper">
+                <div class="col_news">
+                    <h2>NEWS</h2>
+                    <p>Hold dig opdateret på 21-5's nyheder</p>
+                </div>
+                <div class="col_kontakt">
+                    <h2>KONTAKT</h2>
+                    <p>Kontakt os eller book kaffemøde</p>
+                </div>
+                <div class="col_faq">
+
+                    <h2>FAQ</h2>
+                    <p>Se de ofte stillede spørgsmål</p>
+                </div>
+            </div>
+        </article>
+    </section>
 
     <template>
-        <h2></h2>
-        <div class="sectionwrapper">
-            <div class="col2">
-                <img class="grafik" src="" alt=""></div>
-            <div class="col1"><img class="image" src="" alt=""></div>
-        </div>
-        <p class="text"></p>
+        <article>
+            <h2></h2>
+            <p class="text"></p>
+            <div class="grid">
+                <div class="col">
+                    <img class="grafik" src="" alt="">
+                </div>
+                <div class="col">
+                    <img class="image" src="" alt="">
+                </div>
+            </div>
+        </article>
+
     </template>
-
-    <!--
-    <template>
-        <h2></h2>
+    <footer>
         <div class="sectionwrapper">
-            <img class="image" src="" alt="">
             <div class="col">
-                <p class="text"></p>
+                <p><b>21-5 A/S</b><br>
+                    Rungstedvej 41<br>
+                    2970 Hørsholm</p>
+
             </div>
             <div class="col">
-                <img class="grafik" src="" alt=""></div>
+                <div class="col_1">
+                    <div class="col_2">
+                        <img src="img/facebook.svg" alt="facebooklogo">
+                    </div>
+                    <div class="col_2">
+                        <img src="img/instagram.svg" alt="instagramlogo">
+                    </div>
+                </div>
+                <p>70 26 11 55 <br>
+                    info@21-5.dk</p>
+
+            </div>
+
+
         </div>
 
-    </template>
--->
-
-
-
-
+    </footer>
 
 
     <script>
-        let section1 = [];
+        let foreningerSections = [];
 
-        const listeElm = document.querySelector(".foreninger");
+        const listeElm = document.querySelector(".foreninger_sections");
 
-        const endpoint1 = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/foreninger-type";
+        const endpoint = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/forening";
 
         let skabelon = document.querySelector("template");
         document.addEventListener("DOMContentLoaded", start);
@@ -167,37 +237,49 @@
 
         async function hentData() {
 
-            const response1 = await fetch(endpoint1);
+            const response = await fetch(endpoint);
 
 
-            console.log(response1);
+            console.log(response);
 
 
-            section1 = await response1.json();
+            foreningerSections = await response.json();
 
 
-            console.log(section1);
+            console.log(foreningerSections);
 
-            visSection1();
+            visSections();
 
         }
 
 
-        function visSection1() {
-            console.log(section1);
-            section1.forEach(elm => {
+        function visSections() {
+            console.log(foreningerSections);
+            foreningerSections.forEach(elm => {
                 const klon = skabelon.cloneNode(true).content;
                 klon.querySelector("h2").innerHTML = elm.overskrift;
+                klon.querySelector("p").innerHTML = elm.tekst;
                 klon.querySelector(".image").src = elm.image.guid;
-                klon.querySelector("p").innerHTML = elm.beskrivelse;
-                klon.querySelector(".grafik").src = elm.grafik.guid;
 
+                klon.querySelector(".grafik").src = elm.grafikbillede.guid;
 
                 listeElm.appendChild(klon);
             })
         }
+        document.querySelector(".col_news").addEventListener("click", visNews)
+        document.querySelector(".col_kontakt").addEventListener("click", visKontakt)
+        document.querySelector(".col_faq").addEventListener("click", visFAQ)
 
+        function visNews() {
+            location.href = "news.html";
+        }
+
+        function visKontakt() {
+            location.href = "kontakt.html";
+        }
+
+        function visFAQ() {
+            location.href = "faq.html"
+        }
     </script>
-</body>
-
-</html>
+</body></html>

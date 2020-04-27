@@ -1,0 +1,802 @@
+/****** MOBIL START ******/
+/******* GENERALT START *****/
+img {
+    width: 100%;
+
+}
+
+body {
+    margin: 0;
+    /*    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);*/
+    background-color: white;
+}
+
+section {
+    padding: 0 10vw 0 10vw;
+}
+
+/*
+.color2 {
+    background-color: #C95D43;
+}
+*/
+
+.col_news,
+.col_kontakt,
+.col_faq {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+p {
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .8rem;
+    letter-spacing: 1.2px;
+    color: #2a2a2a;
+    line-height: 1.5;
+
+}
+
+h1 {
+    color: #2a2a2a;
+    font-size: 2rem;
+    font-family: freight-neo-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin: 0;
+}
+
+
+h2,
+h3,
+h4 {
+    color: #2a2a2a;
+    font-size: 1.8rem;
+    font-family: freight-neo-pro, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    text-align: center;
+    margin: 0;
+}
+
+
+
+.velkommen {
+
+    color: white;
+    text-align: center;
+    padding-top: 10vw;
+    font-size: 4rem;
+
+
+    /***** FOOTER START *****/
+
+}
+
+footer .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #C95D43;
+    width: 100%;
+
+
+}
+
+footer .col_1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .col {
+    margin: .5vw;
+}
+
+
+
+footer p {
+    font-family: freight-neo-pro, sans-serif;
+    color: white;
+    font-size: 1rem;
+
+
+}
+
+
+/***** FOOTER SLUT ****/
+
+
+/******* GENERALT SLUT *****/
+
+
+
+/******* MOBIL FORSIDE START ******/
+
+
+
+.forside_sections article:nth-child(3) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 5vw;
+
+
+}
+
+
+
+.forside_sections h1,
+.forside_sections h2,
+.koncept_sections h2,
+#destinationer_detaljeview h2,
+#boliger_sections h2,
+.foreninger_sections h2 {
+    margin-top: 10vw;
+    margin-bottom: 3vw;
+}
+
+.forside_sections p,
+.forside_sections img,
+.koncept_sections p,
+.koncept_sections img,
+.destinationer_sections p,
+#destinationer_detaljeview p,
+#destinationer_detaljeview img,
+#boliger_sections p,
+#boliger_sections img,
+.foreninger_sections p,
+.foreninger_sections img {
+    margin-top: 5vw;
+
+}
+
+.destinationer_sections img {
+    margin-top: .5vw;
+}
+
+.destinationer_sections h2 {
+    margin-top: 5vw;
+    margin-bottom: 1vw;
+}
+
+.destinationer_sections article:nth-child(1) h2 {
+    margin-top: 15vw;
+}
+
+
+.forside_sections article:nth-child(1) .col:nth-child(2) h2,
+.forside_sections article:nth-child(2) .col:nth-child(2) h2,
+.forside_sections article:nth-child(4) .text1,
+.forside_sections article:nth-child(4) .overskrift2,
+.forside_sections article:nth-child(4) .text2,
+.forside_sections article:nth-child(3) img {
+    display: none;
+}
+
+
+
+
+
+/******* MOBIL FORSIDE SLUT *****/
+/****** MOBIL KONCEPT START *****/
+
+.splash_koncept {
+    background-size: cover;
+    background-image: url(img/splash_forside3.jpg);
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-position: 10% 30%;
+    height: 50vh;
+    margin-bottom: 100px;
+}
+
+.koncept_sections article:nth-child(1) .overskrift2,
+.koncept_sections article:nth-child(1) .text2 {
+    display: none;
+}
+
+.koncept_sections article:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 5vw;
+
+
+}
+
+.koncept_sections article:nth-child(2) img {
+    grid-column: 1 / -1;
+}
+
+
+
+/****** MOBIL KONCEPT SLUT ******/
+
+/***** MOBIL BOLIGER START ****/
+.splash_boliger {
+    background-size: cover;
+    background-image: url(img/splash_boliger.jpg);
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-position: 10% 29%;
+    height: 50vh;
+}
+
+#boliger_sections article:nth-child(2) .image1 {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#boliger_sections a {
+    text-decoration: none;
+    color: #C95D43;
+    font-weight: 500;
+}
+
+/***** MOBIL BOLIGER SLUT ****/
+
+/***** MOBIL DESTINATIONER START ****/
+.splash_destinationer {
+    background-size: cover;
+    background-image: url(img/splash_destinationer.jpg);
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-position: 10% 40%;
+    height: 50vh;
+
+}
+
+.destinationer_sections article:nth-child(2) .tekst1,
+.destinationer_sections article:nth-child(3) .tekst1,
+.destinationer_sections article:nth-child(4) .tekst1,
+.destinationer_sections article:nth-child(5) .tekst1,
+.destinationer_sections article:nth-child(6) .tekst1,
+.destinationer_sections article:nth-child(7) .tekst1,
+.destinationer_sections article:nth-child(8) .tekst1,
+.destinationer_sections article:nth-child(9) .tekst1,
+.destinationer_sections article:nth-child(10) .tekst1 {
+    display: none;
+}
+
+
+.destinationer_sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1vw;
+
+
+}
+
+.destinationer_sections article:nth-child(1) {
+    grid-column: 1 / -1;
+}
+
+/***** MOBIL DESTINATIONER SLUT *****/
+
+
+/***** MOBIL DESTINATIONER DETALJEVIEW START ****/
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 1vw;
+
+
+}
+
+#destinationer_detaljeview .container {
+    margin-top: 2vw;
+}
+
+#destinationer_detaljeview .tekst2 {
+    margin-bottom: 5vw;
+}
+
+
+
+/***** MOBIL DESTINATIONER DETALJEVIEW SLUT *****/
+
+/***** MOBIL FORENINGER START *****/
+.splash_foreninger {
+    background-size: cover;
+    background-image: url(img/splash_foreninger.jpg);
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-position: 10% 45%;
+    height: 50vh;
+}
+
+.foreninger_sections article:nth-child(1) img {
+    display: none;
+}
+
+.foreninger_sections .grafik {
+    width: 55%;
+}
+
+
+
+/***** MOBIL FORENINGER SLUT *****/
+
+/***** MOBIL STIFTEDE FORENINGER START ****/
+.splash_stiftedeforeninger {
+
+    background-size: cover;
+    background-image: url(img/splash_stiftedeforeninger.jpg);
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-position: 10% 45%;
+    height: 50vh;
+    margin-bottom: 100px;
+}
+
+
+.stiftede_foreninger_sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 2vw;
+
+
+}
+
+.stiftede_foreninger_sections article:nth-child(1) {
+    grid-column: 1 / -1;
+}
+
+/***** MOBIL STIFTEDE FORENINGER SLUT ****/
+
+
+/**** MOBIL NEWS/KONTAKT/FAQ SEKTION START ****/
+
+
+.footer_section .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.footer_section .col_news,
+.footer_section .col_kontakt,
+.footer_section .col_faq {
+    flex-basis: 250px;
+    flex-grow: 1;
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+}
+
+.footer_section img {}
+
+.footer_section p {
+    font-family: freight-neo-pro, sans-serif;
+    text-align: center;
+}
+
+.logo_footer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    margin-top: 10vw;
+
+}
+
+
+
+
+
+
+/**** MOBIL NEWS/KONTAKT/FAQ SEKTION START ****/
+
+/***** MOBIL KONTAKT START ****/
+#kontakt_sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 10vw;
+
+}
+
+#kontakt_sections .col:nth-child(2) {
+    grid-column: 1/-1;
+}
+
+#kontakt_sections .col:nth-child(3) {
+    display: none;
+}
+
+
+
+
+
+
+
+
+/***** MOBIL KONTAKT SLUT ****/
+/****** MOBIL SLUT ******/
+
+/***** WEB START *******/
+@media only screen and (min-width : 1224px) {
+    /***** WEB GENERALT START ****/
+
+    section {
+        padding: 0vw 15vw 0 15vw;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .koncept_sections article:nth-child(1) p,
+    .destinationer_sections article:nth-child(1) p,
+    #destinationer_detaljeview .tekst1,
+    .foreninger_sections p,
+    #boliger_sections p {
+        columns: 2;
+
+    }
+
+
+
+
+
+
+    /***** WEB GENERALT SLUT ****/
+    /*WEB-NAVIGATION START*/
+    nav {
+        z-index: 4000;
+    }
+
+    #menuToggle a {
+        text-decoration: none;
+        color: white;
+        transition: color 0.3s ease;
+    }
+
+    #menuToggle .undermenu a {
+        /*        color: #222222;*/
+    }
+
+    #menuToggle .undermenu .under-undermenu a {
+        /*        color: #eaeaea;*/
+    }
+
+    #menuToggle a:hover {
+        color: black;
+
+    }
+
+
+    #menuToggle input {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        /*        top: -7px;*/
+        /*           left: -5px;*/
+
+        cursor: pointer;
+        z-index: 4002;
+        opacity: 0;
+        /* hide this */
+
+        /* and place it over the hamburger */
+
+        -webkit-touch-callout: none;
+    }
+
+    /*
+ * Just a quick hamburger
+ */
+
+
+    #menuToggle .burger:first-child {
+        transform-origin: 0% 0%;
+
+    }
+
+    #menuToggle .burger:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    /*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+    #menuToggle input:checked ~ .burger {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #232323;
+    }
+
+    /*
+ * But let's hide the middle one.
+ */
+    #menuToggle input:checked ~ .burger:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*
+ * Ohyeah and the last one should go the other direction
+ */
+    #menuToggle input:checked ~ .burger:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    /*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+    .menu {
+        position: fixed;
+        width: 100vw;
+        /*        height: 80vh;*/
+        margin: 0;
+        top: 0;
+        left: 0;
+        padding: 100px 0 100px 50px;
+
+        background: #C95D43;
+
+
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+
+        transform-origin: 0% 0%;
+        transform: translate(100%, 0);
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+
+    .menu a {
+        font-size: 1.5rem;
+        font-family: neue-haas-grotesk-text, sans-serif;
+
+    }
+
+
+
+
+
+
+    .undermenu {
+        transition: all 0.5s;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        left: 314px;
+        top: 100px;
+
+
+    }
+
+    .under-undermenu {
+        transition: all 0.5s;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        left: 414px;
+        top: 0;
+    }
+
+
+
+    .undermenu a {
+        font-size: 1.5rem;
+
+    }
+
+    .under-undermenu a {
+
+        font-size: 1.5rem;
+    }
+
+
+
+
+
+    .menu li:hover > ul {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .undermenu li li:hover > ul {
+        /*        display: none;*/
+    }
+
+    nav {
+        position: fixed;
+        right: 0;
+
+    }
+
+    .menu a {
+
+        padding: 0 90px 0 0;
+    }
+
+    .undermenu a,
+    under-undermenu a {}
+
+    .menu ul {
+
+        list-style: none;
+    }
+
+
+
+    .menu li {
+        /*        background-color: #fdfdfd;*/
+        max-width: 250px;
+        /*        border-bottom: 1px solid black;*/
+        list-style: none;
+        padding: 20px 0px 20px 10px;
+
+    }
+
+    .menu li li {
+
+        /*        background-color: blue;*/
+        max-width: 400px;
+
+    }
+
+    .menu li li li {
+        /*        background-color: yellow;*/
+        width: 400px;
+
+    }
+
+
+
+
+
+
+
+    /*
+    .input_position {
+    position: absolute;
+    right: 0;
+    }
+*/
+
+
+    /*
+ * And let's slide it in from the left
+ */
+    #menuToggle input:checked ~ ul {
+        transform: none;
+    }
+
+
+    .arrow:after {
+        content: '\2038';
+        float: right;
+        transform: rotate(90deg);
+    }
+
+
+
+
+    .wrapper {
+        display: flex;
+    }
+
+    #menuToggle {
+        display: block;
+        position: relative;
+        z-index: 4001;
+
+
+
+        padding-top: 30px;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    #menuToggle .burger {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        margin-left: 1vw;
+        background: #C95D43;
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            opacity 0.55s ease;
+        right: 15px;
+
+
+
+    }
+
+    .logo {
+        position: fixed;
+        width: 100px;
+        height: 100px;
+        left: 0;
+        padding: 0;
+        margin: 0;
+        top: -30px;
+
+
+    }
+
+    /*WEB-NAVIGATION SLUT*/
+    /***** WEB FORSIDE START *****/
+
+    /* Splash start */
+    .splash h1 {
+        font-size: 4rem;
+        padding-top: 8vw;
+    }
+
+    /*Splash slut */
+
+    .forside_sections article:nth-child(1) p,
+    .forside_sections article:nth-child(2) p {
+        columns: 2;
+
+    }
+
+    .forside_sections img {
+        margin-top: 3vw;
+    }
+
+    .forside_sections {
+        margin-top: 20vw;
+    }
+
+
+    /***** WEB FORSIDE SLUT ****/
+
+    /***** WEB KONCEPT START ****/
+
+
+
+    /***** WEB KONCEPT SLUT *****/
+
+    /*****WEB BOLIGER START *****/
+
+    /***** WEB BOLIGER SLUT ****/
+    /***** WEB DESTINATIONER START *****/
+
+
+    /***** WEB DESTINATIONER SLUT *****/
+
+    /***** WEB DESTINATIONER DETALJEVIEW START ****/
+
+
+
+    /***** WEB DESTINATIONER DETALJEVIEW SLUT ****/
+
+    /***** WEB FORENINGER START ****/
+
+    /***** WEB FORENINGER START ****/
+
+
+    /***** WEB SLUT *****/
+
+    /***** WEB NEWS START ****/
+
+
+    /***** WEB NEWS SLUT ****/
+
+}
