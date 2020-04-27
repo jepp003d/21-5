@@ -15,11 +15,9 @@ section {
     padding: 0 10vw 0 10vw;
 }
 
-/*
 .color2 {
     background-color: #C95D43;
 }
-*/
 
 .col_news,
 .col_kontakt,
@@ -65,7 +63,10 @@ h4 {
     font-style: normal;
     text-align: center;
     margin: 0;
+    text-transform: uppercase;
 }
+
+
 
 
 
@@ -323,8 +324,12 @@ footer p {
     display: none;
 }
 
-.foreninger_sections .grafik {
-    width: 55%;
+
+.foreninger_sections img {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+
 }
 
 
@@ -356,6 +361,9 @@ footer p {
 .stiftede_foreninger_sections article:nth-child(1) {
     grid-column: 1 / -1;
 }
+
+
+
 
 /***** MOBIL STIFTEDE FORENINGER SLUT ****/
 
