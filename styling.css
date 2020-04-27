@@ -15,9 +15,11 @@ section {
     padding: 0 10vw 0 10vw;
 }
 
+/*
 .color2 {
     background-color: #C95D43;
 }
+*/
 
 .col_news,
 .col_kontakt,
@@ -63,10 +65,7 @@ h4 {
 
     text-align: center;
     margin: 0;
-    text-transform: uppercase;
 }
-
-
 
 
 
@@ -324,14 +323,7 @@ article:nth-child(even) {
 
 /***** MOBIL DESTINATIONER DETALJEVIEW START ****/
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    grid-gap: 20px;
-    align-items: center;
 
-
-}
 
 #destinationer_detaljeview .container {
     margin-top: 2vw;
@@ -360,17 +352,10 @@ article:nth-child(even) {
     display: none;
 }
 
-<<<<<<< HEAD
-
-.foreninger_sections img {
-    display: block;
-    margin: 0 auto;
-    width: 80%;
-
-=======
 .foreninger_sections .grafik {
-    width: 100%;
->>>>>>> origin/master
+    display: block;
+    margin: auto;
+    width: 80%;
 }
 
 
@@ -421,9 +406,6 @@ article:nth-child(even) {
 .stiftede_foreninger_sections article:nth-child(1) {
     grid-column: 1 / -1;
 }
-
-
-
 
 /***** MOBIL STIFTEDE FORENINGER SLUT ****/
 

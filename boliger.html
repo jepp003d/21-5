@@ -44,12 +44,9 @@
         align-items: center;
 
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 
-    <<<<<<< HEAD=======.bwd p,
+    .bwd p,
     .fwd p {
         position: absolute;
         z-index: 10;
@@ -68,14 +65,9 @@
 
 <body>
 
-<<<<<<< HEAD
-    <<<<<<< HEAD <header>
-        =======
-=======
 
     <header>
 
->>>>>>> origin/master
         <!--
     <header>
 >>>>>>> origin/master
@@ -86,54 +78,32 @@
     A fake / hidden checkbox is used as click reciever,
     so you can use the :checked selector on it.
     -->
-<<<<<<< HEAD
-        <<<<<<< HEAD <div class="logo"><a href="forside.html"> <img src="img/21_5_logo.svg" alt="21-5 logo"></a></div>
-            =======
-            <!--
-=======
         <div class="logo"><a href="forside.html"> <img src="img/21_5_logo.svg" alt="21-5 logo"></a></div>
         =======
         <!--
->>>>>>> origin/master
                 <div class="logo"> <img src="img/21_5_logo.svg" alt="21-5 logo"></div>
 >>>>>>> origin/master
                 <input type="checkbox" />
 -->
 
 
-<<<<<<< HEAD
-            <!--
-=======
         <!--
->>>>>>> origin/master
     Some spans to act as a hamburger.
 
     They are acting like a real hamburger,
     not that McDonalds stuff.
     -->
-<<<<<<< HEAD
-            <!--
-=======
         <!--
->>>>>>> origin/master
                 <span class="burger"></span>
                 <span class="burger"></span>
                 <span class="burger"></span>
 -->
 
-<<<<<<< HEAD
-            <!--
-    Too bad the menu has to be inside of the button
-    but hey, it's pure CSS magic.
-    -->
-            <!--
-=======
         <!--
     Too bad the menu has to be inside of the button
     but hey, it's pure CSS magic.
     -->
         <!--
->>>>>>> origin/master
                 <ul class="menu">
 
                     <li><a class="overmenu" href="forside.html">Forside</a></li>
@@ -200,11 +170,6 @@
 
 
 
-<<<<<<< HEAD
-            <section id="splash" class="splash_boliger">
-                <h1 class="velkommen">BOLIGER</h1>
-            </section>
-=======
         <section id="splash" class="splash_boliger">
             <h1 class="velkommen">BOLIGER</h1>
         </section>
@@ -214,23 +179,8 @@
 
         <template class="main_template">
             <article>
->>>>>>> origin/master
-
-            <section id="boliger_sections"></section>
-
-<<<<<<< HEAD
-
-            <template class="main_template">
-                <article>
 
 
-                    <h2 class="overskrift"></h2>
-
-                    <p class="text"></p>
-                    <img class="image1" src="" alt="">
-                    <img class="image2" src="" alt="">
-
-=======
                 <h2 class="overskrift"></h2>
 
                 <p class="text"></p>
@@ -243,215 +193,9 @@
                     <img class="caro_imgs" src="" alt="">
 
                 </template>
->>>>>>> origin/master
-
-                    <template class="billedkarrusel_container">
-
-                        <img class="caro_imgs" src="" alt="">
-
-<<<<<<< HEAD
-                    </template>
 
 
 
-                </article>
-
-            </template>
-            <section>
-                <main>
-
-                    <div class="carousel">
-                        <div class="carousel_inner">
-
-                            <div class="bwd">
-                                <p>&lt;</p>
-                            </div>
-                            <div class="container">
-
-                            </div>
-                            <div class="fwd">
-                                <p>&gt;</p>
-                            </div>
-                        </div>
-                        <div class="legend-container"></div>
-                    </div>
-                </main>
-            </section>
-            <section class=footer_section>
-
-                <article>
-                    <div class="logo_footer"><img src="img/21_5_logo.svg" alt="logo"></div>
-                    <div class="sectionwrapper">
-                        <div class="col_news">
-                            <h2>NEWS</h2>
-                            <p>Hold dig opdateret på 21-5's nyheder</p>
-                        </div>
-                        <div class="col_kontakt">
-                            <h2>KONTAKT</h2>
-                            <p>Kontakt os eller book kaffemøde</p>
-                        </div>
-                        <div class="col_faq">
-
-                            <h2>FAQ</h2>
-                            <p>Se de ofte stillede spørgsmål</p>
-                        </div>
-                    </div>
-                </article>
-            </section>
-            <footer>
-                <div class="sectionwrapper">
-                    <div class="col">
-                        <p><b>21-5 A/S</b><br>
-                            Rungstedvej 41<br>
-                            2970 Hørsholm</p>
-
-                    </div>
-                    <div class="col">
-                        <div class="col_1">
-                            <div class="col_2">
-                                <img src="img/facebook.svg" alt="facebooklogo">
-                            </div>
-                            <div class="col_2">
-                                <img src="img/instagram.svg" alt="instagramlogo">
-                            </div>
-                        </div>
-                        <p>70 26 11 55 <br>
-                            info@21-5.dk</p>
-
-                    </div>
-
-
-                </div>
-
-            </footer>
-
-
-            <script>
-                let boligerSections = [];
-                let karrusel;
-                let numberOfPicsInCaro;
-                let caroCurrentNum = 0;
-                const endpoint = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/boliger";
-                const billedkarruselEndpoint = "http://keajeppe.dk/kea/09_cms/21-5/wordpress/wordpress/wp-json/wp/v2/boliger/311";
-                let skabelon = document.querySelector(".main_template");
-                const listeElm = document.querySelector("#boliger_sections");
-
-
-                document.addEventListener("DOMContentLoaded", start);
-
-                function start() {
-                    hentData();
-                    document.querySelector(".fwd").addEventListener("click", fwd);
-                    document.querySelector(".bwd").addEventListener("click", bwd);
-                }
-
-                async function hentData() {
-                    const response = await fetch(endpoint);
-                    const response2 = await fetch(billedkarruselEndpoint);
-                    console.log(response2);
-                    boligerSections = await response.json();
-                    karrusel = await response2.json();
-                    console.log("BANAN", karrusel);
-                    //            visSection1();
-                    visSections();
-                    visBilledkarussel();
-
-                }
-
-
-                function visSections() {
-
-                    console.log(boligerSections);
-                    boligerSections.forEach(elm => {
-                        const klon = skabelon.cloneNode(true).content;
-                        klon.querySelector(".overskrift").innerHTML = elm.overskrift;
-                        klon.querySelector(".text").innerHTML = elm.tekst;
-                        klon.querySelector(".image1").src = elm.billede1.guid;
-                        klon.querySelector(".image2").src = elm.billede2.guid;
-                        listeElm.appendChild(klon);
-                    })
-                }
-
-                function visBilledkarussel() {
-                    console.log("visBilleder");
-                    numberOfPicsInCaro = karrusel.billedkarrusel.length;
-                    console.log("ANANAS", numberOfPicsInCaro);
-                    karrusel.billedkarrusel.forEach((billedkarrusel, index) => {
-                        const theClone = document.querySelector("template").cloneNode(true).content;
-                        const secondClone = document.querySelector("template").cloneNode(true).content;
-                        theClone.querySelector(".caro_imgs").src = billedkarrusel.guid;
-                        secondClone.querySelector(".caro_imgs").src = billedkarrusel.guid;
-                        document.querySelector(".container").appendChild(theClone);
-                        document.querySelector(".legend-container").appendChild(theClone);
-                    })
-
-                    document.querySelector(".container").addEventListener("scroll", scrollFunction);
-
-                }
-
-                function fwd() {
-                    if (caroCurrentNum < numberOfPicsInCaro - 1) {
-                        caroCurrentNum++;
-                        navigate();
-                    }
-                }
-
-                function bwd() {
-                    if (caroCurrentNum > 0)
-                        caroCurrentNum--;
-                    navigate();
-                }
-
-                function navigate() {
-                    document.querySelector(".container").scrollTo({
-                        left: caroCurrentNum * document.querySelector(".caro_imgs").width,
-                        behavior: "smooth"
-                    })
-                    setBtns();
-                }
-
-                function scrollFunction() {
-                    console.log("scrollFunction");
-
-                    caroCurrentNum = Math.round(document.querySelector(".container").scrollLeft / document.querySelector(".caro_imgs").width);
-                    console.log(caroCurrentNum);
-                    setBtns();
-
-                }
-
-                function setBtns() {
-                    if (caroCurrentNum < numberOfPicsInCaro - 1) {
-                        document.querySelector(".fwd").style.opacity = 1;
-                        document.querySelector(".fwd").style.cursor = "pointer";
-                    } else {
-                        document.querySelector(".fwd").style.opacity = 0.2;
-                        document.querySelector(".fwd").style.cursor = "default";
-                    }
-                    if (caroCurrentNum > 0) {
-                        document.querySelector(".bwd").style.opacity = 1;
-                        document.querySelector(".bwd").style.cursor = "pointer";
-                    } else {
-                        document.querySelector(".bwd").style.opacity = 0.2;
-                        document.querySelector(".bwd").style.cursor = "default";
-                    }
-                }
-                document.querySelector(".col_news").addEventListener("click", visNews)
-                document.querySelector(".col_kontakt").addEventListener("click", visKontakt)
-                document.querySelector(".col_faq").addEventListener("click", visFAQ)
-
-                function visNews() {
-                    location.href = "news.html";
-                }
-
-                function visKontakt() {
-                    location.href = "kontakt.html";
-                }
-
-                function visFAQ() {
-                    location.href = "faq.html"
-                }
-            </script>
-=======
             </article>
 
         </template>
@@ -478,7 +222,7 @@
         <section class=footer_section>
 
             <article>
-                <div class="logo"><img src="img/21_5_logo.svg" alt="logo"></div>
+                <div class="logo_footer"><img src="img/21_5_logo.svg" alt="logo"></div>
                 <div class="sectionwrapper">
                     <div class="col_news">
                         <h2>NEWS</h2>
@@ -649,5 +393,4 @@
                 location.href = "faq.html"
             }
         </script>
->>>>>>> origin/master
 </body></html>
