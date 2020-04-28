@@ -75,6 +75,7 @@ h4 {
     text-align: center;
     margin: 0;
     text-transform: uppercase;
+    font-style: normal;
 }
 
 
@@ -551,7 +552,7 @@ article:nth-child(even) {
         width: 2%;
         display: block;
         margin: 0 auto;
-        padding-top: 7vw;
+        padding-top: 6vw;
     }
 
     .bounce {
