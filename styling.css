@@ -11,7 +11,6 @@ body {
     /*    background-color: white;*/
 }
 
-/*
 #forside_article,
 #boliger_article,
 #bolig_carousel,
@@ -24,20 +23,15 @@ body {
 #dest_detaljeview_carousel,
 .stiftede_foreninger_sections {
     padding: 0 10vw 0 10vw;
-    transition: 1s;
-}*/
+
+}
 
 #destinationer_article,
 #kontakt_sections {
     padding: 0 10vw 0 10vw;
 }
 
-/*
-.color2 {
-    background-color: #C95D43;
 
-}
-*/
 
 .col_news,
 .col_kontakt,
@@ -542,9 +536,16 @@ article:nth-child(even) {
 
     #boliger_article,
     #forside_article,
-    #foreninger_article #boliger_footer {
+    #foreninger_article,
+    #boliger_footer,
+    #bolig_carousel {
         transition: 1s;
     }
+
+    .white {
+        background-color: white !important;
+    }
+
 
     p {
         font-size: 1rem;
