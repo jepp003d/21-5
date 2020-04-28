@@ -1,0 +1,985 @@
+/****** MOBIL START ******/
+/******* GENERALT START *****/
+img {
+    width: 100%;
+
+}
+
+body {
+    margin: 0;
+    /*        background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);*/
+    /*    background-color: white;*/
+}
+
+#forside_article,
+#boliger_article,
+#bolig_carousel,
+.footer_section,
+#foreninger_article,
+.destinationer_sections,
+#koncept_article,
+#destination,
+#dest_detaljeview_carousel,
+.stiftede_foreninger_sections {
+    padding: 0 10vw 0 10vw;
+
+}
+
+#kontakt_sections {
+    padding: 0 10vw 0 10vw;
+}
+
+
+
+.col_news,
+.col_kontakt,
+.col_faq {
+    cursor: pointer;
+}
+
+
+
+
+
+
+p {
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .8rem;
+    letter-spacing: 0.5px;
+    color: #2a2a2a;
+    line-height: 1.8;
+
+}
+
+h1 {
+    color: #2a2a2a;
+    font-size: 2rem;
+    font-family: freight-neo-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin: 0;
+}
+
+
+h2,
+h3,
+h4 {
+    color: #2a2a2a;
+    font-size: 1.8rem;
+    font-family: freight-neo-pro, sans-serif;
+
+    transition: all 0.3s;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+
+
+.velkommen {
+
+    color: white;
+    text-align: center;
+    padding-top: 10vw;
+    font-size: 4rem;
+    font-weight: 600;
+
+
+    /***** FOOTER START *****/
+
+}
+
+footer .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #C95D43;
+    width: 100%;
+}
+
+
+
+
+.footer_section h2:hover {
+
+    letter-spacing: 0.2rem;
+
+}
+
+footer .col_1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .col {
+    margin: .5vw;
+}
+
+
+
+footer p {
+    font-family: freight-neo-pro, sans-serif;
+    color: white;
+    font-size: 1rem;
+
+
+}
+
+
+
+
+/***** FOOTER SLUT ****/
+
+
+/******* GENERALT SLUT *****/
+
+
+
+/******* MOBIL FORSIDE START ******/
+
+
+
+.forside_sections article:nth-child(3) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 20px;
+
+
+}
+
+/*
+.forside_sections img,
+.koncept_sections img,
+.foreninger_sections img,
+#boliger_sections .image2 {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+}
+*/
+
+/*
+article:nth-child(even) {
+    background-color: #e2e2e2;
+}
+*/
+
+
+
+
+.koncept_sections h2,
+#destinationer_detaljeview h2,
+#boliger_sections h2,
+#foreninger_sections h2 {
+    margin-top: 6vh;
+    margin-bottom: 3vw;
+}
+
+
+
+.forside_sections p,
+.forside_sections img,
+.koncept_sections p,
+.koncept_sections img,
+.destinationer_sections p,
+#destinationer_detaljeview p,
+#destinationer_detaljeview img,
+#boliger_sections p,
+#boliger_sections img,
+.foreninger_sections p,
+.foreninger_sections img {
+    margin-top: 5vw;
+
+}
+
+.destinationer_sections img {
+    margin-top: .5vw;
+}
+
+.destinationer_sections h2 {
+    margin-top: 5vw;
+    margin-bottom: 1vw;
+}
+
+.destinationer_sections article:nth-child(1) h2 {
+    margin-top: 15vw;
+}
+
+
+.forside_sections article:nth-child(1) .col:nth-child(2) h2,
+.forside_sections article:nth-child(2) .col:nth-child(2) h2,
+.forside_sections article:nth-child(4) .text1,
+.forside_sections article:nth-child(4) .overskrift2,
+.forside_sections article:nth-child(4) .text2,
+.forside_sections article:nth-child(3) img {
+    display: none;
+}
+
+
+
+
+
+/******* MOBIL FORSIDE SLUT *****/
+/****** MOBIL KONCEPT START *****/
+
+.splash_forside {
+    background-size: cover;
+    background-image: url(img/splash_test2.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    object-fit: fill;
+}
+
+
+
+
+.splash_koncept {
+    background-size: cover;
+    background-image: url(img/splash_koncept%20copy.jpg);
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-position: 0% 100%;
+    height: 50vh;
+    margin-bottom: 100px;
+}
+
+.koncept_sections article:nth-child(1) .overskrift2,
+.koncept_sections article:nth-child(1) .text2 {
+    display: none;
+}
+
+.koncept_sections article:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 20px;
+
+
+}
+
+.koncept_sections article:nth-child(2) img {
+    grid-column: 1 / -1;
+}
+
+
+
+/****** MOBIL KONCEPT SLUT ******/
+
+/***** MOBIL BOLIGER START ****/
+.splash_boliger {
+    background-size: cover;
+    background-image: url(img/splash_boliger.jpg);
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-position: 0% 80%;
+    height: 50vh;
+}
+
+#boliger_sections article:nth-child(2) .image1 {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#boliger_sections a {
+    text-decoration: none;
+    color: #C95D43;
+    font-weight: 500;
+}
+
+#boliger_sections article:nth-child(1),
+#foreninger_sections article:nth-child(1),
+.forside_sections article:nth-child(1) {
+    background-color: white;
+}
+
+
+/***** MOBIL BOLIGER SLUT ****/
+
+/***** MOBIL DESTINATIONER START ****/
+.splash_destinationer {
+    background-size: cover;
+    background-image: url(img/splash_destinationer.jpg);
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-position: 0% 95%;
+    height: 50vh;
+
+}
+
+.destinationer_sections article:nth-child(2) .tekst1,
+.destinationer_sections article:nth-child(3) .tekst1,
+.destinationer_sections article:nth-child(4) .tekst1,
+.destinationer_sections article:nth-child(5) .tekst1,
+.destinationer_sections article:nth-child(6) .tekst1,
+.destinationer_sections article:nth-child(7) .tekst1,
+.destinationer_sections article:nth-child(8) .tekst1,
+.destinationer_sections article:nth-child(9) .tekst1,
+.destinationer_sections article:nth-child(10) .tekst1 {
+    display: none;
+}
+
+
+.destinationer_sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+/*
+.destinationer_sections p:nth-child(2) {
+    color: white;
+}
+*/
+
+.destinationer_sections img {
+    transition: all 0.2s;
+    /*    box-shadow: 3px 3px 5px black;*/
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .6);
+    transform: scale(1);
+}
+
+.destinationer_sections img:hover {
+
+    transform: scale(0.95);
+}
+
+.destinationer_sections article:nth-child(1) {
+    grid-column: 1 / -1;
+}
+
+/***** MOBIL DESTINATIONER SLUT *****/
+
+
+/***** MOBIL DESTINATIONER DETALJEVIEW START ****/
+
+
+
+#destinationer_detaljeview .container {
+    margin-top: 2vw;
+}
+
+#destinationer_detaljeview .tekst2 {
+    margin-bottom: 5vw;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 2vw;
+}
+
+
+
+
+
+/***** MOBIL DESTINATIONER DETALJEVIEW SLUT *****/
+
+/***** MOBIL FORENINGER START *****/
+.splash_foreninger {
+    background-size: cover;
+    background-image: url(img/splash_foreninger.jpg);
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-position: 0% 52%;
+    height: 50vh;
+}
+
+/*
+.foreninger_sections article:nth-child(1) img {
+    display: none;
+}
+*/
+
+.foreninger_sections .grafik {
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+
+
+
+/***** MOBIL FORENINGER SLUT *****/
+
+/***** MOBIL STIFTEDE FORENINGER START ****/
+.splash_stiftedeforeninger {
+
+    background-size: cover;
+    background-image: url(img/splash_stiftede_foreninger.jpg);
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-position: 10% 75%;
+    height: 50vh;
+    margin-bottom: 100px;
+}
+
+
+.stiftede_foreninger_sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 2vw;
+}
+
+.stiftede_foreninger_sections article:nth-of-type(n+2) p {
+    /*    color: white;*/
+    line-height: 1.5;
+}
+
+.stiftede_foreninger_sections article:nth-of-type(n+2) h2 {
+    /*    color: white;*/
+    padding-bottom: 10px;
+
+}
+
+.stiftede_foreninger_sections article:nth-of-type(n+2) {
+    /*    box-shadow: 0px 0px 5px rgba(0, 0, 0, .8);*/
+    border-radius: 10px;
+    /*    background-color: #C95D43;*/
+    background-color: #efefef;
+    padding: 15px;
+}
+
+
+
+.stiftede_foreninger_sections article:nth-child(1) {
+    grid-column: 1 / -1;
+}
+
+/***** MOBIL STIFTEDE FORENINGER SLUT ****/
+
+
+/**** MOBIL NEWS/KONTAKT/FAQ SEKTION START ****/
+
+
+.footer_section .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.footer_section .col_news,
+.footer_section .col_kontakt,
+.footer_section .col_faq {
+    flex-basis: 250px;
+    flex-grow: 1;
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+}
+
+.footer_section {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.footer_section h2 {
+    font-weight: 200;
+
+}
+
+.footer_section img {}
+
+.footer_section p {
+    font-family: freight-neo-pro, sans-serif;
+    text-align: center;
+}
+
+.logo_footer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    margin-top: 15vw;
+
+}
+
+
+
+
+
+
+/**** MOBIL NEWS/KONTAKT/FAQ SEKTION START ****/
+
+/***** MOBIL KONTAKT START ****/
+#kontakt_sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 10vw;
+
+}
+
+#kontakt_sections .col:nth-child(2) {
+    grid-column: 1/-1;
+}
+
+#kontakt_sections .col:nth-child(3) {
+    display: none;
+}
+
+
+
+
+
+
+
+
+/***** MOBIL KONTAKT SLUT ****/
+/****** MOBIL SLUT ******/
+
+/***** WEB START *******/
+@media only screen and (min-width : 1224px) {
+    /***** WEB GENERALT START ****/
+
+
+    #splash_wrapper {
+        flex-basis: 250px;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        padding-top: 7vw;
+    }
+
+    #splash_wrapper img {
+        width: 12%;
+        padding: 10px;
+    }
+
+    #splash .scroll_icon {
+        width: 2%;
+        display: block;
+        margin: 0 auto;
+        padding-top: 5vw;
+    }
+
+
+
+    .bounce {
+        animation-name: bounce;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes bounce {
+
+        from {
+            transform: translateY(0);
+        }
+
+        to {
+            transform: translateY(5px);
+        }
+    }
+
+
+
+    #forside_article,
+    #boliger_article,
+    #bolig_carousel,
+
+    #foreninger_article,
+    .destinationer_sections,
+    #koncept_article,
+    #destination,
+    #dest_detaljeview_carousel,
+    .stiftede_foreninger_sections {
+        padding: 5vw 15vw 5vw 15vw;
+    }
+
+    #foreninger_article:nth-child(4) {}
+
+    /*
+    .footer_section_forening img {
+        margin-top: 0;
+    }
+*/
+
+
+    #boliger_article,
+    #forside_article,
+    #foreninger_article,
+    #boliger_footer,
+    #bolig_carousel,
+    #koncept_article {
+        transition: 1s;
+    }
+
+    .white {
+        background-color: white !important;
+    }
+
+
+    p {
+        font-size: 1rem;
+    }
+
+    .koncept_sections article:nth-child(1) p,
+    .destinationer_sections article:nth-child(1) p,
+    #destinationer_detaljeview .tekst1,
+    .foreninger_sections p,
+    #boliger_sections p {
+        columns: 2;
+
+    }
+
+
+
+
+
+
+    /***** WEB GENERALT SLUT ****/
+    /*WEB-NAVIGATION START*/
+    nav {
+        z-index: 4000;
+    }
+
+    #menuToggle a {
+        text-decoration: none;
+        color: white;
+        transition: color 0.3s ease;
+    }
+
+    #menuToggle .undermenu a {
+        /*        color: #222222;*/
+    }
+
+    #menuToggle .undermenu .under-undermenu a {
+        /*        color: #eaeaea;*/
+    }
+
+    #menuToggle a:hover {
+        color: black;
+
+
+    }
+
+
+    #menuToggle input {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        /*        top: -7px;*/
+        /*           left: -5px;*/
+
+        cursor: pointer;
+        z-index: 4002;
+        opacity: 0;
+        /* hide this */
+
+        /* and place it over the hamburger */
+
+        -webkit-touch-callout: none;
+    }
+
+    /*
+ * Just a quick hamburger
+ */
+
+
+    #menuToggle .burger:first-child {
+        transform-origin: 0% 0%;
+
+    }
+
+    #menuToggle .burger:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    /*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+    #menuToggle input:checked ~ .burger {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #232323;
+    }
+
+    /*
+ * But let's hide the middle one.
+ */
+    #menuToggle input:checked ~ .burger:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*
+ * Ohyeah and the last one should go the other direction
+ */
+    #menuToggle input:checked ~ .burger:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    /*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+    .menu {
+        position: fixed;
+        width: 100vw;
+        /*        height: 80vh;*/
+        margin: 0;
+        top: 0;
+        left: 0;
+        padding: 100px 0 100px 50px;
+
+        background: #C95D43;
+
+
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+
+        transform-origin: 0% 0%;
+        transform: translate(100%, 0);
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+
+    .menu a {
+        font-size: 1.5rem;
+        font-family: neue-haas-grotesk-text, sans-serif;
+
+    }
+
+
+
+
+
+
+    .undermenu {
+        transition: all 0.5s;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        left: 314px;
+        top: 100px;
+
+
+    }
+
+    .under-undermenu {
+        transition: all 0.5s;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        left: 414px;
+        top: 0;
+    }
+
+
+
+    .undermenu a {
+        font-size: 1.5rem;
+
+    }
+
+    .under-undermenu a {
+
+        font-size: 1.5rem;
+    }
+
+
+
+
+
+    .menu li:hover > ul {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .undermenu li li:hover > ul {
+        /*        display: none;*/
+    }
+
+    nav {
+        position: fixed;
+        right: 0;
+
+    }
+
+    .menu a {
+
+        padding: 0 90px 0 0;
+    }
+
+    .undermenu a,
+    under-undermenu a {}
+
+    .menu ul {
+
+        list-style: none;
+    }
+
+
+
+    .menu li {
+        /*        background-color: #fdfdfd;*/
+        max-width: 250px;
+        /*        border-bottom: 1px solid black;*/
+        list-style: none;
+        padding: 20px 0px 20px 10px;
+
+    }
+
+    .menu li li {
+
+        /*        background-color: blue;*/
+        max-width: 400px;
+
+    }
+
+    .menu li li li {
+        /*        background-color: yellow;*/
+        width: 400px;
+
+    }
+
+
+
+
+
+
+
+    /*
+    .input_position {
+    position: absolute;
+    right: 0;
+    }
+*/
+
+
+    /*
+ * And let's slide it in from the left
+ */
+    #menuToggle input:checked ~ ul {
+        transform: none;
+    }
+
+
+    .arrow:after {
+        content: '\2038';
+        float: right;
+        transform: rotate(90deg);
+    }
+
+
+
+
+    .wrapper {
+        display: flex;
+    }
+
+    #menuToggle {
+        display: block;
+        position: relative;
+        z-index: 4001;
+
+
+
+        padding-top: 30px;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    #menuToggle .burger {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        margin-left: 1vw;
+        background: #C95D43;
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            opacity 0.55s ease;
+        right: 15px;
+
+
+
+    }
+
+    .logo {
+        position: fixed;
+        width: 100px;
+        height: 100px;
+        left: 0;
+        padding: 0;
+        margin: 0;
+        top: -30px;
+
+
+    }
+
+    /*WEB-NAVIGATION SLUT*/
+    /***** WEB FORSIDE START *****/
+
+    /* Splash start */
+    .splash h1 {
+        font-size: 4rem;
+        padding-top: 8vw;
+    }
+
+    /*Splash slut */
+
+    .forside_sections article:nth-child(1) p,
+    .forside_sections article:nth-child(2) p {
+        columns: 2;
+
+    }
+
+    .forside_sections img {
+        margin-top: 3vw;
+    }
+
+    .forside_sections {
+        /*        margin-top: 20vw;*/
+    }
+
+
+    /***** WEB FORSIDE SLUT ****/
+
+    /***** WEB KONCEPT START ****/
+
+
+
+    /***** WEB KONCEPT SLUT *****/
+
+    /*****WEB BOLIGER START *****/
+
+    /***** WEB BOLIGER SLUT ****/
+    /***** WEB DESTINATIONER START *****/
+
+
+    /***** WEB DESTINATIONER SLUT *****/
+
+    /***** WEB DESTINATIONER DETALJEVIEW START ****/
+
+
+
+    /***** WEB DESTINATIONER DETALJEVIEW SLUT ****/
+
+    /***** WEB FORENINGER START ****/
+
+    /***** WEB FORENINGER START ****/
+
+
+    /***** WEB SLUT *****/
+
+    /***** WEB NEWS START ****/
+
+
+    /***** WEB NEWS SLUT ****/
+
+}
