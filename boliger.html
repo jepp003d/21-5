@@ -46,16 +46,21 @@
     }
 
 
-    .bwd p,
-    .fwd p {
+    .bwd img,
+    .fwd img {
         position: absolute;
         z-index: 10;
-        color: white;
-        font-size: 2rem;
+
     }
 
-    .fwd p {
-        margin-left: -17px;
+    .fwd img {
+        margin-left: 4px;
+        width: 1.2%;
+    }
+
+    .bwd img {
+        margin-left: -22px;
+        width: 1.2%;
     }
 </style>
 
@@ -229,13 +234,13 @@
                     <div class="carousel_inner">
 
                         <div class="bwd">
-                            <p>&lt;</p>
+                            <img src="img/tilbagepil.svg" alt="tilbagepil">
                         </div>
                         <div class="container">
 
                         </div>
                         <div class="fwd">
-                            <p>&gt;</p>
+                            <img src="img/forwardpil.svg" alt="forwardpil">
                         </div>
                     </div>
                     <div class="legend-container"></div>
