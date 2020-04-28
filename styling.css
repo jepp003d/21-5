@@ -18,7 +18,6 @@ body {
 #foreninger_article,
 .destinationer_sections,
 #koncept_article,
-/*#koncept_footer,*/
 #destination,
 #dest_detaljeview_carousel,
 .stiftede_foreninger_sections {
@@ -26,7 +25,6 @@ body {
 
 }
 
-#destinationer_article,
 #kontakt_sections {
     padding: 0 10vw 0 10vw;
 }
@@ -526,7 +524,6 @@ article:nth-child(even) {
     #foreninger_article,
     .destinationer_sections,
     #koncept_article,
-
     #destination,
     #dest_detaljeview_carousel,
     .stiftede_foreninger_sections {
