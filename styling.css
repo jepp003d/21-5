@@ -553,7 +553,8 @@ article:nth-child(even) {
     #forside_article,
     #foreninger_article,
     #boliger_footer,
-    #bolig_carousel {
+    #bolig_carousel,
+    #koncept_article {
         transition: 1s;
     }
 
