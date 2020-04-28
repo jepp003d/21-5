@@ -70,7 +70,7 @@ h4 {
     color: #2a2a2a;
     font-size: 1.8rem;
     font-family: freight-neo-pro, sans-serif;
-    font-weight: 500;
+
     transition: all 0.3s;
     text-align: center;
     margin: 0;
@@ -85,10 +85,7 @@ h4 {
     text-align: center;
     padding-top: 10vw;
     font-size: 4rem;
-
-
-    /***** FOOTER START *****/
-
+    font-weight: 600;
 }
 
 footer .sectionwrapper {
@@ -186,8 +183,8 @@ article:nth-child(even) {
 #destinationer_detaljeview img,
 #boliger_sections p,
 #boliger_sections img,
-.foreninger_sections p,
-.foreninger_sections img {
+#foreninger_sections p,
+#foreninger_sections img {
     margin-top: 5vw;
 
 }
@@ -213,6 +210,14 @@ article:nth-child(even) {
 .forside_sections article:nth-child(4) .text2,
 .forside_sections article:nth-child(3) img {
     display: none;
+}
+
+.splash_forside {
+    background-size: cover;
+    background-image: url(img/splash_forside.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    object-fit: fill;
 }
 
 
@@ -362,6 +367,10 @@ article:nth-child(even) {
     grid-gap: 2vw;
 }
 
+.tilbagepil {
+    width: 2%;
+}
+
 
 
 
@@ -385,11 +394,12 @@ article:nth-child(even) {
 }
 */
 
-.foreninger_sections .grafik {
+#foreninger_sections .grafik {
     display: block;
     margin: auto;
     width: 80%;
 }
+
 
 
 
@@ -524,7 +534,45 @@ article:nth-child(even) {
 @media only screen and (min-width : 1224px) {
     /***** WEB GENERALT START ****/
 
+    #splash_wrapper {
+        flex-basis: 250px;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        padding-top: 7vw;
+    }
 
+    #splash_wrapper img {
+        width: 12%;
+        padding: 10px;
+    }
+
+    #splash .scroll_icon {
+        width: 2%;
+        display: block;
+        margin: 0 auto;
+        padding-top: 5vw;
+    }
+
+    .bounce {
+        animation-name: bounce;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes bounce {
+
+        from {
+            transform: translateY(0);
+        }
+
+        to {
+            transform: translateY(5px);
+        }
+    }
 
 
     #forside_article,
@@ -570,7 +618,7 @@ article:nth-child(even) {
     .koncept_sections article:nth-child(1) p,
     .destinationer_sections article:nth-child(1) p,
     #destinationer_detaljeview .tekst1,
-    .foreninger_sections p,
+    #foreninger_sections article:nth-of-type(2n) p,
     #boliger_sections p {
         columns: 2;
 
@@ -889,9 +937,7 @@ article:nth-child(even) {
         margin-top: 3vw;
     }
 
-    .forside_sections {
-        margin-top: 20vw;
-    }
+
 
 
     /***** WEB FORSIDE SLUT ****/
@@ -917,6 +963,7 @@ article:nth-child(even) {
     /***** WEB DESTINATIONER DETALJEVIEW SLUT ****/
 
     /***** WEB FORENINGER START ****/
+
 
     /***** WEB FORENINGER START ****/
 
