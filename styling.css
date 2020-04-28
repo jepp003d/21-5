@@ -232,11 +232,11 @@ article:nth-child(even) {
 
 .splash_koncept {
     background-size: cover;
-    background-image: url(img/splash_forside3.jpg);
+    background-image: url(img/splash_koncept%20copy.jpg);
     object-fit: fill;
     background-repeat: no-repeat;
     z-index: 2;
-    background-position: 10% 30%;
+    background-position: 0% 100%;
     height: 50vh;
     margin-bottom: 100px;
 }
@@ -269,7 +269,7 @@ article:nth-child(even) {
     object-fit: fill;
     background-repeat: no-repeat;
     z-index: 2;
-    background-position: 10% 29%;
+    background-position: 0% 80%;
     height: 50vh;
 }
 
@@ -303,7 +303,7 @@ article:nth-child(even) {
     object-fit: fill;
     background-repeat: no-repeat;
     z-index: 2;
-    background-position: 10% 40%;
+    background-position: 0% 95%;
     height: 50vh;
 
 }
@@ -383,7 +383,7 @@ article:nth-child(even) {
     object-fit: fill;
     background-repeat: no-repeat;
     z-index: 2;
-    background-position: 10% 45%;
+    background-position: 0% 52%;
     height: 50vh;
 }
 
@@ -407,11 +407,11 @@ article:nth-child(even) {
 .splash_stiftedeforeninger {
 
     background-size: cover;
-    background-image: url(img/splash_stiftedeforeninger.jpg);
+    background-image: url(img/splash_stiftede_foreninger.jpg);
     object-fit: fill;
     background-repeat: no-repeat;
     z-index: 2;
-    background-position: 10% 45%;
+    background-position: 10% 75%;
     height: 50vh;
     margin-bottom: 100px;
 }
