@@ -229,6 +229,7 @@ article:nth-child(even) {
     height: 100vh;
     background-repeat: no-repeat;
     object-fit: fill;
+    color: white;
 }
 
 
