@@ -548,11 +548,13 @@ article:nth-child(even) {
         padding: 10px;
     }
 
+
+
     #splash .scroll_icon {
         width: 2%;
-        display: block;
-        margin: 0 auto;
         padding-top: 6vw;
+        position: relative;
+        left: 49vw;
     }
 
     .bounce {
@@ -892,6 +894,7 @@ article:nth-child(even) {
         margin-bottom: 5px;
         position: relative;
         margin-left: 1vw;
+
         background: #C95D43;
         border-radius: 3px;
         z-index: 1;
