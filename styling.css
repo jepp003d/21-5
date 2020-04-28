@@ -34,6 +34,7 @@ body {
 
 .color2 {
     background-color: #C95D43;
+
 }
 
 .col_news,
@@ -169,7 +170,7 @@ article:nth-child(even) {
 #destinationer_detaljeview h2,
 #boliger_sections h2,
 .foreninger_sections h2 {
-    margin-top: 10vw;
+    margin-top: 6vh;
     margin-bottom: 3vw;
 }
 
