@@ -539,7 +539,7 @@ article:nth-child(even) {
         flex-grow: 1;
         display: flex;
         justify-content: center;
-        padding-top: 7vw;
+        padding-top: 4vw;
     }
 
     #splash_wrapper img {
@@ -551,7 +551,7 @@ article:nth-child(even) {
         width: 2%;
         display: block;
         margin: 0 auto;
-        padding-top: 5vw;
+        padding-top: 3vw;
     }
 
     .bounce {

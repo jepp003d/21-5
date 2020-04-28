@@ -192,8 +192,7 @@
     <section id="destinationer_detaljeview">
 
         <article id="destination">
-            <button>⬅︎
-            </button>
+            <img class="tilbagepil" src="img/tilbagepil.svg" alt="tilbagepil">
             <h2></h2>
             <p class="tekst1"></p>
             <img class="image" src="" alt="">
@@ -317,7 +316,7 @@
         }
 
         function visDestination() {
-            detalje.querySelector("button").addEventListener("click", () => {
+            detalje.querySelector(".tilbagepil").addEventListener("click", () => {
                 history.back();
             });
 
