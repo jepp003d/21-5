@@ -291,7 +291,6 @@ article:nth-child(even) {
 #foreninger_sections article:nth-child(1),
 .forside_sections article:nth-child(1) {
     background-color: white;
-    filter: blur(0px);
 }
 
 
@@ -543,7 +542,7 @@ article:nth-child(even) {
 
     #boliger_article,
     #forside_article,
-    #foreninger_article {
+    #foreninger_article #boliger_footer {
         transition: 1s;
     }
 
