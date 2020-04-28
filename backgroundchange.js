@@ -22,7 +22,7 @@ document.onscroll = function () {
         //  Ændrer baggrundsfarve når man skroller forbi 2/3 del af den forrige sektion
         heightBefore = 0;
         if (i > 0) {
-            heightBefore = allSections[i - 1].offsetHeight / 2;
+            heightBefore = allSections[i - 1].offsetHeight / 3;
         }
 
         if (scrollTop > curSection.offsetTop - heightBefore) {

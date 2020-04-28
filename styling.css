@@ -11,22 +11,36 @@ body {
     /*    background-color: white;*/
 }
 
-section {
+/*
+#forside_article,
+#boliger_article,
+#bolig_carousel,
+#boliger_footer,
+#foreninger_article,
+.destinationer_sections,
+#koncept_article,
+#koncept_footer,
+#destination,
+#dest_detaljeview_carousel,
+.stiftede_foreninger_sections {
+    padding: 0 10vw 0 10vw;
+    transition: 1s;
+}*/
+
+#destinationer_article,
+#kontakt_sections {
     padding: 0 10vw 0 10vw;
 }
 
-/*
 .color2 {
     background-color: #C95D43;
 }
-*/
 
 .col_news,
 .col_kontakt,
 .col_faq {
     cursor: pointer;
 }
-
 
 
 
@@ -65,6 +79,7 @@ h4 {
 
     text-align: center;
     margin: 0;
+    text-transform: uppercase;
 }
 
 
@@ -110,9 +125,7 @@ footer p {
 
 }
 
-article {
-    /*    border-bottom: 1px solid black;*/
-}
+
 
 
 /***** FOOTER SLUT ****/
@@ -151,8 +164,7 @@ article:nth-child(even) {
 
 
 
-.forside_sections h1,
-.forside_sections h2,
+
 .koncept_sections h2,
 #destinationer_detaljeview h2,
 #boliger_sections h2,
@@ -160,6 +172,8 @@ article:nth-child(even) {
     margin-top: 10vw;
     margin-bottom: 3vw;
 }
+
+
 
 .forside_sections p,
 .forside_sections img,
@@ -263,6 +277,13 @@ article:nth-child(even) {
     font-weight: 500;
 }
 
+#boliger_sections article:nth-child(1),
+#foreninger_sections article:nth-child(1),
+.forside_sections article:nth-child(1) {
+    background-color: white;
+}
+
+
 /***** MOBIL BOLIGER SLUT ****/
 
 /***** MOBIL DESTINATIONER START ****/
@@ -333,6 +354,14 @@ article:nth-child(even) {
     margin-bottom: 5vw;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 2vw;
+}
+
+
+
 
 
 /***** MOBIL DESTINATIONER DETALJEVIEW SLUT *****/
@@ -348,9 +377,11 @@ article:nth-child(even) {
     height: 50vh;
 }
 
+/*
 .foreninger_sections article:nth-child(1) img {
     display: none;
 }
+*/
 
 .foreninger_sections .grafik {
     display: block;
@@ -481,8 +512,28 @@ article:nth-child(even) {
 @media only screen and (min-width : 1224px) {
     /***** WEB GENERALT START ****/
 
-    section {
-        padding: 0vw 15vw 0 15vw;
+
+
+
+    #forside_article,
+    #boliger_article,
+    #bolig_carousel,
+    #boliger_footer,
+    #foreninger_article,
+    .destinationer_sections,
+    #koncept_article,
+    #koncept_footer,
+    #destination,
+    #dest_detaljeview_carousel,
+    .stiftede_foreninger_sections {
+        padding: 5vw 15vw 5vw 15vw;
+
+    }
+
+    #boliger_article,
+    #forside_article,
+    #foreninger_article {
+        transition: 1s;
     }
 
     p {
