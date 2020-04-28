@@ -14,11 +14,11 @@ body {
 #forside_article,
 #boliger_article,
 #bolig_carousel,
-#boliger_footer,
+.footer_section,
 #foreninger_article,
 .destinationer_sections,
 #koncept_article,
-#koncept_footer,
+/*#koncept_footer,*/
 #destination,
 #dest_detaljeview_carousel,
 .stiftede_foreninger_sections {
@@ -522,11 +522,11 @@ article:nth-child(even) {
     #forside_article,
     #boliger_article,
     #bolig_carousel,
-    #boliger_footer,
+    .footer_section,
     #foreninger_article,
     .destinationer_sections,
     #koncept_article,
-    #koncept_footer,
+
     #destination,
     #dest_detaljeview_carousel,
     .stiftede_foreninger_sections {
