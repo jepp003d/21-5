@@ -32,10 +32,12 @@ body {
     padding: 0 10vw 0 10vw;
 }
 
+/*
 .color2 {
     background-color: #C95D43;
 
 }
+*/
 
 .col_news,
 .col_kontakt,
@@ -282,6 +284,7 @@ article:nth-child(even) {
 #foreninger_sections article:nth-child(1),
 .forside_sections article:nth-child(1) {
     background-color: white;
+    filter: blur(0px);
 }
 
 

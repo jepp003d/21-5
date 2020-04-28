@@ -28,9 +28,12 @@ document.onscroll = function () {
         if (scrollTop > curSection.offsetTop - heightBefore) {
             curColor = curSection.getAttribute("data-color");
             prevColor = "#C95D43";
+            noBlur = curSection.classList.remove("blur");
 
             curSection.style.background = curColor;
+            curSection.style.background = noBlur;
             prevSection.style.background = prevColor;
+
 
 
 
