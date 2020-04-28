@@ -214,7 +214,7 @@ article:nth-child(even) {
 
 .splash_forside {
     background-size: cover;
-    background-image: url(img/splash_test2.jpg);
+    background-image: url(img/splash_test_4.jpg);
     height: 100vh;
     background-repeat: no-repeat;
     object-fit: fill;
@@ -551,7 +551,7 @@ article:nth-child(even) {
         width: 2%;
         display: block;
         margin: 0 auto;
-        padding-top: 3vw;
+        padding-top: 7vw;
     }
 
     .bounce {
