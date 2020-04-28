@@ -170,7 +170,7 @@ article:nth-child(even) {
 .koncept_sections h2,
 #destinationer_detaljeview h2,
 #boliger_sections h2,
-.foreninger_sections h2 {
+#foreninger_sections h2 {
     margin-top: 6vh;
     margin-bottom: 3vw;
 }
@@ -461,6 +461,16 @@ article:nth-child(even) {
     margin-bottom: 10vw;
 }
 
+.footer_section {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.footer_section h2 {
+    font-weight: 200;
+
+}
+
 .footer_section img {}
 
 .footer_section p {
@@ -472,8 +482,8 @@ article:nth-child(even) {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 15%;
-    margin-top: 10vw;
+    width: 20%;
+    margin-top: 15vw;
 
 }
 
@@ -520,7 +530,7 @@ article:nth-child(even) {
     #forside_article,
     #boliger_article,
     #bolig_carousel,
-    .footer_section,
+
     #foreninger_article,
     .destinationer_sections,
     #koncept_article,
@@ -528,8 +538,16 @@ article:nth-child(even) {
     #dest_detaljeview_carousel,
     .stiftede_foreninger_sections {
         padding: 5vw 15vw 5vw 15vw;
-
     }
+
+    #foreninger_article:nth-child(4) {}
+
+    /*
+    .footer_section_forening img {
+        margin-top: 0;
+    }
+*/
+
 
     #boliger_article,
     #forside_article,
