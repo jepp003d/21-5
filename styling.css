@@ -1015,12 +1015,7 @@ article:nth-child(even) {
         height: 5px;
     }
 
-    header {
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
-        left: 0;
-    }
+
 
     /*WEB-NAVIGATION SLUT*/
     /***** WEB FORSIDE START *****/
