@@ -827,14 +827,14 @@ article:nth-child(even) {
         display: flex;
         justify-content: space-around;
         width: 100vw;
-        height: 70vh;
+        height: 100vh;
         margin: 0;
         top: 0;
         /*            left: 0;*/
         right: 0;
         padding: 40px 0 100px 50px;
         background: #C95D43;
-        opacity: .8;
+        opacity: 0.95;
         background-image: url(img/logo_background.svg);
         background-repeat: no-repeat;
         background-position: center;
