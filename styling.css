@@ -20,13 +20,14 @@ body {
 #koncept_article,
 #destination,
 #dest_detaljeview_carousel,
-.stiftede_foreninger_sections {
-    padding: 0 10vw 0 10vw;
+.stiftede_foreninger_sections,
+#forside_sections {
+    padding: 2vw 10vw 2vw 10vw;
 
 }
 
 #kontakt_sections {
-    padding: 0 10vw 0 10vw;
+    padding: 2vw 10vw 2vw 10vw;
 }
 
 
@@ -37,6 +38,33 @@ body {
     cursor: pointer;
 }
 
+/**** LINKS STYLING START *****/
+.tilbagetekst,
+#kontakt_sections a,
+#boliger_sections a,
+.stiftede_foreninger_sections a {
+    color: #ed7052;
+    text-decoration: none;
+    font-weight: 500;
+
+}
+
+.tilbagetekst {
+    font-family: freight-neo-pro, sans-serif;
+    text-transform: uppercase;
+}
+
+#kontakt_sections a:hover,
+#boliger_sections a:hover,
+.stiftede_foreninger_sections a:hover {
+    color: #d3411e;
+}
+
+
+
+
+
+/**** LINKS STYLING SLUT ****/
 
 
 
@@ -63,10 +91,7 @@ h1 {
     margin: 0;
 }
 
-
-h2,
-h3,
-h4 {
+h2 {
     color: #2a2a2a;
     font-size: 1.8rem;
     font-family: freight-neo-pro, sans-serif;
@@ -84,9 +109,9 @@ h4 {
 
     color: white;
     text-align: center;
-    padding-top: 10vw;
-    font-size: 4rem;
-    font-weight: 600;
+    padding-top: 40vw;
+    font-size: 3rem;
+
 }
 
 footer .sectionwrapper {
@@ -130,6 +155,19 @@ footer p {
 
 /***** FOOTER SLUT ****/
 
+#boliger_article,
+#forside_article,
+#foreninger_article,
+#boliger_footer,
+#bolig_carousel,
+#koncept_article {
+    transition: 1s;
+}
+
+.white {
+    background-color: white !important;
+}
+
 
 /******* GENERALT SLUT *****/
 
@@ -141,7 +179,7 @@ footer p {
 
 .forside_sections article:nth-child(3) {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 20px;
 
 
@@ -166,10 +204,9 @@ article:nth-child(even) {
 
 
 .koncept_sections h2,
-#destinationer_detaljeview h2,
 #boliger_sections h2,
 #foreninger_sections h2 {
-    margin-top: 6vh;
+    margin-top: 3vw;
     margin-bottom: 3vw;
 }
 
@@ -199,9 +236,6 @@ article:nth-child(even) {
     margin-bottom: 1vw;
 }
 
-.destinationer_sections article:nth-child(1) h2 {
-    margin-top: 15vw;
-}
 
 
 .forside_sections article:nth-child(1) .col:nth-child(2) h2,
@@ -218,7 +252,52 @@ article:nth-child(even) {
     background-image: url(img/splash_test_4.jpg);
     height: 100vh;
     background-repeat: no-repeat;
-    object-fit: fill;
+
+
+}
+
+#splash_wrapper {
+    flex-basis: 250px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding-top: 4vw;
+    position: relative;
+}
+
+#splash_wrapper img {
+
+    width: 12%;
+    padding: 10px;
+
+}
+
+#splash .scroll_icon {
+    width: 2%;
+    padding-top: 6vw;
+    position: relative;
+    left: 49vw;
+}
+
+.bounce {
+    animation-name: bounce;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+@keyframes bounce {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(5px);
+    }
 }
 
 
@@ -236,7 +315,7 @@ article:nth-child(even) {
     z-index: 2;
     background-position: 0% 100%;
     height: 50vh;
-    margin-bottom: 100px;
+
 }
 
 .koncept_sections article:nth-child(1) .overskrift2,
@@ -246,7 +325,7 @@ article:nth-child(even) {
 
 .koncept_sections article:nth-child(2) {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 20px;
 
 
@@ -279,11 +358,7 @@ article:nth-child(even) {
 
 }
 
-#boliger_sections a {
-    text-decoration: none;
-    color: #C95D43;
-    font-weight: 500;
-}
+
 
 #boliger_sections article:nth-child(1),
 #foreninger_sections article:nth-child(1),
@@ -358,19 +433,44 @@ article:nth-child(even) {
     margin-top: 2vw;
 }
 
-#destinationer_detaljeview .tekst2 {
-    margin-bottom: 5vw;
-}
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 2vw;
 }
 
-.tilbagepil {
-    width: 2%;
+
+#destinationer_detaljeview .tilbagepil {
+    position: absolute;
+    top: 20vw;
+    left: 2vw;
+    width: 1.5%;
+    cursor: pointer;
+    margin-top: 0;
 }
+
+
+
+
+#destinationer_detaljeview .tilbagetekst {
+    position: absolute;
+    top: 15.7vw;
+    left: 4vw;
+    font-size: .9rem;
+
+}
+
+#destinationer_detaljeview .overskrift2,
+#destinationer_detaljeview .overskrift3 {
+    margin-top: 10vw;
+}
+
+#destinationer_detaljeview .tilbagepil:hover {
+    transform: scale(1.1);
+    transition: .2s;
+}
+
 
 
 
@@ -422,7 +522,7 @@ article:nth-child(even) {
 
 .stiftede_foreninger_sections {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 2vw;
 }
 
@@ -450,6 +550,8 @@ article:nth-child(even) {
 .stiftede_foreninger_sections article:nth-child(1) {
     grid-column: 1 / -1;
 }
+
+
 
 /***** MOBIL STIFTEDE FORENINGER SLUT ****/
 
@@ -482,7 +584,7 @@ article:nth-child(even) {
 
 }
 
-.footer_section img {}
+
 
 .footer_section p {
     font-family: freight-neo-pro, sans-serif;
@@ -493,8 +595,8 @@ article:nth-child(even) {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 20%;
-    margin-top: 15vw;
+    width: 40%;
+
 
 }
 
@@ -506,20 +608,46 @@ article:nth-child(even) {
 /**** MOBIL NEWS/KONTAKT/FAQ SEKTION START ****/
 
 /***** MOBIL KONTAKT START ****/
-#kontakt_sections {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    grid-gap: 10vw;
+
+.splash_kontakt {
+    background-size: cover;
+    background-image: url(img/kontakt1.jpg);
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-position: 10% 50%;
+    height: 50vh;
 
 }
 
-#kontakt_sections .col:nth-child(2) {
+
+#kontakt_sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 3vw;
+    margin-bottom: 5vw;
+
+}
+
+#kontakt_sections .col:nth-child(2),
+#kontakt_sections .col:nth-child(8),
+#kontakt_sections .col:nth-child(9) {
     grid-column: 1/-1;
 }
 
 #kontakt_sections .col:nth-child(3) {
     display: none;
 }
+
+
+
+
+
+#kontakt_sections .col:nth-child(8) h2 {
+    margin-top: 5vw;
+}
+
+
 
 
 
@@ -535,47 +663,6 @@ article:nth-child(even) {
 @media only screen and (min-width : 1224px) {
     /***** WEB GENERALT START ****/
 
-    #splash_wrapper {
-        flex-basis: 250px;
-        flex-grow: 1;
-        display: flex;
-        justify-content: center;
-        padding-top: 4vw;
-    }
-
-    #splash_wrapper img {
-        width: 12%;
-        padding: 10px;
-    }
-
-
-
-    #splash .scroll_icon {
-        width: 2%;
-        padding-top: 6vw;
-        position: relative;
-        left: 49vw;
-    }
-
-    .bounce {
-        animation-name: bounce;
-        animation-duration: 0.5s;
-        animation-timing-function: linear;
-        animation-delay: 2s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-    }
-
-    @keyframes bounce {
-
-        from {
-            transform: translateY(0);
-        }
-
-        to {
-            transform: translateY(5px);
-        }
-    }
 
 
     #forside_article,
@@ -586,9 +673,13 @@ article:nth-child(even) {
     .destinationer_sections,
     #koncept_article,
     #destination,
-    #dest_detaljeview_carousel,
-    .stiftede_foreninger_sections {
+    .stiftede_foreninger_sections,
+    #kontakt_sections {
         padding: 5vw 15vw 5vw 15vw;
+    }
+
+    #dest_detaljeview_carousel {
+        padding: 0vw 15vw 0 15vw;
     }
 
     #foreninger_article:nth-child(4) {}
@@ -600,18 +691,7 @@ article:nth-child(even) {
 */
 
 
-    #boliger_article,
-    #forside_article,
-    #foreninger_article,
-    #boliger_footer,
-    #bolig_carousel,
-    #koncept_article {
-        transition: 1s;
-    }
 
-    .white {
-        background-color: white !important;
-    }
 
 
     p {
@@ -628,6 +708,18 @@ article:nth-child(even) {
     }
 
 
+    .logo_footer {
+
+        width: 20%;
+
+
+    }
+
+    .velkommen {
+        padding-top: 10vw;
+        font-size: 3rem;
+
+    }
 
 
 
@@ -929,6 +1021,7 @@ article:nth-child(even) {
         padding-top: 8vw;
     }
 
+
     /*Splash slut */
 
     .forside_sections article:nth-child(1) p,
@@ -941,13 +1034,27 @@ article:nth-child(even) {
         margin-top: 3vw;
     }
 
+    .forside_sections article:nth-child(3) {
+
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+
+
+
+    }
 
 
 
     /***** WEB FORSIDE SLUT ****/
 
-    /***** WEB KONCEPT START ****/
 
+    /***** WEB KONCEPT START ****/
+    .koncept_sections article:nth-child(2) {
+
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+
+
+
+    }
 
 
     /***** WEB KONCEPT SLUT *****/
@@ -962,7 +1069,11 @@ article:nth-child(even) {
 
     /***** WEB DESTINATIONER DETALJEVIEW START ****/
 
+    .grid {
 
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+
+    }
 
     /***** WEB DESTINATIONER DETALJEVIEW SLUT ****/
 
@@ -971,12 +1082,31 @@ article:nth-child(even) {
 
     /***** WEB FORENINGER START ****/
 
+    /****** WEB STIFTEDE FORENINGER START *****/
+
+    .stiftede_foreninger_sections {
+
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+
+    }
+
+    /***** WEB STIFTEDE FORENINGER SLUT *****/
+
 
     /***** WEB SLUT *****/
 
-    /***** WEB NEWS START ****/
+    /***** WEB KONTAKT START ****/
 
+    #kontakt_sections {
 
-    /***** WEB NEWS SLUT ****/
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+
+    }
+
+    #kontakt_sections .col:nth-child(8) p {
+        columns: 2;
+    }
+
+    /***** WEB KONTAKT SLUT ****/
 
 }

@@ -11,7 +11,7 @@ document.onscroll = function () {
     scrollTop = document.documentElement.scrollTop;
 
     //Henter de forskellige sektioner fra html'en og putter dem ind i en variable. Da indholdet er hentet ind i artikler i html'en skal hver der skiftes baggrundsfarve efter artikler.
-    allSections = document.getElementsByTagName('article');
+    allSections = document.getElementsByClassName('detaljetest');
 
     //Laver en index så vi ved hvilken sektion er "current section".
     for (i = 0; i < allSections.length; i++) {
