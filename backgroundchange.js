@@ -10,7 +10,7 @@ document.onscroll = function () {
     //Definerer scrollTop for at gøre det muligt at tælle hvor mange px man har scrollet
     scrollTop = document.documentElement.scrollTop;
 
-    //Henter de forskellige sektioner fra html'en og putter dem ind i en variable. Da indholdet er hentet ind i artikler i html'en skal hver der skiftes baggrundsfarve efter artikler.
+    //Henter de forskellige sektioner fra html'en og putter dem ind i en variable. Da indholdet er hentet ind i artikler i html'en er det article tagget der definerer en sektion
     allSections = document.getElementsByTagName('article');
 
     //Laver en index så vi ved hvilken sektion er "current section".

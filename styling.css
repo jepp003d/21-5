@@ -106,10 +106,8 @@ h2 {
 
 
 .velkommen {
-
-    color: white;
+    padding-top: 20vw;
     text-align: center;
-    padding-top: 40vw;
     font-size: 3rem;
 
 }
@@ -210,6 +208,17 @@ article:nth-child(even) {
     margin-bottom: 3vw;
 }
 
+#foreninger_sections article:nth-child(1) h2,
+.koncept_sections article:nth-child(1) h2,
+#boliger_sections article:nth-child(1) h2,
+.destinationer_sections article:nth-child(1) h2 {
+    margin-top: 0;
+}
+
+.destinationer_sections article:nth-child(1) h2 {
+    margin-bottom: 3vw;
+}
+
 
 
 .forside_sections p,
@@ -226,6 +235,14 @@ article:nth-child(even) {
     margin-top: 5vw;
 
 }
+
+#foreninger_sections article:nth-child(1) p,
+.koncept_sections article:nth-child(1) p,
+#boliger_sections article:nth-child(1) p,
+.destinationer_sections article:nth-child(1) p {
+    margin-top: 0;
+}
+
 
 .destinationer_sections img {
     margin-top: .5vw;
@@ -504,6 +521,8 @@ article:nth-child(even) {
 
 
 
+
+
 /***** MOBIL FORENINGER SLUT *****/
 
 /***** MOBIL STIFTEDE FORENINGER START ****/
@@ -516,7 +535,7 @@ article:nth-child(even) {
     z-index: 2;
     background-position: 10% 75%;
     height: 50vh;
-    margin-bottom: 100px;
+
 }
 
 
@@ -715,9 +734,11 @@ article:nth-child(even) {
 
     }
 
+
     .velkommen {
-        padding-top: 10vw;
-        font-size: 3rem;
+        padding-top: 8vw;
+
+        font-size: 5rem;
 
     }
 
@@ -726,8 +747,15 @@ article:nth-child(even) {
 
     /***** WEB GENERALT SLUT ****/
     /*WEB-NAVIGATION START*/
+    .body_opacity {
+        transition: all 0.5s ease-in;
+        background-color: rgba(0, 0, 0, 0.35);
+    }
+
     nav {
         z-index: 4000;
+        height: 100vh;
+
     }
 
     #menuToggle a {
@@ -736,18 +764,8 @@ article:nth-child(even) {
         transition: color 0.3s ease;
     }
 
-    #menuToggle .undermenu a {
-        /*        color: #222222;*/
-    }
-
-    #menuToggle .undermenu .under-undermenu a {
-        /*        color: #eaeaea;*/
-    }
-
     #menuToggle a:hover {
         color: black;
-
-
     }
 
 
@@ -756,16 +774,9 @@ article:nth-child(even) {
         width: 40px;
         height: 32px;
         position: absolute;
-        /*        top: -7px;*/
-        /*           left: -5px;*/
-
         cursor: pointer;
         z-index: 4002;
         opacity: 0;
-        /* hide this */
-
-        /* and place it over the hamburger */
-
         -webkit-touch-callout: none;
     }
 
@@ -776,7 +787,6 @@ article:nth-child(even) {
 
     #menuToggle .burger:first-child {
         transform-origin: 0% 0%;
-
     }
 
     #menuToggle .burger:nth-last-child(2) {
@@ -814,33 +824,39 @@ article:nth-child(even) {
  */
     .menu {
         position: fixed;
+        display: flex;
+        justify-content: space-around;
         width: 100vw;
-        /*        height: 80vh;*/
+        height: 70vh;
         margin: 0;
         top: 0;
-        left: 0;
-        padding: 100px 0 100px 50px;
-
+        /*            left: 0;*/
+        right: 0;
+        padding: 40px 0 100px 50px;
         background: #C95D43;
-
-
+        opacity: .8;
+        background-image: url(img/logo_background.svg);
+        background-repeat: no-repeat;
+        background-position: center;
         -webkit-font-smoothing: antialiased;
         /* to stop flickering of text in safari */
-
         transform-origin: 0% 0%;
         transform: translate(100%, 0);
-
         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
     }
 
     .menu a {
         font-size: 1.5rem;
-        font-family: neue-haas-grotesk-text, sans-serif;
-
+        font-family: freight-neo-pro, sans-serif;
+        padding: 0 20px 0 0;
+        /*            margin: 0 70px 0 0;*/
+        text-transform: uppercase;
     }
 
-
-
+    li {
+        padding: 0 500px 0 0;
+    }
 
 
 
@@ -849,9 +865,18 @@ article:nth-child(even) {
         opacity: 0;
         visibility: hidden;
         position: absolute;
-        left: 314px;
-        top: 100px;
+        padding-left: 0;
+        margin-left: 0;
 
+    }
+
+    .undermenu a {
+        font-size: 1.3rem;
+
+    }
+
+    .under-undermenu a {
+        font-size: 1.2rem;
 
     }
 
@@ -860,76 +885,39 @@ article:nth-child(even) {
         opacity: 0;
         visibility: hidden;
         position: absolute;
-        left: 414px;
-        top: 0;
-    }
-
-
-
-    .undermenu a {
-        font-size: 1.5rem;
+        padding-left: 0;
+        margin-left: 0;
 
     }
-
-    .under-undermenu a {
-
-        font-size: 1.5rem;
-    }
-
-
-
-
 
     .menu li:hover > ul {
         opacity: 1;
         visibility: visible;
     }
 
-    .undermenu li li:hover > ul {
-        /*        display: none;*/
-    }
-
     nav {
         position: fixed;
         right: 0;
-
     }
-
-    .menu a {
-
-        padding: 0 90px 0 0;
-    }
-
-    .undermenu a,
-    under-undermenu a {}
 
     .menu ul {
-
         list-style: none;
     }
 
 
 
     .menu li {
-        /*        background-color: #fdfdfd;*/
         max-width: 250px;
-        /*        border-bottom: 1px solid black;*/
         list-style: none;
         padding: 20px 0px 20px 10px;
-
     }
 
     .menu li li {
-
-        /*        background-color: blue;*/
         max-width: 400px;
-
     }
 
     .menu li li li {
-        /*        background-color: yellow;*/
         width: 400px;
-
     }
 
 
@@ -938,12 +926,7 @@ article:nth-child(even) {
 
 
 
-    /*
-    .input_position {
-    position: absolute;
-    right: 0;
-    }
-*/
+
 
 
     /*
@@ -954,29 +937,45 @@ article:nth-child(even) {
     }
 
 
-    .arrow:after {
+    /*
+        .arrow:after {
         content: '\2038';
         float: right;
         transform: rotate(90deg);
+        }
+        */
+
+    .arrow:before {
+        content: '\2038';
+        float: right;
+        transform: rotate(180deg);
+        margin-top: 10px;
+
+    }
+
+    .undermenu .arrow:before {
+        content: '\2038';
+        float: right;
+        transform: rotate(180deg);
+        margin-top: 10px;
+        position: absolute;
+        margin-left: 20px;
+
     }
 
 
 
 
-    .wrapper {
-        display: flex;
-    }
+
 
     #menuToggle {
         display: block;
         position: relative;
         z-index: 4001;
-
-
-
-        padding-top: 30px;
+        padding-top: 10px;
         -webkit-user-select: none;
         user-select: none;
+
     }
 
     #menuToggle .burger {
@@ -986,7 +985,6 @@ article:nth-child(even) {
         margin-bottom: 5px;
         position: relative;
         margin-left: 1vw;
-
         background: #C95D43;
         border-radius: 3px;
         z-index: 1;
@@ -1010,6 +1008,18 @@ article:nth-child(even) {
         top: -30px;
 
 
+    }
+
+    .understreg {
+        width: 100vw;
+        height: 5px;
+    }
+
+    header {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        left: 0;
     }
 
     /*WEB-NAVIGATION SLUT*/
