@@ -192,19 +192,19 @@
     </header>
 
     <section id="splash" class="splash_destinationer">
-        <h1 class="velkommen">DESTINATIONER</h1>
+
     </section>
 
     <section id="destinationer_detaljeview">
+        <p class="tilbagetekst">Tilbage til destinationer<p>
 
-        <article id="destination">
-
-            <img class="tilbagepil" src="img/tilbagepil.svg" alt="tilbagepil">
-            <p class="tilbagetekst">Tilbage til destinationer<p>
+                <article id="destination">
 
 
 
-                    <h2></h2>
+
+
+                    <h2 class="overskrift1"></h2>
                     <p class="tekst1"></p>
                     <img class="image" src="" alt="">
                     <div class="grid">
@@ -223,30 +223,30 @@
 
                     </template>
 
-        </article>
+                </article>
     </section>
 
-    <section>
-        <main id="dest_detaljeview_carousel">
 
-            <div class="carousel">
-                <div class="carousel_inner">
+    <main id="dest_detaljeview_carousel">
 
-                    <div class="bwd">
-                        <img src="img/tilbagepil.svg" alt="tilbagepil">
-                    </div>
-                    <div class="container">
+        <div class="carousel">
+            <div class="carousel_inner">
 
-                    </div>
-                    <div class="fwd">
-                        <img src="img/forwardpil.svg" alt="forwardpil">
-                    </div>
+                <div class="bwd">
+                    <img src="img/tilbagepil.svg" alt="tilbagepil">
                 </div>
-                <div class="legend-container"></div>
-            </div>
+                <div class="container">
 
-        </main>
-    </section>
+                </div>
+                <div class="fwd">
+                    <img src="img/forwardpil.svg" alt="forwardpil">
+                </div>
+            </div>
+            <div class="legend-container"></div>
+        </div>
+
+    </main>
+
     <section class=footer_section>
 
         <article>
@@ -327,7 +327,7 @@
         }
 
         function visDestination() {
-            detalje.querySelector(".tilbagepil").addEventListener("click", () => {
+            detalje.querySelector(".tilbagetekst").addEventListener("click", () => {
                 history.back();
             });
 
