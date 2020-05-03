@@ -318,6 +318,13 @@ body {
     font-family: freight-neo-pro, sans-serif;
     text-transform: uppercase;
 
+
+}
+
+.forside_sections a {
+    background-color: white;
+    padding: .3vw;
+    border-radius: 3px;
 }
 
 .tilbagetekst {
@@ -481,6 +488,7 @@ footer p {
 }
 
 .forside_sections article:nth-child(4) .text2,
+.forside_sections article:nth-child(4) .text1,
 .forside_sections article:nth-child(4) .video {
     display: none;
 }
