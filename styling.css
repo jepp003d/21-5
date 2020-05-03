@@ -626,7 +626,7 @@ article:nth-child(even) {
 
 #splash .scroll_icon {
     width: 2%;
-    padding-top: 20vw;
+    padding-top: 100px;
     position: relative;
     left: 49vw;
 }
