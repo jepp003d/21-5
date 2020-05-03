@@ -756,7 +756,7 @@ article:nth-child(even) {
 .destinationer_sections img {
     transition: all 0.2s;
     /*    box-shadow: 3px 3px 5px black;*/
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, .6);
+    box-shadow: 3px 3px 5px rgba(78, 37, 27, 0.6);
     transform: scale(1);
 }
 
