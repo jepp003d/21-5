@@ -26,7 +26,7 @@
     so you can use the :checked selector on it.
     -->
                 <div class="logo"><a href="forside.html"> <img src="img/21_5_logo.svg" alt="21-5 logo"></a></div>
-                <input type="checkbox" />
+                <input id="input" type="checkbox" />
 
 
                 <!--
@@ -67,6 +67,7 @@
                         <ul class="undermenu">
                             <li><a href="foreninger.html">21-5 Foreninger</a></li>
                             <li><a href="">Hvordan kommer vi med</a></li>
+                            <li><a href="stiftedeforeninger.html">Stiftede foreninger</a></li>
                             <li><a class="til_salg">Til salg lige nu<span class="arrow"></span></a>
                                 <ul class="under-undermenu">
                                     <li><a href="">Ejerforeningen 21-5 DK36 Grande</a></li>
@@ -75,7 +76,6 @@
 
                                 </ul>
                             </li>
-                            <li><a href="stiftedeforeninger.html">Stiftede foreninger</a></li>
                         </ul>
                     </li>
 
@@ -108,17 +108,20 @@
 
 
     <section id="splash" class="splash_forside">
-        <h1 class="velkommen">TÆNK AT EJE 5 FERIEBOLIGER I UDLANDET</h1>
-        <div id="splash_wrapper">
-            <img class="splash_img" src="img/black_family.png" alt="family forening hos 21-5">
-            <img class="splash_img" src="img/black_large.png" alt="large forening hos 21-5">
-            <img class="splash_img" src="img/black_family.png" alt="grande forening hos 21-5">
-        </div>
-        <img class="scroll_icon bounce" src="img/scroll_icon_black.png" alt="scroll icon">
+        <h1 class="velkommen">
+            <span>TÆNK AT EJE <br> 5 FERIEBOLIGER I UDLANDET</span>
+        </h1>
+        <!--        <img class="scroll_icon bounce" src="img/scroll_icon.png" alt="scroll icon">-->
     </section>
 
 
     <div>
+        <h1 class="velkommen">DRØMME OG LIVSGLÆDE</h1>
+        <!--
+        <div class="grafik_billeder">
+            <img src="img/foreninger_large.png" alt="test">
+        </div>
+-->
         <section class="forside_sections">
         </section>
         <section class=footer_section>
@@ -150,11 +153,14 @@
             <div class="col">
                 <h2 class="overskrift1"></h2>
                 <p class="text1"></p>
+
+
             </div>
             <div class="col">
                 <h2 class="overskrift2"></h2>
                 <img src="" alt="">
                 <p class="text2"></p>
+                <iframe class="video" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
             </div>
 
@@ -220,6 +226,11 @@
                 klon.querySelector(".overskrift2").innerHTML = elm.overskrift2;
                 klon.querySelector("img").src = elm.image.guid;
                 klon.querySelector(".text2").innerHTML = elm.tekst2;
+                if (elm.video != "") {
+                    klon.querySelector(".video").src = elm.video;
+                }
+
+
                 listeElm.appendChild(klon);
             })
         }
@@ -248,8 +259,5 @@
         function visFAQ() {
             location.href = "faq.html"
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
