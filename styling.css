@@ -534,6 +534,10 @@ article:nth-child(even) {
     margin-top: 0;
 }
 
+#foreninger_sections article:nth-child(1) p {
+    padding-top: 0;
+}
+
 
 .destinationer_sections img {
     margin-top: .5vw;
@@ -969,8 +973,8 @@ article:nth-child(even) {
 }
 
 #kontakt_sections .col:nth-child(2),
-#kontakt_sections .col:nth-child(8),
-#kontakt_sections .col:nth-child(9) {
+#kontakt_sections .col:nth-child(12),
+#kontakt_sections .col:nth-child(13) {
     grid-column: 1/-1;
 }
 
@@ -1096,7 +1100,7 @@ article:nth-child(even) {
         padding: 40px 0 100px 50px;
         background: #C95D43;
 
-        /*        background-image: url(img/logo_background.svg);*/
+
         background-repeat: no-repeat;
         background-position: left;
         -webkit-font-smoothing: antialiased;
@@ -1515,7 +1519,7 @@ article:nth-child(even) {
         padding: 40px 0 100px 50px;
         background: #C95D43;
         opacity: 0.95;
-        background-image: url(img/logo_background.svg);
+
         background-repeat: no-repeat;
         background-position: center;
         -webkit-font-smoothing: antialiased;
@@ -1732,9 +1736,8 @@ article:nth-child(even) {
     .forside_sections article:nth-child(3) {
 
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-        max-width: 1000px;
-        justify-content: center;
-        margin: 0 auto;
+
+
 
 
 
@@ -1820,7 +1823,7 @@ article:nth-child(even) {
     .koncept_sections article:nth-child(2) {
 
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-        max-width: 1000px;
+
 
 
 
