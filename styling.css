@@ -1710,7 +1710,14 @@ article:nth-child(even) {
     /*Splash slut */
 
     .forside_sections p,
+<<<<<<< HEAD
     .koncept_sections p {}
+=======
+    .koncept_sections p {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+>>>>>>> origin/master
 
     .forside_sections article:nth-child(1) p,
     .forside_sections article:nth-child(2) p {
@@ -1725,8 +1732,32 @@ article:nth-child(even) {
     .forside_sections article:nth-child(3) {
 
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        max-width: 1000px;
+        justify-content: center;
+        margin: 0 auto;
 
 
+
+    }
+
+    .forside_sections article:nth-child(1) img {
+        padding-top: 5vw;
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+
+
+    /*
+    .grafik_billeder {
+
+        padding: 5vw 15vw 0vw 15vw;
+
+
+    }
+
+    .grafik_billeder img {
+        width: 90%;
 
 
     }
@@ -1765,6 +1796,20 @@ article:nth-child(even) {
     .forside_sections article:nth-child(2) .col {
         justify-content: center;
     }
+*/
+
+    /*
+    .forside_sections article:nth-child(1) img {
+        width: 70%;
+        display: block;
+        margin: 0 auto;
+        padding-top: 5vw;
+    }
+*/
+
+    .forside_sections article:nth-child(2) .col {
+        justify-content: center;
+    }
 
 
 
@@ -1775,6 +1820,9 @@ article:nth-child(even) {
     .koncept_sections article:nth-child(2) {
 
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        max-width: 1000px;
+
+
 
 
 
