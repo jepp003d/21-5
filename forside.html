@@ -158,7 +158,8 @@
             </div>
             <div class="col">
                 <h2 class="overskrift2"></h2>
-                <img src="" alt="">
+                <img class="image1" src="" alt="">
+                <img class="image2" src="" alt="">
                 <p class="text2"></p>
                 <iframe class="video" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -224,7 +225,10 @@
                 klon.querySelector(".overskrift1").innerHTML = elm.overskrift1;
                 klon.querySelector(".text1").innerHTML = elm.tekst1;
                 klon.querySelector(".overskrift2").innerHTML = elm.overskrift2;
-                klon.querySelector("img").src = elm.image.guid;
+                klon.querySelector(".image1").src = elm.image.guid;
+                if (elm.image2 != "") {
+                    klon.querySelector(".image2").src = elm.image2.guid;
+                }
                 klon.querySelector(".text2").innerHTML = elm.tekst2;
                 if (elm.video != "") {
                     klon.querySelector(".video").src = elm.video;

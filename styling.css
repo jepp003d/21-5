@@ -474,6 +474,21 @@ footer p {
 
 }
 
+.forside_sections article:nth-child(4) .col:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 20px;
+}
+
+.forside_sections article:nth-child(4) .text2,
+.forside_sections article:nth-child(4) .video {
+    display: none;
+}
+
+.forside_sections article:nth-child(4) .image1 {
+    margin-top: 0;
+}
+
 /*
 .forside_sections img,
 .koncept_sections img,
@@ -552,13 +567,18 @@ article:nth-child(even) {
 
 .forside_sections article:nth-child(1) .col:nth-child(2) h2,
 .forside_sections article:nth-child(2) .col:nth-child(2) h2,
-.forside_sections article:nth-child(4) .text1,
-.forside_sections article:nth-child(4) .overskrift2,
-.forside_sections article:nth-child(4) .text2,
+.forside_sections article:nth-child(5) .text1,
+.forside_sections article:nth-child(5) .overskrift2,
+.forside_sections article:nth-child(5) .text2,
 .forside_sections article:nth-child(3) img,
 .forside_sections article:nth-child(1) .video,
 .forside_sections article:nth-child(2) .video,
 .forside_sections article:nth-child(3) .video {
+    display: none;
+}
+
+.forside_sections article:nth-child(4) .overskrift2,
+.forside_sections article:nth-child(4) .tekst2 {
     display: none;
 }
 
@@ -978,17 +998,17 @@ article:nth-child(even) {
     grid-column: 1/-1;
 }
 
+#kontakt_sections .col:nth-child(12) {}
+
 #kontakt_sections .col:nth-child(3) {
     display: none;
 }
 
-
-
-
-
-#kontakt_sections .col:nth-child(8) h2 {
+#kontakt_sections .col {
     margin-top: 5vw;
 }
+
+
 
 
 .video {
@@ -1258,6 +1278,8 @@ article:nth-child(even) {
         font-size: 2rem;
 
     }
+
+
 
     .velkommen {
         padding-top: 10vw;
@@ -1893,9 +1915,7 @@ article:nth-child(even) {
 
     }
 
-    #kontakt_sections .col:nth-child(8) p {
-        columns: 2;
-    }
+    #kontakt_sections .col:nth-child(8) p {}
 
     /***** WEB KONTAKT SLUT ****/
 
